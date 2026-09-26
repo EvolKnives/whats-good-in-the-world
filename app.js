@@ -23,23 +23,8 @@
   var displayedStories = [];
   var SET_SIZE = 15;
   var SEEN_KEY = "wgw-seen-ids";
-  var DENSITY_KEY = "wgw-density";
-  var TOPIC_CHIPS = [
-    "Climate",
-    "Health",
-    "Oregon",
-    "Science",
-    "Tech",
-    "Art",
-    "Achievement",
-    "Community"
-  ];
   var weekWinsEl = document.getElementById("week-wins");
   var weekWinsGrid = document.getElementById("week-wins-grid");
-  var filtersEl = document.getElementById("filters");
-  var topicChipsEl = document.getElementById("topic-chips");
-  var densityBtn = document.getElementById("density-toggle");
-  var activeTopics = [];
   var weekPayload = null;
   var highlightIds = [];
 
@@ -431,46 +416,6 @@
     });
   }
 
-  function readDensity() {
-    try {
-      return localStorage.getItem(DENSITY_KEY) === "compact" ? "compact" : "comfortable";
-    } catch (e) {
-      return "comfortable";
-    }
-  }
-
-  function writeDensity(mode) {
-    try {
-      localStorage.setItem(DENSITY_KEY, mode === "compact" ? "compact" : "comfortable");
-    } catch (e) {
-      /* ignore */
-    }
-  }
-
-  function applyDensity(mode) {
-    var compact = mode === "compact";
-    document.body.classList.toggle("density-compact", compact);
-    if (densityBtn) {
-      densityBtn.setAttribute("aria-pressed", compact ? "true" : "false");
-      densityBtn.textContent = compact ? "Comfortable" : "Compact";
-      densityBtn.setAttribute(
-        "aria-label",
-        compact ? "Switch to comfortable layout" : "Switch to compact list"
-      );
-    }
-  }
-
-  function storyMatchesTopics(story, topics) {
-    if (!topics || !topics.length) return true;
-    var have = {};
-    storyTopics(story).forEach(function (t) {
-      have[t.toLowerCase()] = true;
-    });
-    return topics.every(function (t) {
-      return have[String(t).toLowerCase()];
-    });
-  }
-
   function pickHighlights(pool, ids) {
     var byId = {};
     (pool || []).forEach(function (s) {
@@ -530,7 +475,7 @@
       card.addEventListener("click", function () {
         var targetId = storyId(story, i);
         var el = document.getElementById(targetId);
-        // Prefer matching by data-story-id if present after filter re-render
+        // Prefer matching by data-story-key if present after a re-render
         if (!el) {
           var key = String(story.id || "");
         el = Array.prototype.find.call(
@@ -555,86 +500,24 @@
     weekWinsEl.hidden = false;
   }
 
-  function renderTopicChips(pool) {
-    if (!filtersEl || !topicChipsEl) return;
-    var available = {};
-    (pool || []).forEach(function (s) {
-      storyTopics(s).forEach(function (t) {
-        available[t] = true;
-      });
-    });
-    var chips = TOPIC_CHIPS.filter(function (t) {
-      return available[t];
-    });
-    topicChipsEl.innerHTML = "";
-    if (!chips.length) {
-      filtersEl.hidden = true;
-      return;
-    }
-
-    function makeChip(label, isAll) {
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "topic-chip";
-      btn.textContent = label;
-      if (isAll) {
-        btn.classList.toggle("is-active", activeTopics.length === 0);
-        btn.setAttribute("aria-pressed", activeTopics.length === 0 ? "true" : "false");
-        btn.addEventListener("click", function () {
-          activeTopics = [];
-          renderTopicChips(storyPool);
-          renderFilteredStories();
-        });
-      } else {
-        var on = activeTopics.indexOf(label) !== -1;
-        btn.classList.toggle("is-active", on);
-        btn.setAttribute("aria-pressed", on ? "true" : "false");
-        btn.addEventListener("click", function () {
-          var idx = activeTopics.indexOf(label);
-          if (idx === -1) activeTopics.push(label);
-          else activeTopics.splice(idx, 1);
-          renderTopicChips(storyPool);
-          renderFilteredStories();
-        });
-      }
-      return btn;
-    }
-
-    topicChipsEl.appendChild(makeChip("All", true));
-    chips.forEach(function (t) {
-      topicChipsEl.appendChild(makeChip(t, false));
-    });
-    filtersEl.hidden = false;
-  }
-
-  function renderFilteredStories() {
-    var base = displayedStories.slice();
-    var filtered = base.filter(function (s) {
-      return storyMatchesTopics(s, activeTopics);
-    });
+  function renderStories() {
+    var stories = displayedStories.slice();
     storiesEl.setAttribute("aria-busy", "false");
     storiesEl.innerHTML = "";
     statusEl = null;
     closeOpen();
 
-    if (!filtered.length) {
+    if (!stories.length) {
       var empty = document.createElement("p");
-      empty.className = "status filter-empty";
+      empty.className = "status";
       empty.id = "status";
-      if (activeTopics.length) {
-        empty.textContent =
-          "No stories in this fifteen match " +
-          activeTopics.join(" · ") +
-          ". Clear filters or tap Refresh for a new set.";
-      } else {
-        empty.textContent = "No stories yet for this week.";
-      }
+      empty.textContent = "No stories yet for this week.";
       storiesEl.appendChild(empty);
       statusEl = empty;
       return;
     }
 
-    var nodes = filtered.map(function (story, i) {
+    var nodes = stories.map(function (story, i) {
       return renderStory(story, i);
     });
     nodes.forEach(function (n) {
@@ -642,7 +525,6 @@
     });
     observeReveal(nodes);
   }
-
 
   function renderHeroCard(story, tier, priorityIndex, id) {
     var card = document.createElement("div");
@@ -1021,7 +903,7 @@
     currentFingerprint = fingerprintStories(stories);
 
     storiesEl.setAttribute("aria-busy", "false");
-    renderFilteredStories();
+    renderStories();
 
     var seen = readSeenIds(weekMeta.weekOf);
     stories.forEach(function (s, i) {
@@ -1057,7 +939,6 @@
     weekPayload = data;
     highlightIds = Array.isArray(data.highlights) ? data.highlights.map(String) : [];
     renderWeekWins(pool, highlightIds);
-    renderTopicChips(pool);
     return { data: data, featured: featured, pool: pool };
   }
 
@@ -1176,16 +1057,6 @@
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   window.addEventListener("hashchange", focusHash);
   onScrollHeader();
-
-  applyDensity(readDensity());
-  if (densityBtn) {
-    densityBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      var next = readDensity() === "compact" ? "comfortable" : "compact";
-      writeDensity(next);
-      applyDensity(next);
-    });
-  }
 
   loadWeek();
 })();
