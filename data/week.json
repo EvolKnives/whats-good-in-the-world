@@ -1,6 +1,6 @@
 {
   "weekOf": "2026-09-22",
-  "updatedAt": "2026-09-26T10:03:12Z",
+  "updatedAt": "2026-09-26T10:26:10Z",
   "stories": [
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -51,15 +51,27 @@
       ]
     },
     {
-      "title": "ESA’s EVE turns Earth satellite data into a conversation",
-      "summary": "ESA’s Φ-lab showed EVE (Earth Virtual Expert)—a chat-style guide to Earth observation—with humanoid robots Ameca and Frankie that answer plain-language questions about satellite images. The demo aims to make space data approachable for non-specialists.",
-      "summaryLong": "Over recent years, ESA Φ-lab and Pi School have built EVE (Earth Virtual Expert), an intelligent companion for exploring Earth observation and Earth sciences, with support from Imperative Space, Mistral AI and Wiley. On 23 September 2026, Φ-lab highlighted how two humanoid robots—Ameca and Frankie, developed by Frank Reply GmbH—make talking to EVE more accessible and engaging.\n\nEarth observation can feel like searching for a needle in a digital haystack. Tracking climate patterns or crop health usually takes specialized expertise. With EVE, people can start with a conversation instead of dense code. Ameca focuses on satellite image searches: speak a plain-language request and it helps locate relevant imagery from EVE’s database. Frankie specializes in vegetation analysis, explaining concepts such as NDVI (Normalised Difference Vegetation Index) while looking at an image on screen.\n\nThe robots also offer an interactive image recognition game, an NDVI crop-health inspector, and a “Behind the Scenes” mode that shows retrieval, reasoning, planning, and tool calls as they happen. Daniel Fitzpatrick of Frank Reply said conversational interfaces help democratize Earth observation operations that once required highly specialized knowledge. Nicolas Longépé, EVE’s technical officer at Φ-lab, added that anyone—from curious citizens to policymakers—can ask a question and explore satellite intelligence “just like talking to a friend.”\n\nA demo and hands-on session are planned for the Agentic AI for Earth Observation workshop in Berlin in October, with a fuller public EVE launch expected soon.",
-      "source": "ESA Φ-lab",
-      "url": "https://philab.esa.int/exploring-eve-with-two-new-humanoid-robots/",
+      "title": "Tate Modern opens a free Robert Rauschenberg ARTIST ROOMS display",
+      "summary": "A large free display of over 20 Rauschenberg works opens at Tate Modern, anchored by Glut sculptures newly gifted for the artist’s centenary. Paintings, prints, kinetic pieces, and dance collaborations stay on view through 2027 with free admission.",
+      "summaryLong": "ARTIST ROOMS: Robert Rauschenberg, a large-scale free display in the ARTIST ROOMS gallery at Tate Modern, opened on 21 September 2026. It brings together over 20 works by Rauschenberg (1925–2008) spanning three decades—paintings, prints, and kinetic and light works.\n\nAt the heart of the presentation are Glut sculptures made from scrap metal scavenged from junkyards after the 1980s oil surplus, including three newly gifted by the Robert Rauschenberg Foundation to mark 100 years since the artist’s birth. The gifts join the ARTIST ROOMS collection jointly shared by Tate and the National Galleries of Scotland.\n\nThe display also highlights Rauschenberg’s long collaboration with dance and performance, including scrap-metal pieces linked to Trisha Brown Dance Company and costumes from Set and Reset. Kinetic Carnal Clocks and textile series such as the Jammers and Hoarfrosts show how he pushed materials and technology into everyday artmaking.\n\nAdmission is free. Tate Modern is open daily 10.00–18.00 and until 21:00 on Fridays and Saturdays. The display runs through December 2027 and is organised with the Robert Rauschenberg Foundation.",
+      "source": "Tate",
+      "url": "https://www.tate.org.uk/press/press-releases/artist-rooms-robert-rauschenberg-at-tate-modern-21-september-2026---december-2027",
       "impact": 4,
       "images": [
-        "https://philab.esa.int/wp-content/uploads/sites/3/2026/09/Ameca_ESA_DAY1_020_copy.jpg",
-        "https://philab.esa.int/wp-content/uploads/sites/3/2026/09/gabriele-malaspina-CjWsslYVnPI-unsplash.jpg"
+        "https://media.tate.org.uk/aztate-prd-ew-dg-wgtail-st1-ctr-data/images/87_144_2023_RA.width-1440.format-jpeg.jpg"
+      ]
+    },
+    {
+      "title": "Free digital twin lets anyone explore Assisi’s Giotto frescoes up close",
+      "summary": "Preserving Assisi launched a free platform with gigapixel frescoes, 360° tours, and 3D surveys of the Basilica of Saint Francis. Nearly 8 billion pixels on a single Lorenzetti Crucifixion help the public and conservators study details once out of reach.",
+      "summaryLong": "Presented on 16 September 2026, Preserving Assisi gathers ultra-high-resolution gigapixel images, virtual tours, 360° panoramas, three-dimensional surveys, and a digital archive of the Basilica of Saint Francis—a UNESCO World Heritage site famous for cycles by Giotto, Cimabue, and Pietro Lorenzetti.\n\nPromoted by Haltadefinizione and the General Custody of the Sacred Convent of Saint Francis, with support from Italy’s National Committee for the Celebrations of Saint Francis, the free platform lets anyone move from overall architecture to brushstroke-level detail. Campaigns in 2025–2026 captured more than 27,000 photographs and over 12 TB of data. One new gigapixel of Lorenzetti’s Crucifixion measures about 101,627 × 78,170 pixels—nearly 8 billion pixels.\n\nBeyond public access, the surveys freeze the basilica’s condition at a known moment for future monitoring, study, and restoration. After the 1997 earthquakes, earlier high-definition photography already proved vital to reassembling damaged frescoes; Preserving Assisi continues that documentary tradition in an interactive form anyone can use.",
+      "summaryLongNote": "Verified from Haltadefinizione’s 17 September 2026 project announcement and Art Newspaper coverage of the free platform; rewritten for general readers.",
+      "source": "Haltadefinizione",
+      "url": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
+      "impact": 4,
+      "images": [
+        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-cover.jpg",
+        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-Piattaforma1.jpg"
       ]
     },
     {
@@ -104,15 +116,15 @@
       "youtube": null
     },
     {
-      "title": "ChatGPT’s phone app can now finish tasks by voice",
-      "summary": "OpenAI brought voice-based “agentic” features to the ChatGPT mobile app. Plus and Pro users can ask the phone to draft documents, summarize Slack or email, and continue work later on desktop; free users get plugins and connected apps.",
-      "summaryLong": "OpenAI announced that it is bringing voice-based agentic features to mobile, allowing users to trigger workflows like drafting documents or summarizing emails from the ChatGPT phone app.\n\nPlus and Pro subscribers can use the Work tab on their phone to create a document, draft an email, or summarize Slack messages. Those users can also build sites, create presentations, use the cloud browser, and reach other Work areas such as finances inside ChatGPT. Free and Go users, meanwhile, can work with plugins and connected apps.\n\nOpenAI said voice conversations will produce richer text output, and users can switch between text and voice more easily. Someone can start a conversation on the go and resume it later on desktop. The company earlier launched conversational model GPT-Live and integrated similar voice task features on desktop; this rollout brings comparable capabilities to mobile.\n\nThe update arrives as more people use spoken commands for complex assistant tasks. TechCrunch notes the feature set still keeps chat and workspaces separate, even as competitors experiment with merged interfaces.",
-      "summaryLongNote": "Verified from TechCrunch’s 23 Sep 2026 report (~180 words; article is short).",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/",
+      "title": "Zeitz MOCAA opens free for Cape Town Heritage Day",
+      "summary": "Africa’s leading contemporary art museum offered free admission, tours, conservation demos, and family workshops on Heritage Day. Multilingual Bloomberg Connects guidance and silo architecture tours made seven floors of African art easier to explore together.",
+      "summaryLong": "On Heritage Day, Thursday 24 September 2026, Zeitz Museum of Contemporary Art Africa (Zeitz MOCAA) at Cape Town’s V&A Waterfront Silo precinct opened free to all visitors from 10am to 6pm.\n\nThe day paired free general admission across seven floors of contemporary African art with guided exhibition tours, multilingual architecture tours of the century-old grain silo, tote-bag and children’s creative workshops, and an “Art Patrol” experience that lets guests see museum safeguarding and conservation from a staff perspective. Outdoor food, live music, and the Bloomberg Connects app—supporting South African languages—helped families and first-time visitors navigate the building.\n\nEducation leads described Heritage Day as a chance to connect, learn, and celebrate together at Africa’s leading museum of contemporary art. Tickets were issued on arrival, first come, first served, with capacity limits—keeping world-class art free for a citywide cultural holiday.",
+      "source": "Zeitz MOCAA / Capetowner",
+      "url": "https://capetowner.co.za/things-to-do/2026-09-18-free-heritage-day-2026-programme-at-zeitz-mocaa-in-cape-town/",
       "impact": 3,
       "images": [
-        "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800"
+        "https://zeitzmocaa.museum/wp-content/uploads/2017/08/MW170727zeitzmocaa_32_pano_lo.jpg",
+        "https://images.newsteam.io/image/400/GbSdY1y2zciCxGYRYCgRWj83cyKvwK8USBorzE55iV8vTKx44Guw2KbPFZnohW4PGn1xuFZU1ecWhTcDyfECqqdVV2a8ti2JsnLrWw6iGRBgj89SV71WVVVDjasLmfXmDppSGWbLed5mmQHS6iMjP"
       ]
     },
     {
@@ -151,18 +163,6 @@
         "https://www.cam.ac.uk/sites/default/files/2026-09/Feshiebridge_plough_lines_trees_CROP.jpg"
       ],
       "youtube": null
-    },
-    {
-      "title": "STRATOS: free software that designs airships from hull to fabric",
-      "summary": "An MIT-licensed open-source tool called STRATOS helps engineers design lighter-than-air craft—from multilobe hull shapes to cut-ready fabric patterns—without juggling a patchwork of expensive CAD packages.",
-      "summaryLong": "Airships and long-duration balloons are drawing fresh interest for cargo, science, and low-energy flight, but designing them has often meant stitching together costly CAD tools, fluid-dynamics solvers, and spreadsheets. A new open-source platform called STRATOS, described in the journal SoftwareX and covered by Scienmag, aims to collapse that pipeline into one accessible program.\n\nDeveloped by Anantha Hari Arun Pedapudi, Sudarsan D. Naidu, Pranav Mittal and Manikandan Murugaiah, STRATOS is released under the MIT License on GitHub and runs on Python 3.10+ with the SALOME geometry platform. A PySide6 graphical interface walks users from blank-screen sizing and geometry generation through physical evaluation and manufacturing output, including CNC-ready fabric patterns for complex multilobe hulls and fins.\n\nThe SoftwareX paper positions STRATOS as the first piece of a broader suite that may later add computational fluid dynamics, finite element analysis, and cost modules. For a niche field where exotic hull shapes have been slow and expensive to prototype, an open tool that speaks to both aerodynamicists and fabric cutters is a practical step toward cheaper conceptual design.\n\nScienmag’s write-up emphasizes accessibility: conceptual design should not require mastery of half a dozen specialized packages. Early users still need engineering judgment—the project is a design accelerator, not an autopilot—but the open license lowers the barrier for students, startups, and labs exploring lighter-than-air vehicles.",
-      "summaryLongNote": "Verified from Scienmag’s SoftwareX coverage (~240 words).",
-      "source": "Scienmag",
-      "url": "https://scienmag.com/stratos-open-source-software-speeds-airship-design-from-hull-to-fabric/",
-      "impact": 2,
-      "images": [
-        "https://scienmag.com/wp-content/uploads/2026/09/stackrss-featured-5900.png"
-      ]
     },
     {
       "title": "Pakistan expands a sanctuary for the Indus River dolphin",

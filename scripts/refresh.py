@@ -3,9 +3,11 @@
 Refresh data/week.json with 15 uplifting stories from the prior calendar week.
 
 Monday cron/routine friendly. Prefers freely readable, accessible writeups —
-tech products/tools, space, AI-for-good, open source, conservation, community —
-over dense journal abstracts. Assigns impact 1–5. No API key required
-(DuckDuckGo HTML). Keeps prior file if too few candidates.
+tech products/tools, space, AI-for-good, open source, conservation, community,
+and art-world wins (museum restorations, free exhibitions, street art, heritage
+conservation, accessible art tech) — over dense journal abstracts, controversy,
+or auction spectacle. Assigns impact 1–5. No API key required (DuckDuckGo HTML).
+Keeps prior file if too few candidates.
 Monday deploy: run this script, then git commit + push so GitHub Pages picks up data/week.json.
 """
 
@@ -37,6 +39,9 @@ POSITIVE_QUERIES = [
     "space mission OR lunar OR satellite open data positive",
     "community restoration OR habitat return wildlife trust",
     "site:news.mongabay.com OR site:smithsonianmag.com conservation",
+    "museum restoration OR free exhibition OR heritage conservation",
+    "street art mural community OR accessible art OR digital heritage",
+    "site:tate.org.uk OR site:si.edu OR site:metmuseum.org free OR conservation",
 ]
 
 # Skip known paywall / contested / low-signal domains
@@ -66,7 +71,9 @@ POS_HINTS = re.compile(
     r"success|return|rebound|open[- ]source|vaccine|conservation|"
     r"accessibility|tool|app|gadget|satellite|lunar|space|"
     r"AI|artificial intelligence|robot|software|free|"
-    r"community|sanctuary|reintroduc|habitat)\b",
+    r"community|sanctuary|reintroduc|habitat|"
+    r"museum|exhibition|gallery|fresco|mural|heritage|"
+    r"street art|conservation studio|gigapixel)\b",
     re.I,
 )
 
@@ -74,6 +81,13 @@ TECH_HINTS = re.compile(
     r"\b(open[- ]source|software|app|AI|artificial intelligence|"
     r"robot|satellite|NASA|ESA|lunar|space|gadget|tool|"
     r"Hugging Face|GitHub|accessibility|assistive)\b",
+    re.I,
+)
+
+ART_HINTS = re.compile(
+    r"\b(museum|gallery|exhibition|fresco|mural|heritage|"
+    r"street art|conservator|restoration|gigapixel|"
+    r"Tate|Louvre|Smithsonian|Met |MOCAA|ARTIST ROOMS)\b",
     re.I,
 )
 
@@ -171,6 +185,7 @@ def score_candidate(title: str, summary: str, url: str) -> float:
     score -= 1.0 * len(NEG_HINTS.findall(blob))
     # Prefer digestible tech / accessible news over dense paper language
     score += 2.0 * len(TECH_HINTS.findall(blob))
+    score += 2.0 * len(ART_HINTS.findall(blob))
     if DENSE_HINTS.search(blob):
         score -= 2.5
     host = urllib.parse.urlparse(url).netloc.lower()
@@ -179,6 +194,8 @@ def score_candidate(title: str, summary: str, url: str) -> float:
         "smithsonianmag.com", "mongabay.com", "cam.ac.uk", "colorado.edu",
         "mit.edu", "ucr.edu", "ibm.com", "huggingface.co", "github.com",
         "wildlife", "nationaltrust", "halotrust",
+        "tate.org.uk", "si.edu", "asia.si.edu", "metmuseum.org",
+        "zeitzmocaa", "haltadefinizione", "nga.gov",
     )
     if any(h in host for h in preferred):
         score += 2.5
@@ -253,42 +270,63 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
     picked: list[dict] = []
     titles_norm: list[str] = []
     tech_count = 0
+    art_count = 0
+
+    def blob_of(story: dict) -> str:
+        return f"{story['title']} {story['summary']} {story.get('url', '')}"
+
     for sc, story in candidates:
         norm = re.sub(r"[^a-z0-9]+", "", story["title"].lower())[:48]
         if any(norm[:24] in t or t[:24] in norm for t in titles_norm):
             continue
-        is_tech = bool(TECH_HINTS.search(f"{story['title']} {story['summary']} {story['url']}"))
+        is_tech = bool(TECH_HINTS.search(blob_of(story)))
+        is_art = bool(ART_HINTS.search(blob_of(story)))
         titles_norm.append(norm)
         story["impact"] = impact_from_score(sc, len(picked))
         picked.append(story)
         if is_tech:
             tech_count += 1
+        if is_art:
+            art_count += 1
         if len(picked) >= need:
             break
-    # Second pass: if tech under-represented, try to swap in remaining tech candidates
-    if tech_count < 5:
+
+    def boost_category(hint_re: re.Pattern, count: int, want: int, label: str) -> int:
+        if count >= want:
+            return count
         for sc, story in candidates:
-            if len(picked) >= need and tech_count >= 5:
+            if count >= want:
                 break
-            if not TECH_HINTS.search(f"{story['title']} {story['summary']} {story['url']}"):
+            if not hint_re.search(blob_of(story)):
                 continue
             norm = re.sub(r"[^a-z0-9]+", "", story["title"].lower())[:48]
             if any(norm[:24] in t or t[:24] in norm for t in titles_norm):
                 continue
             if len(picked) >= need:
-                # replace lowest-impact non-tech
                 for i in range(len(picked) - 1, -1, -1):
-                    if not TECH_HINTS.search(f"{picked[i]['title']} {picked[i]['summary']}"):
-                        story["impact"] = picked[i]["impact"]
-                        picked[i] = story
-                        titles_norm[i] = norm
-                        tech_count += 1
-                        break
+                    # Prefer replacing items that are neither tech nor art
+                    pb = f"{picked[i]['title']} {picked[i]['summary']}"
+                    if hint_re.search(pb):
+                        continue
+                    if label == "tech" and ART_HINTS.search(pb):
+                        continue
+                    if label == "art" and TECH_HINTS.search(pb):
+                        continue
+                    story["impact"] = picked[i]["impact"]
+                    picked[i] = story
+                    titles_norm[i] = norm
+                    count += 1
+                    break
             else:
                 story["impact"] = impact_from_score(sc, len(picked))
                 picked.append(story)
                 titles_norm.append(norm)
-                tech_count += 1
+                count += 1
+        return count
+
+    # Second pass: keep tech and art represented alongside nature/health
+    tech_count = boost_category(TECH_HINTS, tech_count, 5, "tech")
+    art_count = boost_category(ART_HINTS, art_count, 2, "art")
     return picked
 
 
