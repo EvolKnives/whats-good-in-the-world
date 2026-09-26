@@ -1,6 +1,6 @@
 {
   "weekOf": "2026-09-22",
-  "updatedAt": "2026-09-26T10:46:39Z",
+  "updatedAt": "2026-09-26T11:08:16Z",
   "stories": [
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -95,7 +95,7 @@
       "url": "https://www.nature.com/articles/s41598-026-65437-0",
       "impact": 4,
       "images": [
-        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.webp",
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.jpg",
         "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
@@ -152,7 +152,7 @@
       "url": "https://www.smithsonianmag.com/smart-news/in-a-first-sea-turtles-were-spotted-nesting-on-the-us-west-coast-scientists-say-the-super-el-nino-could-have-brought-them-there-180989574/",
       "impact": 3,
       "images": [
-        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.webp"
+        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.jpg"
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
@@ -308,7 +308,7 @@
       "url": "https://www.nature.com/articles/s41598-026-65437-0",
       "impact": 4,
       "images": [
-        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.webp",
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.jpg",
         "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
@@ -365,7 +365,7 @@
       "url": "https://www.smithsonianmag.com/smart-news/in-a-first-sea-turtles-were-spotted-nesting-on-the-us-west-coast-scientists-say-the-super-el-nino-could-have-brought-them-there-180989574/",
       "impact": 3,
       "images": [
-        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.webp"
+        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.jpg"
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
@@ -471,7 +471,7 @@
       "url": "https://coastalscience.noaa.gov/news/new-version-of-wave-exposure-tool-now-publicly-available/",
       "impact": 4,
       "images": [
-        "images/noaa-wemo-open-source-r-0.jpg"
+        "images/noaa-wemo-open-source-r-0.webp"
       ]
     },
     {
@@ -519,7 +519,7 @@
       "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=DD4CCC17-0479-3D9F-66E42DADA3CE12EF",
       "impact": 2,
       "images": [
-        "images/nps-cuyahoga-habitat-day-0.webp"
+        "images/nps-cuyahoga-habitat-day-0.jpg"
       ]
     },
     {
@@ -699,7 +699,7 @@
       "url": "https://www.uoregon.edu/news",
       "impact": 2,
       "images": [
-        "images/uoregon-research-news-0.webp"
+        "images/uoregon-research-news-0.jpg"
       ]
     },
     {
@@ -735,7 +735,7 @@
       "url": "https://huggingface.co/ibm-nasa-geospatial",
       "impact": 3,
       "images": [
-        "images/huggingface-nasa-models-0.jpg"
+        "images/huggingface-nasa-models-0.webp"
       ]
     },
     {

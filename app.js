@@ -92,6 +92,11 @@
     }
   }
 
+  function primaryImageKey(story) {
+    var imgs = storyImages(story);
+    return imgs.length ? String(imgs[0]) : "";
+  }
+
   function pickDisjointSet(pool, avoidIds, count) {
     var avoid = {};
     (avoidIds || []).forEach(function (id) {
@@ -106,10 +111,34 @@
     });
     shuffleInPlace(fresh);
     shuffleInPlace(reused);
-    var picked = fresh.slice(0, count);
-    if (picked.length < count) {
-      picked = picked.concat(reused.slice(0, count - picked.length));
+
+    // Prefer unique primary photo paths so Refresh never paints the same
+    // bytes twice on screen when the pool still has unused images.
+    var usedImg = {};
+    var picked = [];
+
+    function takePreferUnique(source) {
+      var deferred = [];
+      source.forEach(function (story) {
+        if (picked.length >= count) return;
+        var img = primaryImageKey(story);
+        if (img && usedImg[img]) {
+          deferred.push(story);
+          return;
+        }
+        if (img) usedImg[img] = true;
+        picked.push(story);
+      });
+      deferred.forEach(function (story) {
+        if (picked.length >= count) return;
+        var img = primaryImageKey(story);
+        if (img) usedImg[img] = true;
+        picked.push(story);
+      });
     }
+
+    takePreferUnique(fresh);
+    if (picked.length < count) takePreferUnique(reused);
     return picked.slice(0, count);
   }
 
