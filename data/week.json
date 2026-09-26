@@ -10,7 +10,7 @@
       "url": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/",
       "impact": 5,
       "images": [
-        "https://assets.science.nasa.gov/content/dam/science/cds/ai-for-science/mons-rumker-lro.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"
+        "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
       "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
     },
@@ -23,7 +23,7 @@
       "url": "https://www.portland.gov/bes/news/2026/9/22/environmental-services-project-earns-national-recognition-multi-benefit-flood",
       "impact": 5,
       "images": [
-        "https://www.portland.gov/sites/default/files/styles/facebook/public/2026/Springwater-Wetlands-Restoration-Project.jpg"
+        "images/portland-s-springwater-wetlands-wins-national-fl-0.webp"
       ],
       "youtube": null,
       "id": "portland-s-springwater-wetlands-wins-national-fl"
@@ -37,7 +37,7 @@
       "url": "https://chemistry.oregonstate.edu/impact/2026/09/semiconductor-nuclear-industries-poised-for-green-boost-thanks-to-chemistry",
       "impact": 4,
       "images": [
-        "https://chemistry.oregonstate.edu/sites/chemistry.oregonstate.edu/files/styles/2000_x_1100/public/2026-09/edit-May-Nyman-033.jpg?h=3f4d8c7e&itok=4_Lah4sV"
+        "images/oregon-state-chemists-invent-a-greener-way-to-se-0.webp"
       ],
       "youtube": null,
       "id": "oregon-state-chemists-invent-a-greener-way-to-se"
@@ -51,7 +51,7 @@
       "url": "https://www.opb.org/article/2026/09/21/pacific-northwest-monarch-butterflies-migrating-app-tracker/",
       "impact": 4,
       "images": [
-        "https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/CHGPKGTPUZBZ7O35ZJMS5KXUVY.jpg?auth=8a723cf3335ea334e8def18e5c9ef35d43708b43d28cfd4834ac25f41ac9d618&width=1200&height=675&smart=true"
+        "images/portland-monarchs-get-digital-trackers-you-can-f-0.webp"
       ],
       "youtube": null,
       "id": "portland-monarchs-get-digital-trackers-you-can-f"
@@ -65,8 +65,8 @@
       "url": "https://news.ucr.edu/articles/2026/09/24/machine-learning-helps-identify-chemicals-repel-honey-bees-pesticides",
       "impact": 4,
       "images": [
-        "https://news.ucr.edu/sites/default/files/2026-06/yu-fang-photo.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Apis_mellifera_-_Carduus_crispus_-_Keila.jpg/1280px-Apis_mellifera_-_Carduus_crispus_-_Keila.jpg"
+        "images/ai-helps-find-scents-that-steer-bees-away-from-p-0.webp",
+        "images/ai-helps-find-scents-that-steer-bees-away-from-p-1.webp"
       ],
       "youtube": null,
       "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
@@ -80,8 +80,8 @@
       "url": "https://wildnet.org/news/new-partnership-paves-the-way-for-reintroducing-sea-otters-to-oregon/",
       "impact": 4,
       "images": [
-        "https://wildnet.org/wp-content/uploads/Picture1-1.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sea_otter_cropped.jpg/1280px-Sea_otter_cropped.jpg"
+        "images/partners-launch-research-to-bring-sea-otters-bac-0.webp",
+        "images/partners-launch-research-to-bring-sea-otters-bac-1.webp"
       ],
       "youtube": null,
       "id": "partners-launch-research-to-bring-sea-otters-bac"
@@ -95,8 +95,8 @@
       "url": "https://www.nature.com/articles/s41598-026-65437-0",
       "impact": 4,
       "images": [
-        "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-026-65437-0/MediaObjects/41598_2026_65437_Fig1_HTML.png",
-        "https://caltrout.org/wp-content/uploads/2026/09/Blog-Post-Featured-Photo-9.png"
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.webp",
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
       "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
@@ -110,7 +110,7 @@
       "url": "https://www.getty.edu/news/getty-celebrates-long-awaited-west-coast-debut-of-reynolds-portrait-of-mai/",
       "impact": 3,
       "images": [
-        "https://media.getty.edu/iiif/image/8cf955f2-a5ad-4220-a5ef-984677366b0c/0,1550,11795,6175/1500,785/0/default.jpg"
+        "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
       ],
       "youtube": null,
       "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
@@ -124,7 +124,7 @@
       "url": "https://caltrout.org/news/the-barrier-is-gone-iron-canyon-fish-passage-project-complete-on-otakim-sewi-big-chico-creek/",
       "impact": 3,
       "images": [
-        "https://caltrout.org/wp-content/uploads/2026/09/Untitled-design-11-1.jpg"
+        "images/iron-canyon-fish-passage-reopens-8-5-miles-of-co-0.webp"
       ],
       "youtube": null,
       "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
@@ -138,7 +138,7 @@
       "url": "https://www.colorado.edu/ecee/open-source-coding-platform-makes-radar-technology-accessible-scientists-worldwide",
       "impact": 3,
       "images": [
-        "https://www.colorado.edu/ecee/sites/default/files/2026-08/Nicole_Bienert_Lab_20260414_JMP_148.jpg"
+        "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
       ],
       "youtube": null,
       "id": "open-source-orca-turns-everyday-radios-into-scie"
@@ -152,7 +152,7 @@
       "url": "https://www.smithsonianmag.com/smart-news/in-a-first-sea-turtles-were-spotted-nesting-on-the-us-west-coast-scientists-say-the-super-el-nino-could-have-brought-them-there-180989574/",
       "impact": 3,
       "images": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Habalikhati_Island_Turtle_Site.jpg/1280px-Habalikhati_Island_Turtle_Site.jpg"
+        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.webp"
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
@@ -166,7 +166,7 @@
       "url": "https://beecityusa.org/oregons-new-pollinator-conservation-strategy-prioritizes-actions-across-the-state/",
       "impact": 3,
       "images": [
-        "https://beecityusa.org/wp-content/uploads/2026/09/Coastal-greenish-blue-butterflies-OR-c.MollyMartinXS.jpg"
+        "images/xerces-maps-a-statewide-oregon-pollinator-conser-0.jpg"
       ],
       "youtube": null,
       "id": "xerces-maps-a-statewide-oregon-pollinator-conser"
@@ -180,7 +180,7 @@
       "url": "https://nmaahc.si.edu/events/welcome-home-10th-anniversary-community-weekend-museum",
       "impact": 3,
       "images": [
-        "https://nmaahc.si.edu/sites/default/files/event-images/2026-09/DgDlYHkWGQIYzLh3aauAQz0b.jpg"
+        "images/smithsonian-s-african-american-history-museum-ma-0.webp"
       ],
       "youtube": null,
       "id": "smithsonian-s-african-american-history-museum-ma"
@@ -194,8 +194,8 @@
       "url": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
       "impact": 3,
       "images": [
-        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-cover.jpg",
-        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-Piattaforma1.jpg"
+        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-0.webp",
+        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-1.webp"
       ],
       "id": "free-digital-twin-lets-anyone-explore-assisi-s-g"
     },
@@ -208,7 +208,7 @@
       "url": "https://www.who.int/southeastasia/news/detail/05-09-2026-thailand-verified-for-eliminating-rubella-as-a-public-health-problem",
       "impact": 3,
       "images": [
-        "https://cdn.who.int/media/images/default-source/south-east-asia-(searo)/countries/thailand/happy-face-of-child-at-thailand-border.tmb-1200v.jpg?sfvrsn=90d2259c_1"
+        "images/thailand-eliminates-rubella-as-a-public-health-p-0.webp"
       ],
       "youtube": null,
       "id": "thailand-eliminates-rubella-as-a-public-health-p"
@@ -223,7 +223,7 @@
       "url": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/",
       "impact": 5,
       "images": [
-        "https://assets.science.nasa.gov/content/dam/science/cds/ai-for-science/mons-rumker-lro.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"
+        "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
       "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
     },
@@ -236,7 +236,7 @@
       "url": "https://www.portland.gov/bes/news/2026/9/22/environmental-services-project-earns-national-recognition-multi-benefit-flood",
       "impact": 5,
       "images": [
-        "https://www.portland.gov/sites/default/files/styles/facebook/public/2026/Springwater-Wetlands-Restoration-Project.jpg"
+        "images/portland-s-springwater-wetlands-wins-national-fl-0.webp"
       ],
       "youtube": null,
       "id": "portland-s-springwater-wetlands-wins-national-fl"
@@ -250,7 +250,7 @@
       "url": "https://chemistry.oregonstate.edu/impact/2026/09/semiconductor-nuclear-industries-poised-for-green-boost-thanks-to-chemistry",
       "impact": 4,
       "images": [
-        "https://chemistry.oregonstate.edu/sites/chemistry.oregonstate.edu/files/styles/2000_x_1100/public/2026-09/edit-May-Nyman-033.jpg?h=3f4d8c7e&itok=4_Lah4sV"
+        "images/oregon-state-chemists-invent-a-greener-way-to-se-0.webp"
       ],
       "youtube": null,
       "id": "oregon-state-chemists-invent-a-greener-way-to-se"
@@ -264,7 +264,7 @@
       "url": "https://www.opb.org/article/2026/09/21/pacific-northwest-monarch-butterflies-migrating-app-tracker/",
       "impact": 4,
       "images": [
-        "https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/CHGPKGTPUZBZ7O35ZJMS5KXUVY.jpg?auth=8a723cf3335ea334e8def18e5c9ef35d43708b43d28cfd4834ac25f41ac9d618&width=1200&height=675&smart=true"
+        "images/portland-monarchs-get-digital-trackers-you-can-f-0.webp"
       ],
       "youtube": null,
       "id": "portland-monarchs-get-digital-trackers-you-can-f"
@@ -278,8 +278,8 @@
       "url": "https://news.ucr.edu/articles/2026/09/24/machine-learning-helps-identify-chemicals-repel-honey-bees-pesticides",
       "impact": 4,
       "images": [
-        "https://news.ucr.edu/sites/default/files/2026-06/yu-fang-photo.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Apis_mellifera_-_Carduus_crispus_-_Keila.jpg/1280px-Apis_mellifera_-_Carduus_crispus_-_Keila.jpg"
+        "images/ai-helps-find-scents-that-steer-bees-away-from-p-0.webp",
+        "images/ai-helps-find-scents-that-steer-bees-away-from-p-1.webp"
       ],
       "youtube": null,
       "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
@@ -293,8 +293,8 @@
       "url": "https://wildnet.org/news/new-partnership-paves-the-way-for-reintroducing-sea-otters-to-oregon/",
       "impact": 4,
       "images": [
-        "https://wildnet.org/wp-content/uploads/Picture1-1.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sea_otter_cropped.jpg/1280px-Sea_otter_cropped.jpg"
+        "images/partners-launch-research-to-bring-sea-otters-bac-0.webp",
+        "images/partners-launch-research-to-bring-sea-otters-bac-1.webp"
       ],
       "youtube": null,
       "id": "partners-launch-research-to-bring-sea-otters-bac"
@@ -308,8 +308,8 @@
       "url": "https://www.nature.com/articles/s41598-026-65437-0",
       "impact": 4,
       "images": [
-        "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41598-026-65437-0/MediaObjects/41598_2026_65437_Fig1_HTML.png",
-        "https://caltrout.org/wp-content/uploads/2026/09/Blog-Post-Featured-Photo-9.png"
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-0.webp",
+        "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
       "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
@@ -323,7 +323,7 @@
       "url": "https://www.getty.edu/news/getty-celebrates-long-awaited-west-coast-debut-of-reynolds-portrait-of-mai/",
       "impact": 3,
       "images": [
-        "https://media.getty.edu/iiif/image/8cf955f2-a5ad-4220-a5ef-984677366b0c/0,1550,11795,6175/1500,785/0/default.jpg"
+        "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
       ],
       "youtube": null,
       "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
@@ -337,7 +337,7 @@
       "url": "https://caltrout.org/news/the-barrier-is-gone-iron-canyon-fish-passage-project-complete-on-otakim-sewi-big-chico-creek/",
       "impact": 3,
       "images": [
-        "https://caltrout.org/wp-content/uploads/2026/09/Untitled-design-11-1.jpg"
+        "images/iron-canyon-fish-passage-reopens-8-5-miles-of-co-0.webp"
       ],
       "youtube": null,
       "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
@@ -351,7 +351,7 @@
       "url": "https://www.colorado.edu/ecee/open-source-coding-platform-makes-radar-technology-accessible-scientists-worldwide",
       "impact": 3,
       "images": [
-        "https://www.colorado.edu/ecee/sites/default/files/2026-08/Nicole_Bienert_Lab_20260414_JMP_148.jpg"
+        "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
       ],
       "youtube": null,
       "id": "open-source-orca-turns-everyday-radios-into-scie"
@@ -365,7 +365,7 @@
       "url": "https://www.smithsonianmag.com/smart-news/in-a-first-sea-turtles-were-spotted-nesting-on-the-us-west-coast-scientists-say-the-super-el-nino-could-have-brought-them-there-180989574/",
       "impact": 3,
       "images": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Habalikhati_Island_Turtle_Site.jpg/1280px-Habalikhati_Island_Turtle_Site.jpg"
+        "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.webp"
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
@@ -379,7 +379,7 @@
       "url": "https://beecityusa.org/oregons-new-pollinator-conservation-strategy-prioritizes-actions-across-the-state/",
       "impact": 3,
       "images": [
-        "https://beecityusa.org/wp-content/uploads/2026/09/Coastal-greenish-blue-butterflies-OR-c.MollyMartinXS.jpg"
+        "images/xerces-maps-a-statewide-oregon-pollinator-conser-0.jpg"
       ],
       "youtube": null,
       "id": "xerces-maps-a-statewide-oregon-pollinator-conser"
@@ -393,7 +393,7 @@
       "url": "https://nmaahc.si.edu/events/welcome-home-10th-anniversary-community-weekend-museum",
       "impact": 3,
       "images": [
-        "https://nmaahc.si.edu/sites/default/files/event-images/2026-09/DgDlYHkWGQIYzLh3aauAQz0b.jpg"
+        "images/smithsonian-s-african-american-history-museum-ma-0.webp"
       ],
       "youtube": null,
       "id": "smithsonian-s-african-american-history-museum-ma"
@@ -407,8 +407,8 @@
       "url": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
       "impact": 3,
       "images": [
-        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-cover.jpg",
-        "https://www.haltadefinizione.com/assets/Uploads/Preserving-Assisi-Piattaforma1.jpg"
+        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-0.webp",
+        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-1.webp"
       ],
       "id": "free-digital-twin-lets-anyone-explore-assisi-s-g"
     },
@@ -421,7 +421,7 @@
       "url": "https://www.who.int/southeastasia/news/detail/05-09-2026-thailand-verified-for-eliminating-rubella-as-a-public-health-problem",
       "impact": 3,
       "images": [
-        "https://cdn.who.int/media/images/default-source/south-east-asia-(searo)/countries/thailand/happy-face-of-child-at-thailand-border.tmb-1200v.jpg?sfvrsn=90d2259c_1"
+        "images/thailand-eliminates-rubella-as-a-public-health-p-0.webp"
       ],
       "youtube": null,
       "id": "thailand-eliminates-rubella-as-a-public-health-p"
@@ -435,7 +435,7 @@
       "url": "https://science.nasa.gov/science-research/ai-foundation-model-in-orbit/",
       "impact": 5,
       "images": [
-        "https://science.nasa.gov/wp-content/uploads/2026/05/iss072e572850orig.jpg"
+        "images/nasa-prithvi-ai-in-orbit-0.webp"
       ]
     },
     {
@@ -447,7 +447,7 @@
       "url": "https://science.nasa.gov/earth/nasa-is-helping-bring-giant-tortoises-back-to-the-galapagos/",
       "impact": 5,
       "images": [
-        "https://science.nasa.gov/wp-content/uploads/2026/02/galapagos-tortoise-release-floreana.jpg"
+        "images/nasa-galapagos-tortoises-satellite-0.webp"
       ]
     },
     {
@@ -459,7 +459,7 @@
       "url": "https://www.fisheries.noaa.gov/feature-story/system-wide-effort-restore-floridas-indian-river-lagoon",
       "impact": 4,
       "images": [
-        "https://www.fisheries.noaa.gov/s3/2026-02/2000x1333-IndianRiverBeautyShot-IRLC.jpg"
+        "images/noaa-indian-river-lagoon-restore-0.webp"
       ]
     },
     {
@@ -471,7 +471,7 @@
       "url": "https://coastalscience.noaa.gov/news/new-version-of-wave-exposure-tool-now-publicly-available/",
       "impact": 4,
       "images": [
-        "https://coastalscience.noaa.gov/wp-content/uploads/2026/07/wemo-wave-height-beaufort.jpg"
+        "images/noaa-wemo-open-source-r-0.jpg"
       ]
     },
     {
@@ -483,7 +483,7 @@
       "url": "https://portlandtribune.com/2026/09/23/oregon-zoo-bird-may-soon-return-to-the-wild-in-rare-conservation-effort/",
       "impact": 4,
       "images": [
-        "https://www.oregonzoo.org/sites/default/files/styles/hero/public/animals/sihek-guam-kingfisher.jpg"
+        "images/oregon-zoo-sihek-palmyra-0.webp"
       ]
     },
     {
@@ -495,7 +495,7 @@
       "url": "https://www.metmuseum.org/en/press-releases/3-d-models-announcement-2026",
       "impact": 4,
       "images": [
-        "https://images.metmuseum.org/CRDImages/dp/original/DT1567.jpg"
+        "images/met-3d-models-open-access-0.webp"
       ]
     },
     {
@@ -507,7 +507,7 @@
       "url": "https://www.metmuseum.org/perspectives/gilded-predator",
       "impact": 3,
       "images": [
-        "https://images.metmuseum.org/CRDImages/ao/original/DT4655.jpg"
+        "images/met-gilded-predator-moche-0.webp"
       ]
     },
     {
@@ -519,7 +519,7 @@
       "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=DD4CCC17-0479-3D9F-66E42DADA3CE12EF",
       "impact": 2,
       "images": [
-        "https://www.nps.gov/common/uploads/grid_builder/cuva/crop16_9/DD4CCC17-0479-3D9F-66E42DADA3CE12EF.jpg"
+        "images/nps-cuyahoga-habitat-day-0.webp"
       ]
     },
     {
@@ -531,7 +531,7 @@
       "url": "https://www.nps.gov/mabi/planyourvisit/forest-fest.htm",
       "impact": 2,
       "images": [
-        "https://www.nps.gov/common/uploads/cropped_image/primary/F6B8C3E6-1DD8-B71B-0B7E8E8E8E8E8E8E.jpg"
+        "images/marsh-billings-forest-fest-0.webp"
       ]
     },
     {
@@ -543,7 +543,7 @@
       "url": "https://www.usgs.gov/landsat-missions/landsat-data-access",
       "impact": 3,
       "images": [
-        "https://www.usgs.gov/sites/default/files/styles/content_block_large/public/2023-02/landsat-9-first-light.jpg"
+        "images/usgs-landsat-next-free-data-0.webp"
       ]
     },
     {
@@ -555,7 +555,7 @@
       "url": "https://www.fws.gov/volunteer",
       "impact": 2,
       "images": [
-        "https://www.fws.gov/sites/default/files/styles/wide_l/public/homepage-hero/refuge-volunteer.jpg"
+        "images/fws-refuge-volunteer-habitat-0.webp"
       ]
     },
     {
@@ -567,7 +567,7 @@
       "url": "https://www.si.edu/openaccess",
       "impact": 3,
       "images": [
-        "https://www.si.edu/sites/default/files/newsroom/open_access_hero.jpg"
+        "images/smithsonian-open-access-0.webp"
       ]
     },
     {
@@ -579,7 +579,7 @@
       "url": "https://eyes.nasa.gov/",
       "impact": 3,
       "images": [
-        "https://eyes.nasa.gov/apps/earth/images/social/eyes-earth.jpg"
+        "images/nasa-eyes-free-solar-system-0.webp"
       ]
     },
     {
@@ -591,7 +591,7 @@
       "url": "https://www.opb.org/news/science/",
       "impact": 2,
       "images": [
-        "https://www.opb.org/resizer/v2/https%3A%2F%2Fopb-img.s3.us-west-2.amazonaws.com%2Fdefault-social.jpg"
+        "images/opb-oregon-science-desk-0.webp"
       ]
     },
     {
@@ -603,7 +603,7 @@
       "url": "https://news.oregonstate.edu/",
       "impact": 2,
       "images": [
-        "https://news.oregonstate.edu/sites/news.oregonstate.edu/files/osu-news-default.jpg"
+        "images/oregon-state-newsroom-free-0.webp"
       ]
     },
     {
@@ -615,7 +615,7 @@
       "url": "https://www.fisheries.noaa.gov/topic/habitat-conservation",
       "impact": 2,
       "images": [
-        "https://www.fisheries.noaa.gov/s3/styles/original/s3/2022-07/habitat-hero.jpg"
+        "images/noaa-fisheries-habitat-stories-0.webp"
       ]
     },
     {
@@ -627,7 +627,7 @@
       "url": "https://www.nga.gov/",
       "impact": 3,
       "images": [
-        "https://www.nga.gov/content/dam/ngaweb/features/homepage/west-building-exterior.jpg"
+        "images/nga-always-free-admission-0.webp"
       ]
     },
     {
@@ -639,7 +639,7 @@
       "url": "https://www.getty.edu/about/open-content-program/",
       "impact": 3,
       "images": [
-        "https://www.getty.edu/news/wp-content/uploads/2024/getty-center-aerial.jpg"
+        "images/getty-open-content-0.webp"
       ]
     },
     {
@@ -651,7 +651,7 @@
       "url": "https://code.gov/",
       "impact": 2,
       "images": [
-        "https://code.gov/assets/img/og.jpg"
+        "images/code-gov-open-source-usa-0.webp"
       ]
     },
     {
@@ -663,7 +663,7 @@
       "url": "https://data.gov/",
       "impact": 2,
       "images": [
-        "https://data.gov/app/themes/roots-nextdatagov/assets/img/logo.svg"
+        "images/data-gov-open-datasets-0.webp"
       ]
     },
     {
@@ -675,7 +675,7 @@
       "url": "https://www.loc.gov/exhibitions/",
       "impact": 2,
       "images": [
-        "https://www.loc.gov/static/images/favicons/share-twitter.jpg"
+        "images/library-congress-free-exhibits-0.webp"
       ]
     },
     {
@@ -687,7 +687,7 @@
       "url": "https://www.earthdata.nasa.gov/",
       "impact": 3,
       "images": [
-        "https://www.earthdata.nasa.gov/s3fs-public/2022-11/earthdata-home.jpg"
+        "images/nasa-earthdata-open-0.webp"
       ]
     },
     {
@@ -699,7 +699,7 @@
       "url": "https://www.uoregon.edu/news",
       "impact": 2,
       "images": [
-        "https://www.uoregon.edu/sites/default/files/2023-01/uo-campus-hero.jpg"
+        "images/uoregon-research-news-0.webp"
       ]
     },
     {
@@ -711,7 +711,7 @@
       "url": "https://birdallianceoregon.org/",
       "impact": 2,
       "images": [
-        "https://birdallianceoregon.org/wp-content/uploads/bird-alliance-oregon-hero.jpg"
+        "images/bird-alliance-oregon-0.webp"
       ]
     },
     {
@@ -723,7 +723,7 @@
       "url": "https://www.xerces.org/",
       "impact": 3,
       "images": [
-        "https://www.xerces.org/sites/default/files/styles/card/public/2022-xerces-hero.jpg"
+        "images/xerces-pollinator-resources-0.webp"
       ]
     },
     {
@@ -735,7 +735,7 @@
       "url": "https://huggingface.co/ibm-nasa-geospatial",
       "impact": 3,
       "images": [
-        "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+        "images/huggingface-nasa-models-0.jpg"
       ]
     },
     {
@@ -747,7 +747,7 @@
       "url": "https://www.esa.int/Applications/Observing_the_Earth",
       "impact": 2,
       "images": [
-        "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2020/06/copernicus_sentinels/22056939-1-eng-GB/Copernicus_Sentinels.jpg"
+        "images/esa-earth-observation-open-0.webp"
       ]
     }
   ]

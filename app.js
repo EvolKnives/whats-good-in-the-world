@@ -226,98 +226,161 @@
     }, reduceMotion ? 0 : 300);
   }
 
-  function imageFigure(src, alt) {
-    var figure = document.createElement("figure");
-    figure.className = "story__figure story__figure--zoom";
-    figure.setAttribute("role", "button");
-    figure.tabIndex = 0;
-    figure.setAttribute("aria-label", "View photo larger");
-    var img = document.createElement("img");
-    img.src = src;
-    img.alt = alt || "";
-    img.width = 1200;
-    img.height = 750;
-    img.loading = "lazy";
-    img.decoding = "async";
-    img.referrerPolicy = "no-referrer";
-    img.addEventListener("error", function onErr() {
-      img.removeEventListener("error", onErr);
-      figure.classList.remove("story__figure--zoom");
-      figure.removeAttribute("role");
-      figure.removeAttribute("tabIndex");
-      figure.removeAttribute("aria-label");
-      figure.classList.add("story__figure--placeholder");
-      figure.textContent = "";
-      img.remove();
+  function isLocalImage(src) {
+    return typeof src === "string" && !/^https?:\/\//i.test(src);
+  }
+
+  function storyImages(story) {
+    return Array.isArray(story.images) ? story.images.filter(Boolean) : [];
+  }
+
+  function preloadStoryImages(stories, limit) {
+    var list = (stories || []).slice(0, limit || 4);
+    var jobs = [];
+    list.forEach(function (story) {
+      var src = storyImages(story)[0];
+      if (!src) return;
+      jobs.push(
+        new Promise(function (resolve) {
+          var img = new Image();
+          img.decoding = "async";
+          img.onload = function () {
+            resolve(src);
+          };
+          img.onerror = function () {
+            resolve(null);
+          };
+          img.src = src;
+        })
+      );
     });
+    return Promise.all(jobs);
+  }
+
+  function bindLightbox(el, src, alt) {
     function openThis(e) {
       if (e) e.preventDefault();
       openLightbox(src, alt || "");
     }
-    figure.addEventListener("click", openThis);
-    figure.addEventListener("keydown", function (e) {
+    el.addEventListener("click", openThis);
+    el.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         openThis(e);
       }
     });
-    figure.appendChild(img);
-    return figure;
   }
 
-  function youtubeEmbed(id, title, large) {
-    var wrap = document.createElement("div");
-    wrap.className = "story__video" + (large ? " story__video--large" : "");
-    var iframe = document.createElement("iframe");
-    iframe.src =
-      "https://www.youtube-nocookie.com/embed/" +
-      encodeURIComponent(id) +
-      "?rel=0&modestbranding=1";
-    iframe.title = (title || "Story") + " — video";
-    iframe.loading = "lazy";
-    iframe.setAttribute(
-      "allow",
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  function makePhoto(src, alt, opts) {
+    opts = opts || {};
+    var img = document.createElement("img");
+    img.className = "story__photo";
+    img.alt = alt || "";
+    img.width = 1200;
+    img.height = 750;
+    img.decoding = "async";
+    if (opts.eager) {
+      img.loading = "eager";
+      img.setAttribute("fetchpriority", "high");
+    } else {
+      img.loading = "lazy";
+    }
+    if (!isLocalImage(src)) {
+      img.referrerPolicy = "no-referrer";
+    }
+    img.classList.add("is-loading");
+    function markLoaded() {
+      img.classList.remove("is-loading");
+      img.classList.add("is-loaded");
+    }
+    if (img.complete && img.naturalWidth) {
+      markLoaded();
+    } else {
+      img.addEventListener("load", markLoaded, { once: true });
+    }
+    img.addEventListener(
+      "error",
+      function onErr() {
+        img.removeEventListener("error", onErr);
+        img.classList.remove("is-loading");
+        img.classList.add("is-error");
+        img.removeAttribute("src");
+      },
+      { once: true }
     );
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = "strict-origin-when-cross-origin";
-    wrap.appendChild(iframe);
-    return wrap;
+    img.src = src;
+    return img;
   }
 
-  function renderMedia(story, tier) {
-    var media = document.createElement("div");
-    media.className = "story__media";
-    var yt = youtubeId(story.youtube);
-    var images = Array.isArray(story.images) ? story.images.filter(Boolean) : [];
-
-    if (yt) {
-      media.appendChild(
-        youtubeEmbed(yt, story.title, tier === "hero" || tier === "featured")
-      );
-      if (images[0] && tier === "hero") {
-        media.appendChild(imageFigure(images[0], story.title));
-      }
-      return media;
-    }
-
-    if (images.length) {
-      var max = tier === "hero" ? 2 : 1;
-      var slice = images.slice(0, max);
-      if (slice.length > 1) media.classList.add("story__media--pair");
-      slice.forEach(function (src) {
-        media.appendChild(imageFigure(src, story.title));
+  function makeShareButton(story, id) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "share-btn share-btn--story";
+    btn.setAttribute("aria-label", "Share this story");
+    btn.textContent = "Share";
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      sharePayload({
+        title: story.title || SITE_TITLE,
+        text: (story.summary || "").slice(0, 180),
+        url: pageUrl(id)
       });
-      return media;
+    });
+    return btn;
+  }
+
+  function renderHeroCard(story, tier, priorityIndex, id) {
+    var card = document.createElement("div");
+    card.className = "story__card";
+    var images = storyImages(story);
+    var src = images[0];
+    var eager = typeof priorityIndex === "number" && priorityIndex < 4;
+
+    if (src) {
+      var photo = makePhoto(src, story.title || "", { eager: eager });
+      card.appendChild(photo);
+      card.classList.add("story__card--zoom");
+      var zoomHit = document.createElement("button");
+      zoomHit.type = "button";
+      zoomHit.className = "story__zoom-hit";
+      zoomHit.setAttribute("aria-label", "View photo larger");
+      bindLightbox(zoomHit, src, story.title || "");
+      card.appendChild(zoomHit);
+    } else {
+      card.classList.add("story__card--placeholder");
     }
 
-    var ph = document.createElement("figure");
-    ph.className = "story__figure story__figure--placeholder";
-    media.appendChild(ph);
-    return media;
+    var wash = document.createElement("div");
+    wash.className = "story__wash";
+    wash.setAttribute("aria-hidden", "true");
+    card.appendChild(wash);
+
+    var overlay = document.createElement("div");
+    overlay.className = "story__overlay";
+
+    var metaRow = document.createElement("div");
+    metaRow.className = "story__meta-row";
+    var meta = document.createElement("p");
+    meta.className = "story__meta";
+    meta.textContent = story.source || "Good news";
+    metaRow.appendChild(meta);
+    var share = makeShareButton(story, id);
+    share.classList.add("share-btn--on-card");
+    metaRow.appendChild(share);
+    overlay.appendChild(metaRow);
+
+    var title = document.createElement("h2");
+    title.className = "story__title";
+    title.textContent = story.title || "Untitled";
+    overlay.appendChild(title);
+
+    card.appendChild(overlay);
+    return card;
   }
 
   function closeOpen() {
+
     if (!openArticle) return;
     openArticle.classList.remove("is-expanded");
     var btn = openArticle.querySelector(".story__more");
@@ -349,24 +412,6 @@
     }
   }
 
-  function makeShareButton(story, id) {
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "share-btn share-btn--story";
-    btn.setAttribute("aria-label", "Share this story");
-    btn.textContent = "Share";
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      sharePayload({
-        title: story.title || SITE_TITLE,
-        text: (story.summary || "").slice(0, 180),
-        url: pageUrl(id)
-      });
-    });
-    return btn;
-  }
-
   function renderStory(story, index) {
     var impact = Math.max(1, Math.min(5, Number(story.impact) || 3));
     var tier = story.tier || tierFromImpact(impact);
@@ -376,24 +421,10 @@
     article.id = id;
     article.dataset.impact = String(impact);
 
-    article.appendChild(renderMedia(story, tier));
+    article.appendChild(renderHeroCard(story, tier, index, id));
 
     var body = document.createElement("div");
     body.className = "story__body";
-
-    var metaRow = document.createElement("div");
-    metaRow.className = "story__meta-row";
-    var meta = document.createElement("p");
-    meta.className = "story__meta";
-    meta.textContent = story.source || "Source";
-    metaRow.appendChild(meta);
-    metaRow.appendChild(makeShareButton(story, id));
-    body.appendChild(metaRow);
-
-    var title = document.createElement("h2");
-    title.className = "story__title";
-    title.textContent = story.title || "Untitled";
-    body.appendChild(title);
 
     if (story.summary) {
       var summary = document.createElement("p");
@@ -648,44 +679,53 @@
     setRefreshBusy(true);
     storiesEl.setAttribute("aria-busy", "true");
 
-    // Brief busy state so the tap feels responsive without waiting on network
-    window.setTimeout(function () {
-      var avoid = displayedStories.map(function (s, i) {
-        return stableStoryKey(s, i);
+    var avoid = displayedStories.map(function (s, i) {
+      return stableStoryKey(s, i);
+    });
+    var seen = readSeenIds();
+    var avoidSet = avoid.slice();
+    if (storyPool.length >= SET_SIZE * 2) {
+      seen.forEach(function (id) {
+        if (avoidSet.indexOf(id) === -1) avoidSet.push(id);
       });
-      var seen = readSeenIds();
-      // Prefer avoiding currently shown; also nudge away from recently seen when pool allows
-      var avoidSet = avoid.slice();
-      if (storyPool.length >= SET_SIZE * 2) {
-        seen.forEach(function (id) {
-          if (avoidSet.indexOf(id) === -1) avoidSet.push(id);
+    }
+
+    var next = pickDisjointSet(storyPool, avoidSet, SET_SIZE);
+    if (next.length < SET_SIZE) {
+      next = pickDisjointSet(storyPool, avoid, SET_SIZE);
+    }
+
+    var settle = reduceMotion ? 0 : 80;
+    var preloadWait = preloadStoryImages(sortStories(next), 4);
+
+    Promise.resolve(preloadWait)
+      .catch(function () {
+        /* ignore preload failures */
+      })
+      .then(function () {
+        return new Promise(function (resolve) {
+          window.setTimeout(resolve, settle);
         });
-      }
+      })
+      .then(function () {
+        var ok = renderWeek(
+          { weekOf: weekMeta.weekOf, stories: next },
+          next
+        );
+        storiesEl.setAttribute("aria-busy", "false");
+        setRefreshBusy(false);
 
-      var next = pickDisjointSet(storyPool, avoidSet, SET_SIZE);
-      // If session avoid exhausted the pool, fall back to current-only avoid
-      if (next.length < SET_SIZE) {
-        next = pickDisjointSet(storyPool, avoid, SET_SIZE);
-      }
+        if (!ok) {
+          showToast("Couldn’t refresh. Try again.");
+          return;
+        }
 
-      var ok = renderWeek(
-        { weekOf: weekMeta.weekOf, stories: next },
-        next
-      );
-      storiesEl.setAttribute("aria-busy", "false");
-      setRefreshBusy(false);
-
-      if (!ok) {
-        showToast("Couldn’t refresh. Try again.");
-        return;
-      }
-
-      scrollToTop();
-      if (history.replaceState) {
-        history.replaceState(null, "", pageUrl());
-      }
-      showToast("Fifteen new stories");
-    }, reduceMotion ? 0 : 120);
+        scrollToTop();
+        if (history.replaceState) {
+          history.replaceState(null, "", pageUrl());
+        }
+        showToast("Fifteen new stories");
+      });
   }
 
   function loadWeek() {
