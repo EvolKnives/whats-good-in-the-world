@@ -228,7 +228,7 @@
       return navigator
         .share(payload)
         .then(function () {
-          /* user completed or dismissed — no toast needed */
+          showToast("Shared");
         })
         .catch(function (err) {
           if (err && err.name === "AbortError") return;

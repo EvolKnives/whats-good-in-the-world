@@ -105,4 +105,5 @@ Tap **Read more** on a card for a smooth in-page disclosure (`summaryLong`). **R
 
 - Header **Share** shares the week URL (`navigator.share` on iOS Safari; otherwise copies the link).
 - Each story has a quiet **Share** control that deep-links with `#story-…`.
+- Confirmation toast: **Shared** after native share, **Link copied** on clipboard fallback.
 - No social icon rows — one sparse pill button only.

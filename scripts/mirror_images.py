@@ -33,7 +33,7 @@ ALTERNATES: dict[str, list[str]] = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Wetland.jpg/1280px-Wetland.jpg",
     ],
     "oregon-state-chemists-invent-a-greener-way-to-se": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Laboratory.jpg/1280px-Laboratory.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Idrossido_di_rame.jpg?width=1280",
     ],
     "portland-monarchs-get-digital-trackers-you-can-f": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Danaus_plexippus_MHNT.jpg/1280px-Danaus_plexippus_MHNT.jpg",
@@ -69,7 +69,7 @@ ALTERNATES: dict[str, list[str]] = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Assisi_Panorama.jpg/1280px-Assisi_Panorama.jpg",
     ],
     "thailand-eliminates-rubella-as-a-public-health-p": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Vaccination.jpg/1280px-Vaccination.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/MMR_vaccine.jpg?width=1280",
     ],
     "nasa-prithvi-ai-in-orbit": [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/ISS_after_completion.jpg/1280px-ISS_after_completion.jpg",
