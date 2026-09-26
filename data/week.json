@@ -28,8 +28,7 @@
           "label": "Miles traveled",
           "value": "5B+"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -48,8 +47,7 @@
         "Tech"
       ],
       "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
-      "actionLabel": "Browse open NASA–IBM models",
-      "readMinutes": 2
+      "actionLabel": "Browse open NASA–IBM models"
     },
     {
       "id": "fishlock-breaks-reign-scoring-record",
@@ -72,8 +70,7 @@
           "label": "Career goals",
           "value": "52"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -103,8 +100,7 @@
           "label": "Native plants",
           "value": "44,000"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "colorado-wildlife-overpass-cuts-collisions",
@@ -128,8 +124,7 @@
           "label": "Collision drop",
           "value": "91%"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
@@ -155,8 +150,7 @@
           "label": "Separation factor",
           "value": "33"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "osu-mina-salehi-ai-injury-award",
@@ -174,8 +168,7 @@
         "Oregon",
         "Health",
         "Tech"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -203,8 +196,7 @@
         }
       ],
       "actionUrl": "https://birdallianceoregon.org/",
-      "actionLabel": "Learn local bird & habitat tips",
-      "readMinutes": 2
+      "actionLabel": "Learn local bird & habitat tips"
     },
     {
       "id": "alabama-releases-1500-mussels-paint-rock",
@@ -228,8 +220,7 @@
           "label": "Mussels released",
           "value": "~1,500"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "AI helps find scents that steer bees away from pesticides",
@@ -250,8 +241,7 @@
         "Science",
         "Tech",
         "Climate"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "parker-solar-probe-29th-record-flyby",
@@ -279,8 +269,7 @@
           "label": "Flyby #",
           "value": "29"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -301,8 +290,7 @@
         "Oregon",
         "Climate",
         "Science"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Chinook salmon reclaim most of their historic Klamath range",
@@ -329,8 +317,7 @@
           "label": "Passed Iron Gate (2025)",
           "value": "13,310"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
@@ -355,8 +342,7 @@
           "label": "Habitat reopened",
           "value": "8.5 mi"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
@@ -376,8 +362,7 @@
         "Science",
         "Climate",
         "Achievement"
-      ],
-      "readMinutes": 2
+      ]
     }
   ],
   "pool": [
@@ -407,8 +392,7 @@
           "label": "Miles traveled",
           "value": "5B+"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -427,8 +411,7 @@
         "Tech"
       ],
       "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
-      "actionLabel": "Browse open NASA–IBM models",
-      "readMinutes": 2
+      "actionLabel": "Browse open NASA–IBM models"
     },
     {
       "id": "fishlock-breaks-reign-scoring-record",
@@ -451,8 +434,7 @@
           "label": "Career goals",
           "value": "52"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -482,8 +464,7 @@
           "label": "Native plants",
           "value": "44,000"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "colorado-wildlife-overpass-cuts-collisions",
@@ -507,8 +488,7 @@
           "label": "Collision drop",
           "value": "91%"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
@@ -534,8 +514,7 @@
           "label": "Separation factor",
           "value": "33"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "osu-mina-salehi-ai-injury-award",
@@ -553,8 +532,7 @@
         "Oregon",
         "Health",
         "Tech"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -582,8 +560,7 @@
         }
       ],
       "actionUrl": "https://birdallianceoregon.org/",
-      "actionLabel": "Learn local bird & habitat tips",
-      "readMinutes": 2
+      "actionLabel": "Learn local bird & habitat tips"
     },
     {
       "id": "alabama-releases-1500-mussels-paint-rock",
@@ -607,8 +584,7 @@
           "label": "Mussels released",
           "value": "~1,500"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "AI helps find scents that steer bees away from pesticides",
@@ -629,8 +605,7 @@
         "Science",
         "Tech",
         "Climate"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "parker-solar-probe-29th-record-flyby",
@@ -658,8 +633,7 @@
           "label": "Flyby #",
           "value": "29"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -680,8 +654,7 @@
         "Oregon",
         "Climate",
         "Science"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Chinook salmon reclaim most of their historic Klamath range",
@@ -708,8 +681,7 @@
           "label": "Passed Iron Gate (2025)",
           "value": "13,310"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
@@ -734,8 +706,7 @@
           "label": "Habitat reopened",
           "value": "8.5 mi"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
@@ -755,8 +726,7 @@
         "Science",
         "Climate",
         "Achievement"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Getty brings Reynolds’ Portrait of Mai to Los Angeles for the first time",
@@ -777,8 +747,7 @@
         "Community"
       ],
       "actionUrl": "https://www.getty.edu/visit/",
-      "actionLabel": "Plan a Getty visit",
-      "readMinutes": 2
+      "actionLabel": "Plan a Getty visit"
     },
     {
       "title": "Open-source ORCA turns everyday radios into science radars",
@@ -797,8 +766,7 @@
       "topics": [
         "Tech",
         "Science"
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "title": "Xerces maps a statewide Oregon pollinator conservation strategy",
@@ -826,8 +794,7 @@
         }
       ],
       "actionUrl": "https://beecityusa.org/oregons-new-pollinator-conservation-strategy-prioritizes-actions-across-the-state/",
-      "actionLabel": "Read the Oregon strategy",
-      "readMinutes": 2
+      "actionLabel": "Read the Oregon strategy"
     },
     {
       "title": "Smithsonian’s African American History Museum marks 10 years with a free community weekend",
@@ -849,8 +816,7 @@
         "Achievement"
       ],
       "actionUrl": "https://nmaahc.si.edu/",
-      "actionLabel": "Visit the free museum site",
-      "readMinutes": 2
+      "actionLabel": "Visit the free museum site"
     },
     {
       "title": "Free digital twin lets anyone explore Assisi’s Giotto frescoes up close",
@@ -877,8 +843,7 @@
         }
       ],
       "actionUrl": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
-      "actionLabel": "Explore Preserving Assisi",
-      "readMinutes": 2
+      "actionLabel": "Explore Preserving Assisi"
     },
     {
       "title": "Thailand eliminates rubella as a public health problem, WHO says",
@@ -903,8 +868,7 @@
           "label": "SE Asia countries verified",
           "value": "7th"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "nasa-prithvi-ai-in-orbit",
@@ -924,8 +888,7 @@
         "Climate"
       ],
       "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
-      "actionLabel": "Try open geospatial models",
-      "readMinutes": 2
+      "actionLabel": "Try open geospatial models"
     },
     {
       "id": "nasa-galapagos-tortoises-satellite",
@@ -949,8 +912,7 @@
           "label": "Tortoises released",
           "value": "158"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "noaa-indian-river-lagoon-restore",
@@ -977,8 +939,7 @@
           "label": "Projects",
           "value": "15"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "noaa-wemo-open-source-r",
@@ -998,8 +959,7 @@
         "Climate"
       ],
       "actionUrl": "https://coastalscience.noaa.gov/news/new-version-of-wave-exposure-tool-now-publicly-available/",
-      "actionLabel": "Get the free WEMo package",
-      "readMinutes": 2
+      "actionLabel": "Get the free WEMo package"
     },
     {
       "id": "oregon-zoo-sihek-palmyra",
@@ -1023,8 +983,7 @@
           "label": "Birds in human care",
           "value": "~143"
         }
-      ],
-      "readMinutes": 2
+      ]
     },
     {
       "id": "met-3d-models-open-access",
@@ -1049,8 +1008,7 @@
         }
       ],
       "actionUrl": "https://www.metmuseum.org/",
-      "actionLabel": "Explore The Met online",
-      "readMinutes": 2
+      "actionLabel": "Explore The Met online"
     },
     {
       "id": "met-gilded-predator-moche",
@@ -1069,8 +1027,7 @@
         "Science"
       ],
       "actionUrl": "https://www.metmuseum.org/perspectives/gilded-predator",
-      "actionLabel": "View the reconstruction",
-      "readMinutes": 2
+      "actionLabel": "View the reconstruction"
     },
     {
       "id": "nps-cuyahoga-habitat-day",
@@ -1089,8 +1046,7 @@
         "Climate"
       ],
       "actionUrl": "https://www.nps.gov/cuva/getinvolved/volunteer.htm",
-      "actionLabel": "Find Cuyahoga volunteer days",
-      "readMinutes": 1
+      "actionLabel": "Find Cuyahoga volunteer days"
     },
     {
       "id": "marsh-billings-forest-fest",
@@ -1107,8 +1063,7 @@
       "topics": [
         "Community",
         "Art"
-      ],
-      "readMinutes": 1
+      ]
     },
     {
       "id": "usgs-landsat-next-free-data",
@@ -1128,8 +1083,7 @@
         "Climate"
       ],
       "actionUrl": "https://www.usgs.gov/landsat-missions/landsat-data-access",
-      "actionLabel": "Access free Landsat data",
-      "readMinutes": 1
+      "actionLabel": "Access free Landsat data"
     },
     {
       "id": "fws-refuge-volunteer-habitat",
@@ -1148,8 +1102,7 @@
         "Climate"
       ],
       "actionUrl": "https://www.fws.gov/volunteer",
-      "actionLabel": "Find a refuge volunteer day",
-      "readMinutes": 1
+      "actionLabel": "Find a refuge volunteer day"
     },
     {
       "id": "smithsonian-open-access",
@@ -1169,8 +1122,7 @@
         "Community"
       ],
       "actionUrl": "https://www.si.edu/openaccess",
-      "actionLabel": "Browse Smithsonian Open Access",
-      "readMinutes": 1
+      "actionLabel": "Browse Smithsonian Open Access"
     },
     {
       "id": "nasa-eyes-free-solar-system",
@@ -1189,8 +1141,7 @@
         "Tech"
       ],
       "actionUrl": "https://eyes.nasa.gov/",
-      "actionLabel": "Open NASA Eyes",
-      "readMinutes": 1
+      "actionLabel": "Open NASA Eyes"
     },
     {
       "id": "opb-oregon-science-desk",
@@ -1208,8 +1159,7 @@
         "Oregon",
         "Science",
         "Community"
-      ],
-      "readMinutes": 1
+      ]
     },
     {
       "id": "oregon-state-newsroom-free",
@@ -1226,8 +1176,7 @@
       "topics": [
         "Oregon",
         "Science"
-      ],
-      "readMinutes": 1
+      ]
     },
     {
       "id": "noaa-fisheries-habitat-stories",
@@ -1244,8 +1193,7 @@
       "topics": [
         "Climate",
         "Community"
-      ],
-      "readMinutes": 1
+      ]
     },
     {
       "id": "code-gov-open-source-usa",
@@ -1264,8 +1212,7 @@
         "Community"
       ],
       "actionUrl": "https://code.gov/",
-      "actionLabel": "Browse Code.gov",
-      "readMinutes": 1
+      "actionLabel": "Browse Code.gov"
     },
     {
       "id": "nasa-earthdata-open",
@@ -1285,8 +1232,7 @@
         "Climate"
       ],
       "actionUrl": "https://www.earthdata.nasa.gov/",
-      "actionLabel": "Create a free Earthdata login",
-      "readMinutes": 1
+      "actionLabel": "Create a free Earthdata login"
     },
     {
       "id": "uoregon-research-news",
@@ -1303,8 +1249,7 @@
       "topics": [
         "Oregon",
         "Science"
-      ],
-      "readMinutes": 1
+      ]
     },
     {
       "id": "bird-alliance-oregon",
@@ -1324,8 +1269,7 @@
         "Community"
       ],
       "actionUrl": "https://birdallianceoregon.org/",
-      "actionLabel": "Explore Bird Alliance guides",
-      "readMinutes": 1
+      "actionLabel": "Explore Bird Alliance guides"
     },
     {
       "id": "huggingface-nasa-models",
@@ -1344,8 +1288,7 @@
         "Science"
       ],
       "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
-      "actionLabel": "Open the model cards",
-      "readMinutes": 1
+      "actionLabel": "Open the model cards"
     }
   ],
   "highlights": [

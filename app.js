@@ -394,15 +394,6 @@
   }
 
 
-  function estimateReadMinutes(story) {
-    if (story && story.readMinutes != null && Number(story.readMinutes) > 0) {
-      return Math.max(1, Math.round(Number(story.readMinutes)));
-    }
-    var text = (story && (story.summaryLong || story.summary)) || "";
-    var words = String(text).trim().split(/\s+/).filter(Boolean).length;
-    return Math.max(1, Math.round(words / 200) || 1);
-  }
-
   function storyTopics(story) {
     return Array.isArray(story && story.topics)
       ? story.topics.map(String).filter(Boolean)
@@ -625,11 +616,6 @@
 
     var chipRow = document.createElement("div");
     chipRow.className = "story__chips";
-    var mins = estimateReadMinutes(story);
-    var readBadge = document.createElement("span");
-    readBadge.className = "story__chip story__chip--read";
-    readBadge.textContent = mins + " min";
-    chipRow.appendChild(readBadge);
 
     storyMetrics(story).forEach(function (m) {
       var chip = document.createElement("span");
@@ -649,7 +635,9 @@
       chip.textContent = t;
       chipRow.appendChild(chip);
     });
-    body.appendChild(chipRow);
+    if (chipRow.childNodes.length) {
+      body.appendChild(chipRow);
+    }
 
     if (story.summary) {
       var summary = document.createElement("p");

@@ -12,7 +12,7 @@ over dense journal abstracts, controversy, or auction spectacle. Assigns impact 
 
 Writes both `stories` (featured 15 for first paint / Monday label) and `pool`
 (~30–45) so the site Refresh button can swap in a disjoint set of 15 client-side.
-Soft-fills `topics`, `whyMatters`, and `readMinutes` from title/summary heuristics;
+Soft-fills `topics` and `whyMatters` from title/summary heuristics;
 preserves prior `metrics` / `actionUrl` / `actionLabel` / `highlights` when merging.
 Never invents numeric metrics or action links. No API key required (DuckDuckGo HTML).
 Keeps prior file if too few candidates. Monday deploy: run this script, then git
@@ -548,19 +548,8 @@ def soft_why_matters(story: dict) -> str | None:
     return None
 
 
-def soft_read_minutes(story: dict) -> int:
-    if story.get("readMinutes"):
-        try:
-            return max(1, int(story["readMinutes"]))
-        except (TypeError, ValueError):
-            pass
-    text = story.get("summaryLong") or story.get("summary") or ""
-    words = len(re.findall(r"\b\w+\b", text))
-    return max(1, round(words / 200) or 1)
-
-
 def enrich_story(story: dict) -> dict:
-    """Soft-fill topics / whyMatters / readMinutes for Monday harvests.
+    """Soft-fill topics / whyMatters for Monday harvests.
 
     metrics[] and actionUrl/actionLabel stay manual-or-prior only — never invent
     numbers or shady CTAs in the refresher.
@@ -571,7 +560,6 @@ def enrich_story(story: dict) -> dict:
     why = soft_why_matters(story)
     if why:
         story["whyMatters"] = why
-    story["readMinutes"] = soft_read_minutes(story)
     return story
 
 

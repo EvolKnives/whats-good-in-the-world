@@ -43,7 +43,6 @@ Each story object:
 - `whyMatters` — short grounded one-liner shown in the expand panel (“Why this is good”); never invent claims  
 - `topics[]` — 1–3 tags from: Climate, Health, Oregon, Science, Tech, Art, Achievement, Community  
 - `metrics[]` — optional `{label, value}` chips; **only** when the number is clearly in the summary/title/source  
-- `readMinutes` — optional; otherwise the UI estimates from `summaryLong` (~200 wpm)  
 - `actionUrl` + `actionLabel` — optional “Do one thing” CTA; only real free reputable links (volunteer, open tools, museum/open-access). Skip if unsure.
 
 Also:
@@ -59,7 +58,7 @@ Also:
 
 - **Topic chips** narrow the current fifteen (AND across selected topics); empty state if none match.  
 - **Quiet-list** density toggle (Compact / Comfortable) persists in `localStorage` (`wgw-density`).  
-- **Read-time** badge and **metric** chips on cards; **whyMatters** + optional micro-action inside expand.
+- **Metric** and topic chips on cards; **whyMatters** + optional micro-action inside expand.
 
 ## Monday refresh
 

@@ -1195,7 +1195,7 @@ body.lightbox-open {
   overflow: hidden;
 }
 
-/* Story chips: read-time, metrics, topics */
+/* Story chips: metrics and topics */
 
 .story__chips {
   display: flex;
@@ -1237,9 +1237,6 @@ body.lightbox-open {
   color: #003d82;
 }
 
-.story__chip--read {
-  color: var(--text-tertiary);
-}
 
 .story__chip--topic {
   background: transparent;
