@@ -70,7 +70,7 @@ Only freely readable article URLs. Prefer org CDNs and Wikimedia. Hotlink failur
 
 ## Live site (iPhone Safari)
 
-**https://evolknivss.github.io/whats-good-in-the-world/**
+**https://evolknives.github.io/whats-good-in-the-world/**
 
 Static files — no build step. GitHub Pages serves from `main` branch root `/`.
 
