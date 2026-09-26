@@ -73,20 +73,50 @@
     return arr;
   }
 
-  function readSeenIds() {
+  function uniqueIds(ids) {
+    var seen = {};
+    return (Array.isArray(ids) ? ids : []).map(String).filter(function (id) {
+      if (seen[id]) return false;
+      seen[id] = true;
+      return true;
+    });
+  }
+
+  function readSeenState(weekOf) {
+    var requestedWeek = weekOf ? String(weekOf) : "";
     try {
-      var raw = sessionStorage.getItem(SEEN_KEY);
-      var parsed = raw ? JSON.parse(raw) : [];
-      return Array.isArray(parsed) ? parsed.map(String) : [];
+      var raw = localStorage.getItem(SEEN_KEY);
+      var parsed = raw ? JSON.parse(raw) : null;
+      var storedWeek = parsed && !Array.isArray(parsed) ? String(parsed.weekOf || "") : "";
+      var ids = parsed && !Array.isArray(parsed) ? parsed.ids : parsed;
+
+      // A new weekly pool gets a soft reset, without losing the current round
+      // when the page is merely reopened during the same week.
+      if (requestedWeek && storedWeek && requestedWeek !== storedWeek) {
+        return { weekOf: requestedWeek, ids: [] };
+      }
+      return {
+        weekOf: requestedWeek || storedWeek,
+        ids: uniqueIds(ids)
+      };
     } catch (e) {
-      return [];
+      return { weekOf: requestedWeek, ids: [] };
     }
   }
 
-  function writeSeenIds(ids) {
+  function readSeenIds(weekOf) {
+    return readSeenState(weekOf).ids;
+  }
+
+  function writeSeenIds(ids, weekOf) {
     try {
-      var capped = ids.slice(-Math.max(SET_SIZE * 4, 60));
-      sessionStorage.setItem(SEEN_KEY, JSON.stringify(capped));
+      localStorage.setItem(
+        SEEN_KEY,
+        JSON.stringify({
+          weekOf: weekOf ? String(weekOf) : String(weekMeta.weekOf || ""),
+          ids: uniqueIds(ids)
+        })
+      );
     } catch (e) {
       /* ignore quota / private mode */
     }
@@ -630,6 +660,26 @@
       });
   }
 
+  function choosePoolSet(pool, weekOf) {
+    var seen = readSeenIds(weekOf);
+    var unseenCount = pool.filter(function (story, index) {
+      return seen.indexOf(stableStoryKey(story, index)) === -1;
+    }).length;
+
+    if (unseenCount < SET_SIZE) {
+      writeSeenIds([], weekOf);
+      return {
+        stories: pickDisjointSet(pool, [], SET_SIZE),
+        recycled: true
+      };
+    }
+
+    return {
+      stories: pickDisjointSet(pool, seen, SET_SIZE),
+      recycled: false
+    };
+  }
+
   function renderWeek(data, storiesOverride) {
     var stories = Array.isArray(storiesOverride)
       ? storiesOverride.slice(0, SET_SIZE)
@@ -664,12 +714,12 @@
     displayedStories = stories.slice();
     currentFingerprint = fingerprintStories(stories);
 
-    var seen = readSeenIds();
+    var seen = readSeenIds(weekMeta.weekOf);
     stories.forEach(function (s, i) {
       var key = stableStoryKey(s, i);
       if (seen.indexOf(key) === -1) seen.push(key);
     });
-    writeSeenIds(seen);
+    writeSeenIds(seen, weekMeta.weekOf);
     return true;
   }
 
@@ -708,21 +758,8 @@
     setRefreshBusy(true);
     storiesEl.setAttribute("aria-busy", "true");
 
-    var avoid = displayedStories.map(function (s, i) {
-      return stableStoryKey(s, i);
-    });
-    var seen = readSeenIds();
-    var avoidSet = avoid.slice();
-    if (storyPool.length >= SET_SIZE * 2) {
-      seen.forEach(function (id) {
-        if (avoidSet.indexOf(id) === -1) avoidSet.push(id);
-      });
-    }
-
-    var next = pickDisjointSet(storyPool, avoidSet, SET_SIZE);
-    if (next.length < SET_SIZE) {
-      next = pickDisjointSet(storyPool, avoid, SET_SIZE);
-    }
+    var choice = choosePoolSet(storyPool, weekMeta.weekOf);
+    var next = choice.stories;
 
     var settle = reduceMotion ? 0 : 80;
     var preloadWait = preloadStoryImages(sortStories(next), 4);
@@ -753,7 +790,11 @@
         if (history.replaceState) {
           history.replaceState(null, "", pageUrl());
         }
-        showToast("Fifteen new stories");
+        showToast(
+          choice.recycled
+            ? "You’ve seen the rest — starting a new round"
+            : "Fifteen new stories"
+        );
       });
   }
 
@@ -767,14 +808,13 @@
       })
       .then(function (data) {
         var packed = ingestWeekData(data);
-        // Fresh 15 from the full pool on every page open (not a fixed featured list).
-        var initial =
-          packed.pool.length >= SET_SIZE
-            ? pickDisjointSet(packed.pool, [], SET_SIZE)
-            : packed.featured.slice(0, SET_SIZE);
+        // Fresh 15 from the pool on every page open, skipping this week's seen ids.
+        var choice = choosePoolSet(packed.pool, packed.data.weekOf);
+        var initial = choice.stories;
         if (!initial.length) initial = packed.featured.slice(0, SET_SIZE);
         var ok = renderWeek(packed.data, initial);
         if (!ok) return;
+        if (choice.recycled) showToast("You’ve seen the rest — starting a new round");
         requestAnimationFrame(focusHash);
       })
       .catch(function () {

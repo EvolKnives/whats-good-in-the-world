@@ -68,7 +68,7 @@ Each page load picks a **fresh 15** from `pool` (shuffled; prefers unique primar
 
 ### In-page Refresh
 
-The footer **Refresh** button does **not** wait on a network re-harvest. It instantly chooses 15 stories from `pool` with ids disjoint from the current set (falling back to maximize-new if the pool is tight), re-renders, scrolls to top, and toasts **“Fifteen new stories”**. `sessionStorage` remembers recent ids so repeated taps keep rotating.
+The footer **Refresh** button does **not** wait on a network re-harvest. It instantly chooses 15 stories from `pool`, preferring ids not already seen this week, re-renders, scrolls to top, and toasts **“Fifteen new stories”**. `localStorage` remembers the full seen-id round across page opens; when the pool cannot fill another unseen set, it starts a new round with a **“You’ve seen the rest — starting a new round”** toast. A new `weekOf` soft-resets the round.
 
 **Positivity criteria:** conservation & recovery, public-health milestones, useful tech/open-source tools, restoration, accessibility, free museum/art wins, and **human achievements** (personal/team records, maker builds, science/tech milestones, community goals met, wildlife release successes). Prefer USA + Oregon when available. Avoid culture-war / contested framing.
 
