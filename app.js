@@ -10,11 +10,14 @@
   var lightboxEl = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");
   var lightboxClose = document.getElementById("lightbox-close");
+  var refreshBtn = document.getElementById("refresh-week");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var openArticle = null;
   var weekMeta = { weekOf: "", label: "This week" };
   var toastTimer = null;
   var lightboxOpen = false;
+  var currentFingerprint = "";
+  var loadingWeek = false;
   var SITE_TITLE = "What's Good In The World?";
 
   document.documentElement.classList.add("js");
@@ -465,8 +468,145 @@
 
   function showError(message) {
     storiesEl.setAttribute("aria-busy", "false");
-    statusEl.classList.add("status--error");
-    statusEl.textContent = message;
+    if (statusEl && statusEl.isConnected) {
+      statusEl.classList.add("status--error");
+      statusEl.textContent = message;
+    } else {
+      storiesEl.innerHTML = "";
+      var p = document.createElement("p");
+      p.className = "status status--error";
+      p.id = "status";
+      p.textContent = message;
+      storiesEl.appendChild(p);
+      statusEl = p;
+    }
+  }
+
+  function fingerprintData(data) {
+    try {
+      return JSON.stringify({
+        weekOf: data && data.weekOf,
+        stories: data && data.stories
+      });
+    } catch (e) {
+      return String(Date.now());
+    }
+  }
+
+  function sortStories(stories) {
+    return stories
+      .map(function (s, i) {
+        return { s: s, i: i };
+      })
+      .sort(function (a, b) {
+        var ia = Number(a.s.impact) || 0;
+        var ib = Number(b.s.impact) || 0;
+        if (ib !== ia) return ib - ia;
+        return a.i - b.i;
+      })
+      .map(function (x) {
+        return x.s;
+      });
+  }
+
+  function renderWeek(data) {
+    var stories = Array.isArray(data.stories) ? data.stories.slice(0, 15) : [];
+    if (!stories.length) {
+      showError("No stories yet for this week.");
+      return false;
+    }
+
+    stories = sortStories(stories);
+    closeOpen();
+    closeLightbox();
+
+    if (data.weekOf) {
+      weekMeta.weekOf = data.weekOf;
+      weekMeta.label = formatWeekOf(data.weekOf);
+      weekLabelEl.textContent = "Week of " + weekMeta.label;
+    }
+
+    storiesEl.setAttribute("aria-busy", "false");
+    storiesEl.innerHTML = "";
+    statusEl = null;
+    var nodes = stories.map(function (story, i) {
+      return renderStory(story, i);
+    });
+    nodes.forEach(function (n) {
+      storiesEl.appendChild(n);
+    });
+    observeReveal(nodes);
+    currentFingerprint = fingerprintData(data);
+    return true;
+  }
+
+  function scrollToTop() {
+    try {
+      window.scrollTo({
+        top: 0,
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  function setRefreshBusy(busy) {
+    loadingWeek = busy;
+    if (!refreshBtn) return;
+    refreshBtn.disabled = !!busy;
+    refreshBtn.setAttribute("aria-busy", busy ? "true" : "false");
+  }
+
+  function loadWeek(opts) {
+    opts = opts || {};
+    var isRefresh = !!opts.refresh;
+    var url = "data/week.json";
+    if (isRefresh) {
+      url += "?t=" + Date.now();
+    }
+
+    if (isRefresh) setRefreshBusy(true);
+    storiesEl.setAttribute("aria-busy", "true");
+
+    return fetch(url, { cache: isRefresh ? "no-store" : "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("load failed");
+        return res.json();
+      })
+      .then(function (data) {
+        var nextFp = fingerprintData(data);
+        var same =
+          isRefresh && currentFingerprint && nextFp === currentFingerprint;
+
+        if (isRefresh && same) {
+          storiesEl.setAttribute("aria-busy", "false");
+          scrollToTop();
+          showToast("You’re caught up — new stories land Mondays.");
+          return;
+        }
+
+        var ok = renderWeek(data);
+        if (!ok) return;
+
+        if (isRefresh) {
+          scrollToTop();
+          showToast("Fresh week loaded.");
+        } else {
+          requestAnimationFrame(focusHash);
+        }
+      })
+      .catch(function () {
+        if (isRefresh) {
+          storiesEl.setAttribute("aria-busy", "false");
+          showToast("Couldn’t refresh. Try again.");
+        } else {
+          showError("Couldn’t load stories. Try a local server (see README).");
+        }
+      })
+      .then(function () {
+        if (isRefresh) setRefreshBusy(false);
+      });
   }
 
   if (shareWeekBtn) {
@@ -480,6 +620,14 @@
           ".",
         url: pageUrl()
       });
+    });
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (loadingWeek) return;
+      loadWeek({ refresh: true });
     });
   }
 
@@ -506,51 +654,5 @@
   window.addEventListener("hashchange", focusHash);
   onScrollHeader();
 
-  fetch("data/week.json", { cache: "no-cache" })
-    .then(function (res) {
-      if (!res.ok) throw new Error("load failed");
-      return res.json();
-    })
-    .then(function (data) {
-      var stories = Array.isArray(data.stories) ? data.stories.slice(0, 15) : [];
-      if (!stories.length) {
-        showError("No stories yet for this week.");
-        return;
-      }
-
-      stories = stories
-        .map(function (s, i) {
-          return { s: s, i: i };
-        })
-        .sort(function (a, b) {
-          var ia = Number(a.s.impact) || 0;
-          var ib = Number(b.s.impact) || 0;
-          if (ib !== ia) return ib - ia;
-          return a.i - b.i;
-        })
-        .map(function (x) {
-          return x.s;
-        });
-
-      if (data.weekOf) {
-        weekMeta.weekOf = data.weekOf;
-        weekMeta.label = formatWeekOf(data.weekOf);
-        weekLabelEl.textContent = "Week of " + weekMeta.label;
-      }
-
-      storiesEl.setAttribute("aria-busy", "false");
-      storiesEl.innerHTML = "";
-      var nodes = stories.map(function (story, i) {
-        return renderStory(story, i);
-      });
-      nodes.forEach(function (n) {
-        storiesEl.appendChild(n);
-      });
-      observeReveal(nodes);
-      // Deep-link after render
-      requestAnimationFrame(focusHash);
-    })
-    .catch(function () {
-      showError("Couldn’t load stories. Try a local server (see README).");
-    });
+  loadWeek();
 })();
