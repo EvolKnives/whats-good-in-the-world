@@ -60,9 +60,9 @@ Cron example (Mondays 06:00) — refresh then push so Pages updates:
 0 6 * * 1 cd /path/to/whats-good-in-the-world && python3 scripts/refresh.py && git add data/week.json && git commit -m "weekly refresh" && git push >> /tmp/whats-good-refresh.log 2>&1
 ```
 
-**Assumptions:** searches favor accessible tech/space/open-source writeups, WHO, conservation news, and reputable free outlets over dense journal abstracts. Skips known paywall hosts. Scores with simple positivity heuristics. **Failure:** if fewer than ~8 solid candidates, exits non-zero and leaves the previous `week.json` intact.
+**Assumptions:** searches favor **USA stories (majority)**, with **Oregon** when available (Portland, coast, Cascades, Willamette, OSU/UO, local nonprofits), plus accessible tech/space/open-source writeups, conservation, art, and a little global variety only as needed to fill 15. Skips known paywall hosts. Scores with positivity heuristics plus USA/Oregon boosts. **Failure:** if fewer than ~8 solid candidates, exits non-zero and leaves the previous `week.json` intact.
 
-**Positivity criteria:** conservation & recovery, public-health milestones, useful tech/open-source tools, restoration, accessibility. Avoid culture-war / contested framing.
+**Positivity criteria:** conservation & recovery, public-health milestones, useful tech/open-source tools, restoration, accessibility, free museum/art wins. Avoid culture-war / contested framing.
 
 ## Images & paywalls
 

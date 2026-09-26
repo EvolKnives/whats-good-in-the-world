@@ -2,12 +2,13 @@
 """
 Refresh data/week.json with 15 uplifting stories from the prior calendar week.
 
-Monday cron/routine friendly. Prefers freely readable, accessible writeups —
-tech products/tools, space, AI-for-good, open source, conservation, community,
-and art-world wins (museum restorations, free exhibitions, street art, heritage
-conservation, accessible art tech) — over dense journal abstracts, controversy,
-or auction spectacle. Assigns impact 1–5. No API key required (DuckDuckGo HTML).
-Keeps prior file if too few candidates.
+Monday cron/routine friendly. Prefers USA stories (majority), with Oregon when
+available (Portland, Oregon coast, Cascades, Willamette, Oregon nonprofits,
+OSU/UO research, conservation, community, art, tech). Keep a little global
+variety only as needed to fill 15. Freely readable writeups — tech, space,
+AI-for-good, open source, conservation, community, and art-world wins — over
+dense journal abstracts, controversy, or auction spectacle. Assigns impact 1–5.
+No API key required (DuckDuckGo HTML). Keeps prior file if too few candidates.
 Monday deploy: run this script, then git commit + push so GitHub Pages picks up data/week.json.
 """
 
@@ -24,24 +25,32 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "week.json"
-UA = "WhatsGoodInTheWorldRefresh/1.2 (+local; positive-news curator)"
+UA = "WhatsGoodInTheWorldRefresh/1.3 (+local; positive-news curator)"
 NEED = 15
 
 # Prefer accessible newsy sources + tech/space/open-source; still allow WHO/uni
 POSITIVE_QUERIES = [
+    # USA-first (majority preference)
     "site:science.nasa.gov OR site:nasa.gov open source OR AI OR Artemis",
-    "site:esa.int OR site:philab.esa.int Earth observation OR open",
+    "site:noaa.gov OR site:fisheries.noaa.gov habitat restoration OR recovery",
+    "site:si.edu OR site:airandspace.si.edu OR site:nmaahc.si.edu free OR exhibition",
+    "site:smithsonianmag.com conservation OR discovery USA",
     "site:techcrunch.com OR site:theverge.com useful OR open source OR accessibility",
+    "open source tool OR software release GitHub university NASA OR MIT OR Stanford",
+    "AI for good OR machine learning bees OR accessibility OR assistive USA",
+    "USA conservation recovery wildlife sanctuary OR reintroduction OR fish passage",
+    "site:fws.gov OR site:nps.gov restoration OR recovery habitat",
+    "museum free exhibition OR heritage conservation Getty OR Met OR Smithsonian",
+    # Oregon preference when available
+    "Oregon Portland conservation OR restoration OR wetland OR salmon",
+    "Oregon coast OR Cascades OR Willamette wildlife OR habitat OR otter",
+    "site:oregonstate.edu OR site:uoregon.edu OR site:ohsu.edu research breakthrough OR discovery",
+    "site:opb.org Oregon conservation OR science OR community",
+    "Oregon nonprofit museum OR art OR pollinator OR monarch",
+    # Small global fill only
     "site:who.int verifies OR eliminates OR validates",
-    "open source tool OR software release GitHub university OR NASA",
-    "conservation recovery wildlife sanctuary OR reintroduction",
-    "AI for good OR machine learning bees OR accessibility OR assistive",
-    "space mission OR lunar OR satellite open data positive",
-    "community restoration OR habitat return wildlife trust",
-    "site:news.mongabay.com OR site:smithsonianmag.com conservation",
-    "museum restoration OR free exhibition OR heritage conservation",
-    "street art mural community OR accessible art OR digital heritage",
-    "site:tate.org.uk OR site:si.edu OR site:metmuseum.org free OR conservation",
+    "site:esa.int Earth observation OR open",
+    "museum restoration OR free exhibition OR digital heritage conservation",
 ]
 
 # Skip known paywall / contested / low-signal domains
@@ -87,8 +96,41 @@ TECH_HINTS = re.compile(
 ART_HINTS = re.compile(
     r"\b(museum|gallery|exhibition|fresco|mural|heritage|"
     r"street art|conservator|restoration|gigapixel|"
-    r"Tate|Louvre|Smithsonian|Met |MOCAA|ARTIST ROOMS)\b",
+    r"Tate|Louvre|Smithsonian|Met |MOCAA|ARTIST ROOMS|Getty)\b",
     re.I,
+)
+
+# Geographic preference: majority USA, boost Oregon
+USA_HINTS = re.compile(
+    r"\b(United States|U\.S\.?|USA|American|NASA|NOAA|Smithsonian|"
+    r"California|Washington|Colorado|Texas|Alaska|Hawaii|Michigan|"
+    r"New Jersey|Idaho|Georgia|Puerto Rico|"
+    r"National Park|Fish and Wildlife|\.gov)\b",
+    re.I,
+)
+
+OREGON_HINTS = re.compile(
+    r"\b(Oregon|Portland|Salem|Eugene|Corvallis|Bend|Ashland|"
+    r"Willamette|Cascades|Crater Lake|Columbia River|"
+    r"Oregon coast|Newport|Astoria|Hood River|Klamath|"
+    r"OSU|Oregon State|University of Oregon|UO |OHSU|"
+    r"OPB|Xerces|Elakha|Johnson Creek|Sandy River)\b",
+    re.I,
+)
+
+USA_HOSTS = (
+    "nasa.gov", "noaa.gov", "si.edu", "smithsonianmag.com", "usgs.gov",
+    "fws.gov", "nps.gov", "nih.gov", "energy.gov", "usda.gov",
+    "edu", ".gov",
+    "techcrunch.com", "theverge.com", "getty.edu", "metmuseum.org",
+    "nga.gov", "npr.org", "opb.org",
+)
+
+OREGON_HOSTS = (
+    "oregonstate.edu", "uoregon.edu", "ohsu.edu", "portland.gov",
+    "oregon.gov", "opb.org", "oregonlive.com", "kgw.com",
+    "birdallianceoregon.org", "xerces.org", "beecityusa.org",
+    "wildnet.org", "aquarium.org", "elakha",
 )
 
 
@@ -177,7 +219,7 @@ def source_name(url: str, html: str) -> str:
 
 
 def score_candidate(title: str, summary: str, url: str) -> float:
-    blob = f"{title} {summary}"
+    blob = f"{title} {summary} {url}"
     if NEG_HINTS.search(blob) and not POS_HINTS.search(blob):
         return -1.0
     score = 0.0
@@ -190,20 +232,28 @@ def score_candidate(title: str, summary: str, url: str) -> float:
         score -= 2.5
     host = urllib.parse.urlparse(url).netloc.lower()
     preferred = (
-        "nasa.gov", "esa.int", "who.int", "techcrunch.com", "theverge.com",
+        "nasa.gov", "noaa.gov", "si.edu", "esa.int", "who.int",
+        "techcrunch.com", "theverge.com",
         "smithsonianmag.com", "mongabay.com", "cam.ac.uk", "colorado.edu",
         "mit.edu", "ucr.edu", "ibm.com", "huggingface.co", "github.com",
         "wildlife", "nationaltrust", "halotrust",
-        "tate.org.uk", "si.edu", "asia.si.edu", "metmuseum.org",
+        "tate.org.uk", "asia.si.edu", "metmuseum.org", "getty.edu",
         "zeitzmocaa", "haltadefinizione", "nga.gov",
+        "oregonstate.edu", "uoregon.edu", "ohsu.edu", "portland.gov",
+        "opb.org", "fws.gov", "nps.gov",
     )
     if any(h in host for h in preferred):
         score += 2.5
     elif any(h in host for h in ("edu", "ac.uk", "gov", "int")):
         score += 1.5
+    # Geographic preference: Oregon strongest, then USA majority
+    if OREGON_HINTS.search(blob) or any(h in host for h in OREGON_HOSTS):
+        score += 4.0
+    elif USA_HINTS.search(blob) or any(h in host for h in USA_HOSTS):
+        score += 2.5
     # Soft preference for news/blog paths over /articles/ journal URLs
     path = urllib.parse.urlparse(url).path.lower()
-    if "/news" in path or "/blog" in path or "/smart-news" in path:
+    if "/news" in path or "/blog" in path or "/smart-news" in path or "/feature-story" in path:
         score += 1.0
     if re.search(r"/articles/s\d+|doi\.org|abstract", path):
         score -= 1.5
@@ -327,6 +377,34 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
     # Second pass: keep tech and art represented alongside nature/health
     tech_count = boost_category(TECH_HINTS, tech_count, 5, "tech")
     art_count = boost_category(ART_HINTS, art_count, 2, "art")
+
+    # Third pass: prefer USA majority (soft replace non-US when USA candidates remain)
+    def is_usa(story: dict) -> bool:
+        b = blob_of(story)
+        host = urllib.parse.urlparse(story.get("url", "")).netloc.lower()
+        return bool(USA_HINTS.search(b) or OREGON_HINTS.search(b) or any(h in host for h in USA_HOSTS + OREGON_HOSTS))
+
+    usa_count = sum(1 for s in picked if is_usa(s))
+    want_usa = max(10, (need * 2) // 3)  # majority (~10 of 15)
+    if usa_count < want_usa:
+        for sc, story in candidates:
+            if usa_count >= want_usa:
+                break
+            if not is_usa(story):
+                continue
+            norm = re.sub(r"[^a-z0-9]+", "", story["title"].lower())[:48]
+            if any(norm[:24] in t or t[:24] in norm for t in titles_norm):
+                continue
+            # Replace weakest non-US from the end
+            for i in range(len(picked) - 1, -1, -1):
+                if is_usa(picked[i]):
+                    continue
+                story["impact"] = picked[i]["impact"]
+                picked[i] = story
+                titles_norm[i] = norm
+                usa_count += 1
+                break
+
     return picked
 
 
