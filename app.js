@@ -23,6 +23,25 @@
   var displayedStories = [];
   var SET_SIZE = 15;
   var SEEN_KEY = "wgw-seen-ids";
+  var DENSITY_KEY = "wgw-density";
+  var TOPIC_CHIPS = [
+    "Climate",
+    "Health",
+    "Oregon",
+    "Science",
+    "Tech",
+    "Art",
+    "Achievement",
+    "Community"
+  ];
+  var weekWinsEl = document.getElementById("week-wins");
+  var weekWinsGrid = document.getElementById("week-wins-grid");
+  var filtersEl = document.getElementById("filters");
+  var topicChipsEl = document.getElementById("topic-chips");
+  var densityBtn = document.getElementById("density-toggle");
+  var activeTopics = [];
+  var weekPayload = null;
+  var highlightIds = [];
 
   document.documentElement.classList.add("js");
 
@@ -389,6 +408,242 @@
     return btn;
   }
 
+
+  function estimateReadMinutes(story) {
+    if (story && story.readMinutes != null && Number(story.readMinutes) > 0) {
+      return Math.max(1, Math.round(Number(story.readMinutes)));
+    }
+    var text = (story && (story.summaryLong || story.summary)) || "";
+    var words = String(text).trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200) || 1);
+  }
+
+  function storyTopics(story) {
+    return Array.isArray(story && story.topics)
+      ? story.topics.map(String).filter(Boolean)
+      : [];
+  }
+
+  function storyMetrics(story) {
+    if (!Array.isArray(story && story.metrics)) return [];
+    return story.metrics.filter(function (m) {
+      return m && m.value != null && String(m.value).trim() !== "";
+    });
+  }
+
+  function readDensity() {
+    try {
+      return localStorage.getItem(DENSITY_KEY) === "compact" ? "compact" : "comfortable";
+    } catch (e) {
+      return "comfortable";
+    }
+  }
+
+  function writeDensity(mode) {
+    try {
+      localStorage.setItem(DENSITY_KEY, mode === "compact" ? "compact" : "comfortable");
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function applyDensity(mode) {
+    var compact = mode === "compact";
+    document.body.classList.toggle("density-compact", compact);
+    if (densityBtn) {
+      densityBtn.setAttribute("aria-pressed", compact ? "true" : "false");
+      densityBtn.textContent = compact ? "Comfortable" : "Compact";
+      densityBtn.setAttribute(
+        "aria-label",
+        compact ? "Switch to comfortable layout" : "Switch to compact list"
+      );
+    }
+  }
+
+  function storyMatchesTopics(story, topics) {
+    if (!topics || !topics.length) return true;
+    var have = {};
+    storyTopics(story).forEach(function (t) {
+      have[t.toLowerCase()] = true;
+    });
+    return topics.every(function (t) {
+      return have[String(t).toLowerCase()];
+    });
+  }
+
+  function pickHighlights(pool, ids) {
+    var byId = {};
+    (pool || []).forEach(function (s) {
+      if (s && s.id) byId[String(s.id)] = s;
+    });
+    var picked = [];
+    (ids || []).forEach(function (id) {
+      if (byId[id]) picked.push(byId[id]);
+    });
+    if (picked.length >= 3) return picked.slice(0, 3);
+    var ranked = sortStories((pool || []).slice());
+    ranked.forEach(function (s) {
+      if (picked.length >= 3) return;
+      if (picked.indexOf(s) !== -1) return;
+      picked.push(s);
+    });
+    return picked.slice(0, 3);
+  }
+
+  function renderWeekWins(pool, ids) {
+    if (!weekWinsEl || !weekWinsGrid) return;
+    var wins = pickHighlights(pool, ids);
+    weekWinsGrid.innerHTML = "";
+    if (!wins.length) {
+      weekWinsEl.hidden = true;
+      return;
+    }
+    wins.forEach(function (story, i) {
+      var card = document.createElement("article");
+      card.className = "week-win";
+      var imgSrc = primaryImageKey(story);
+      if (imgSrc) {
+        var media = document.createElement("div");
+        media.className = "week-win__media";
+        var img = makePhoto(imgSrc, story.title || "", { eager: i === 0 });
+        img.classList.add("week-win__photo");
+        media.appendChild(img);
+        card.appendChild(media);
+      }
+      var body = document.createElement("div");
+      body.className = "week-win__body";
+      var meta = document.createElement("p");
+      meta.className = "week-win__meta";
+      meta.textContent = story.source || "Good news";
+      body.appendChild(meta);
+      var title = document.createElement("h3");
+      title.className = "week-win__title";
+      title.textContent = story.title || "Untitled";
+      body.appendChild(title);
+      if (story.whyMatters) {
+        var why = document.createElement("p");
+        why.className = "week-win__why";
+        why.textContent = story.whyMatters;
+        body.appendChild(why);
+      }
+      card.appendChild(body);
+      card.addEventListener("click", function () {
+        var targetId = storyId(story, i);
+        var el = document.getElementById(targetId);
+        // Prefer matching by data-story-id if present after filter re-render
+        if (!el) {
+          var key = String(story.id || "");
+        el = Array.prototype.find.call(
+          storiesEl.querySelectorAll("[data-story-key]"),
+          function (node) { return node.getAttribute("data-story-key") === key; }
+        ) || null;
+        }
+        if (el) {
+          try {
+            el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+          } catch (e) {
+            el.scrollIntoView(true);
+          }
+          el.classList.add("is-deep-linked");
+          setTimeout(function () {
+            el.classList.remove("is-deep-linked");
+          }, 1600);
+        }
+      });
+      weekWinsGrid.appendChild(card);
+    });
+    weekWinsEl.hidden = false;
+  }
+
+  function renderTopicChips(pool) {
+    if (!filtersEl || !topicChipsEl) return;
+    var available = {};
+    (pool || []).forEach(function (s) {
+      storyTopics(s).forEach(function (t) {
+        available[t] = true;
+      });
+    });
+    var chips = TOPIC_CHIPS.filter(function (t) {
+      return available[t];
+    });
+    topicChipsEl.innerHTML = "";
+    if (!chips.length) {
+      filtersEl.hidden = true;
+      return;
+    }
+
+    function makeChip(label, isAll) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "topic-chip";
+      btn.textContent = label;
+      if (isAll) {
+        btn.classList.toggle("is-active", activeTopics.length === 0);
+        btn.setAttribute("aria-pressed", activeTopics.length === 0 ? "true" : "false");
+        btn.addEventListener("click", function () {
+          activeTopics = [];
+          renderTopicChips(storyPool);
+          renderFilteredStories();
+        });
+      } else {
+        var on = activeTopics.indexOf(label) !== -1;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        btn.addEventListener("click", function () {
+          var idx = activeTopics.indexOf(label);
+          if (idx === -1) activeTopics.push(label);
+          else activeTopics.splice(idx, 1);
+          renderTopicChips(storyPool);
+          renderFilteredStories();
+        });
+      }
+      return btn;
+    }
+
+    topicChipsEl.appendChild(makeChip("All", true));
+    chips.forEach(function (t) {
+      topicChipsEl.appendChild(makeChip(t, false));
+    });
+    filtersEl.hidden = false;
+  }
+
+  function renderFilteredStories() {
+    var base = displayedStories.slice();
+    var filtered = base.filter(function (s) {
+      return storyMatchesTopics(s, activeTopics);
+    });
+    storiesEl.setAttribute("aria-busy", "false");
+    storiesEl.innerHTML = "";
+    statusEl = null;
+    closeOpen();
+
+    if (!filtered.length) {
+      var empty = document.createElement("p");
+      empty.className = "status filter-empty";
+      empty.id = "status";
+      if (activeTopics.length) {
+        empty.textContent =
+          "No stories in this fifteen match " +
+          activeTopics.join(" · ") +
+          ". Clear filters or tap Refresh for a new set.";
+      } else {
+        empty.textContent = "No stories yet for this week.";
+      }
+      storiesEl.appendChild(empty);
+      statusEl = empty;
+      return;
+    }
+
+    var nodes = filtered.map(function (story, i) {
+      return renderStory(story, i);
+    });
+    nodes.forEach(function (n) {
+      storiesEl.appendChild(n);
+    });
+    observeReveal(nodes);
+  }
+
+
   function renderHeroCard(story, tier, priorityIndex, id) {
     var card = document.createElement("div");
     card.className = "story__card";
@@ -479,11 +734,40 @@
     article.className = "story story--" + tier;
     article.id = id;
     article.dataset.impact = String(impact);
+    if (story.id) article.setAttribute("data-story-key", String(story.id));
 
     article.appendChild(renderHeroCard(story, tier, index, id));
 
     var body = document.createElement("div");
     body.className = "story__body";
+
+    var chipRow = document.createElement("div");
+    chipRow.className = "story__chips";
+    var mins = estimateReadMinutes(story);
+    var readBadge = document.createElement("span");
+    readBadge.className = "story__chip story__chip--read";
+    readBadge.textContent = mins + " min";
+    chipRow.appendChild(readBadge);
+
+    storyMetrics(story).forEach(function (m) {
+      var chip = document.createElement("span");
+      chip.className = "story__chip story__chip--metric";
+      var val = document.createElement("strong");
+      val.textContent = String(m.value);
+      chip.appendChild(val);
+      if (m.label) {
+        chip.appendChild(document.createTextNode(" " + String(m.label)));
+      }
+      chipRow.appendChild(chip);
+    });
+
+    storyTopics(story).slice(0, 3).forEach(function (t) {
+      var chip = document.createElement("span");
+      chip.className = "story__chip story__chip--topic";
+      chip.textContent = t;
+      chipRow.appendChild(chip);
+    });
+    body.appendChild(chipRow);
 
     if (story.summary) {
       var summary = document.createElement("p");
@@ -532,6 +816,27 @@
       note.className = "story__note";
       note.textContent = story.summaryLongNote;
       panelInner.appendChild(note);
+    }
+
+    if (story.whyMatters) {
+      var why = document.createElement("p");
+      why.className = "story__why";
+      var whyLabel = document.createElement("span");
+      whyLabel.className = "story__why-label";
+      whyLabel.textContent = "Why this is good";
+      why.appendChild(whyLabel);
+      why.appendChild(document.createTextNode(" " + String(story.whyMatters)));
+      panelInner.appendChild(why);
+    }
+
+    if (story.actionUrl && story.actionLabel) {
+      var action = document.createElement("a");
+      action.className = "story__action";
+      action.href = story.actionUrl;
+      action.target = "_blank";
+      action.rel = "noopener noreferrer";
+      action.textContent = story.actionLabel;
+      panelInner.appendChild(action);
     }
 
     if (story.url) {
@@ -712,18 +1017,11 @@
       weekLabelEl.textContent = "Week of " + weekMeta.label;
     }
 
-    storiesEl.setAttribute("aria-busy", "false");
-    storiesEl.innerHTML = "";
-    statusEl = null;
-    var nodes = stories.map(function (story, i) {
-      return renderStory(story, i);
-    });
-    nodes.forEach(function (n) {
-      storiesEl.appendChild(n);
-    });
-    observeReveal(nodes);
     displayedStories = stories.slice();
     currentFingerprint = fingerprintStories(stories);
+
+    storiesEl.setAttribute("aria-busy", "false");
+    renderFilteredStories();
 
     var seen = readSeenIds(weekMeta.weekOf);
     stories.forEach(function (s, i) {
@@ -756,6 +1054,10 @@
     var featured = Array.isArray(data.stories) ? data.stories : [];
     var pool = Array.isArray(data.pool) && data.pool.length ? data.pool : featured;
     storyPool = pool.slice();
+    weekPayload = data;
+    highlightIds = Array.isArray(data.highlights) ? data.highlights.map(String) : [];
+    renderWeekWins(pool, highlightIds);
+    renderTopicChips(pool);
     return { data: data, featured: featured, pool: pool };
   }
 
@@ -874,6 +1176,16 @@
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   window.addEventListener("hashchange", focusHash);
   onScrollHeader();
+
+  applyDensity(readDensity());
+  if (densityBtn) {
+    densityBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var next = readDensity() === "compact" ? "comfortable" : "compact";
+      writeDensity(next);
+      applyDensity(next);
+    });
+  }
 
   loadWeek();
 })();

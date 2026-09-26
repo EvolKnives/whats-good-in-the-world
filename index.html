@@ -14,9 +14,14 @@
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <p class="week-label" id="week-label">This week</p>
-      <button type="button" class="share-btn share-btn--header" id="share-week" aria-label="Share this week">
-        Share
-      </button>
+      <div class="header-actions">
+        <button type="button" class="density-btn" id="density-toggle" aria-pressed="false" aria-label="Toggle compact list">
+          Compact
+        </button>
+        <button type="button" class="share-btn share-btn--header" id="share-week" aria-label="Share this week">
+          Share
+        </button>
+      </div>
     </div>
   </header>
 
@@ -25,6 +30,19 @@
       <div class="hero__inner">
         <h1 id="hero-title">What’s Good In<br>The World?</h1>
         <p class="hero__lede">Fifteen quiet highlights from the week just past.</p>
+      </div>
+    </section>
+
+    <section class="week-wins" id="week-wins" aria-labelledby="week-wins-title" hidden>
+      <div class="week-wins__inner">
+        <h2 class="week-wins__title" id="week-wins-title">This week in three wins</h2>
+        <div class="week-wins__grid" id="week-wins-grid"></div>
+      </div>
+    </section>
+
+    <section class="filters" id="filters" aria-label="Filter by topic" hidden>
+      <div class="filters__inner">
+        <div class="filters__chips" id="topic-chips" role="group" aria-label="Topics"></div>
       </div>
     </section>
 

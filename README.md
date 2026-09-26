@@ -27,7 +27,8 @@ Open [http://127.0.0.1:8080/](http://127.0.0.1:8080/) (or your machine’s LAN I
 {
   "weekOf": "2026-09-22",
   "updatedAt": "2026-09-26T09:00:00Z",
-  "stories": [ { "id": "stable-slug", "title": "…", "impact": 5 } ],
+  "highlights": ["stable-slug-a", "stable-slug-b", "stable-slug-c"],
+  "stories": [ { "id": "stable-slug", "title": "…", "impact": 5, "topics": ["Science"], "whyMatters": "…" } ],
   "pool": [ { "id": "stable-slug", "title": "…" } ]
 }
 ```
@@ -39,14 +40,26 @@ Each story object:
 - `summaryLong` — verified in-page expand text (~don’t invent quotes/numbers)  
 - `summaryLongNote` — optional honesty note if shorter  
 - `source`, `url`, `impact` (1–5), optional `youtube`, `images[]`
+- `whyMatters` — short grounded one-liner shown in the expand panel (“Why this is good”); never invent claims  
+- `topics[]` — 1–3 tags from: Climate, Health, Oregon, Science, Tech, Art, Achievement, Community  
+- `metrics[]` — optional `{label, value}` chips; **only** when the number is clearly in the summary/title/source  
+- `readMinutes` — optional; otherwise the UI estimates from `summaryLong` (~200 wpm)  
+- `actionUrl` + `actionLabel` — optional “Do one thing” CTA; only real free reputable links (volunteer, open tools, museum/open-access). Skip if unsure.
 
 Also:
 
 - `weekOf` — Monday of the prior calendar week (first-paint label)  
 - `stories` — featured **15** for first load  
 - `pool` — ~30–45 stories; **Refresh** picks 15 whose ids are disjoint from what’s on screen (session-aware rotation)  
+- `highlights` — optional array of up to 3 story ids for the “This week in three wins” strip (else auto top-3 by impact)  
 - `impact` — 1–5 → hero / featured / standard / compact / minimal  
 - Missing/broken images → calm gray placeholder (no invented credits)
+
+### UI extras
+
+- **Topic chips** narrow the current fifteen (AND across selected topics); empty state if none match.  
+- **Quiet-list** density toggle (Compact / Comfortable) persists in `localStorage` (`wgw-density`).  
+- **Read-time** badge and **metric** chips on cards; **whyMatters** + optional micro-action inside expand.
 
 ## Monday refresh
 

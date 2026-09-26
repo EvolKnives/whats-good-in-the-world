@@ -12,7 +12,24 @@
       "impact": 5,
       "images": [
         "images/hubble-marks-200000-earth-orbits-0.webp"
-      ]
+      ],
+      "whyMatters": "A 36-year observatory still measuring the universe’s expansion after 200,000 orbits.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Earth orbits",
+          "value": "200,000"
+        },
+        {
+          "label": "Miles traveled",
+          "value": "5B+"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -24,7 +41,15 @@
       "images": [
         "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
-      "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
+      "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping",
+      "whyMatters": "Open lunar AI lets researchers map the Moon without training a model from scratch.",
+      "topics": [
+        "Science",
+        "Tech"
+      ],
+      "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
+      "actionLabel": "Browse open NASA–IBM models",
+      "readMinutes": 2
     },
     {
       "id": "fishlock-breaks-reign-scoring-record",
@@ -36,7 +61,19 @@
       "impact": 4,
       "images": [
         "images/fishlock-breaks-reign-scoring-record-0.webp"
-      ]
+      ],
+      "whyMatters": "A club captain sets a scoring record in her final NWSL season.",
+      "topics": [
+        "Achievement",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Career goals",
+          "value": "52"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -50,7 +87,24 @@
         "images/portland-s-springwater-wetlands-wins-national-fl-0.webp"
       ],
       "youtube": null,
-      "id": "portland-s-springwater-wetlands-wins-national-fl"
+      "id": "portland-s-springwater-wetlands-wins-national-fl",
+      "whyMatters": "An urban wetland cuts flood risk while restoring habitat and trail access along Johnson Creek.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Wetland acres",
+          "value": "18"
+        },
+        {
+          "label": "Native plants",
+          "value": "44,000"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "colorado-wildlife-overpass-cuts-collisions",
@@ -62,7 +116,20 @@
       "impact": 4,
       "images": [
         "images/colorado-wildlife-overpass-cuts-collisions-0.webp"
-      ]
+      ],
+      "whyMatters": "A wildlife crossing has already cut highway collisions for elk and pronghorn.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Collision drop",
+          "value": "91%"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
@@ -76,7 +143,20 @@
         "images/oregon-state-chemists-invent-a-greener-way-to-se-0.webp"
       ],
       "youtube": null,
-      "id": "oregon-state-chemists-invent-a-greener-way-to-se"
+      "id": "oregon-state-chemists-invent-a-greener-way-to-se",
+      "whyMatters": "A water-based metal separation skips toxic solvents used in chip and nuclear supply chains.",
+      "topics": [
+        "Oregon",
+        "Science",
+        "Tech"
+      ],
+      "metrics": [
+        {
+          "label": "Separation factor",
+          "value": "33"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "osu-mina-salehi-ai-injury-award",
@@ -88,7 +168,14 @@
       "impact": 4,
       "images": [
         "images/osu-mina-salehi-ai-injury-award-0.webp"
-      ]
+      ],
+      "whyMatters": "Affordable AI ergonomics could flag workplace injury risk outside expensive labs.",
+      "topics": [
+        "Oregon",
+        "Health",
+        "Tech"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -102,7 +189,22 @@
         "images/portland-monarchs-get-digital-trackers-you-can-f-0.webp"
       ],
       "youtube": null,
-      "id": "portland-monarchs-get-digital-trackers-you-can-f"
+      "id": "portland-monarchs-get-digital-trackers-you-can-f",
+      "whyMatters": "Live butterfly tracks help focus habitat work where Pacific Northwest monarchs actually travel.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Science"
+      ],
+      "metrics": [
+        {
+          "label": "Trackers planned",
+          "value": "~200"
+        }
+      ],
+      "actionUrl": "https://birdallianceoregon.org/",
+      "actionLabel": "Learn local bird & habitat tips",
+      "readMinutes": 2
     },
     {
       "id": "alabama-releases-1500-mussels-paint-rock",
@@ -114,7 +216,20 @@
       "impact": 4,
       "images": [
         "images/alabama-releases-1500-mussels-paint-rock-0.webp"
-      ]
+      ],
+      "whyMatters": "Rare mussels are back in a repaired river reach that now shows recruitment.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Mussels released",
+          "value": "~1,500"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "AI helps find scents that steer bees away from pesticides",
@@ -129,7 +244,14 @@
         "images/ai-helps-find-scents-that-steer-bees-away-from-p-1.webp"
       ],
       "youtube": null,
-      "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
+      "id": "ai-helps-find-scents-that-steer-bees-away-from-p",
+      "whyMatters": "Machine learning found bee-safe scents that may keep pollinators off sprayed crops.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Climate"
+      ],
+      "readMinutes": 2
     },
     {
       "id": "parker-solar-probe-29th-record-flyby",
@@ -141,7 +263,24 @@
       "impact": 4,
       "images": [
         "images/parker-solar-probe-29th-record-flyby-0.webp"
-      ]
+      ],
+      "whyMatters": "A spacecraft keeps sampling the Sun’s corona at record distance and speed.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Closest approach",
+          "value": "3.8M mi"
+        },
+        {
+          "label": "Flyby #",
+          "value": "29"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -156,7 +295,14 @@
         "images/partners-launch-research-to-bring-sea-otters-bac-1.webp"
       ],
       "youtube": null,
-      "id": "partners-launch-research-to-bring-sea-otters-bac"
+      "id": "partners-launch-research-to-bring-sea-otters-bac",
+      "whyMatters": "New coastal science is the foundation for eventually restoring Oregon sea otters.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Science"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Chinook salmon reclaim most of their historic Klamath range",
@@ -171,7 +317,20 @@
         "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
-      "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
+      "id": "chinook-salmon-reclaim-most-of-their-historic-kl",
+      "whyMatters": "After the largest dam removal yet, Chinook are already using nearly their full historic range.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Passed Iron Gate (2025)",
+          "value": "13,310"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
@@ -185,7 +344,19 @@
         "images/iron-canyon-fish-passage-reopens-8-5-miles-of-co-0.webp"
       ],
       "youtube": null,
-      "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
+      "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co",
+      "whyMatters": "Removing a failed fish ladder reconnects miles of cold-water spawning habitat.",
+      "topics": [
+        "Climate",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Habitat reopened",
+          "value": "8.5 mi"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
@@ -199,7 +370,14 @@
         "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.jpg"
       ],
       "youtube": null,
-      "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
+      "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-",
+      "whyMatters": "The first documented natural sea-turtle nests on the U.S. West Coast.",
+      "topics": [
+        "Science",
+        "Climate",
+        "Achievement"
+      ],
+      "readMinutes": 2
     }
   ],
   "pool": [
@@ -213,7 +391,24 @@
       "impact": 5,
       "images": [
         "images/hubble-marks-200000-earth-orbits-0.webp"
-      ]
+      ],
+      "whyMatters": "A 36-year observatory still measuring the universe’s expansion after 200,000 orbits.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Earth orbits",
+          "value": "200,000"
+        },
+        {
+          "label": "Miles traveled",
+          "value": "5B+"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
@@ -225,7 +420,15 @@
       "images": [
         "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
-      "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
+      "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping",
+      "whyMatters": "Open lunar AI lets researchers map the Moon without training a model from scratch.",
+      "topics": [
+        "Science",
+        "Tech"
+      ],
+      "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
+      "actionLabel": "Browse open NASA–IBM models",
+      "readMinutes": 2
     },
     {
       "id": "fishlock-breaks-reign-scoring-record",
@@ -237,7 +440,19 @@
       "impact": 4,
       "images": [
         "images/fishlock-breaks-reign-scoring-record-0.webp"
-      ]
+      ],
+      "whyMatters": "A club captain sets a scoring record in her final NWSL season.",
+      "topics": [
+        "Achievement",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Career goals",
+          "value": "52"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -251,7 +466,24 @@
         "images/portland-s-springwater-wetlands-wins-national-fl-0.webp"
       ],
       "youtube": null,
-      "id": "portland-s-springwater-wetlands-wins-national-fl"
+      "id": "portland-s-springwater-wetlands-wins-national-fl",
+      "whyMatters": "An urban wetland cuts flood risk while restoring habitat and trail access along Johnson Creek.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Wetland acres",
+          "value": "18"
+        },
+        {
+          "label": "Native plants",
+          "value": "44,000"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "colorado-wildlife-overpass-cuts-collisions",
@@ -263,7 +495,20 @@
       "impact": 4,
       "images": [
         "images/colorado-wildlife-overpass-cuts-collisions-0.webp"
-      ]
+      ],
+      "whyMatters": "A wildlife crossing has already cut highway collisions for elk and pronghorn.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Collision drop",
+          "value": "91%"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
@@ -277,7 +522,20 @@
         "images/oregon-state-chemists-invent-a-greener-way-to-se-0.webp"
       ],
       "youtube": null,
-      "id": "oregon-state-chemists-invent-a-greener-way-to-se"
+      "id": "oregon-state-chemists-invent-a-greener-way-to-se",
+      "whyMatters": "A water-based metal separation skips toxic solvents used in chip and nuclear supply chains.",
+      "topics": [
+        "Oregon",
+        "Science",
+        "Tech"
+      ],
+      "metrics": [
+        {
+          "label": "Separation factor",
+          "value": "33"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "osu-mina-salehi-ai-injury-award",
@@ -289,7 +547,14 @@
       "impact": 4,
       "images": [
         "images/osu-mina-salehi-ai-injury-award-0.webp"
-      ]
+      ],
+      "whyMatters": "Affordable AI ergonomics could flag workplace injury risk outside expensive labs.",
+      "topics": [
+        "Oregon",
+        "Health",
+        "Tech"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -303,7 +568,22 @@
         "images/portland-monarchs-get-digital-trackers-you-can-f-0.webp"
       ],
       "youtube": null,
-      "id": "portland-monarchs-get-digital-trackers-you-can-f"
+      "id": "portland-monarchs-get-digital-trackers-you-can-f",
+      "whyMatters": "Live butterfly tracks help focus habitat work where Pacific Northwest monarchs actually travel.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Science"
+      ],
+      "metrics": [
+        {
+          "label": "Trackers planned",
+          "value": "~200"
+        }
+      ],
+      "actionUrl": "https://birdallianceoregon.org/",
+      "actionLabel": "Learn local bird & habitat tips",
+      "readMinutes": 2
     },
     {
       "id": "alabama-releases-1500-mussels-paint-rock",
@@ -315,7 +595,20 @@
       "impact": 4,
       "images": [
         "images/alabama-releases-1500-mussels-paint-rock-0.webp"
-      ]
+      ],
+      "whyMatters": "Rare mussels are back in a repaired river reach that now shows recruitment.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Mussels released",
+          "value": "~1,500"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "AI helps find scents that steer bees away from pesticides",
@@ -330,7 +623,14 @@
         "images/ai-helps-find-scents-that-steer-bees-away-from-p-1.webp"
       ],
       "youtube": null,
-      "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
+      "id": "ai-helps-find-scents-that-steer-bees-away-from-p",
+      "whyMatters": "Machine learning found bee-safe scents that may keep pollinators off sprayed crops.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Climate"
+      ],
+      "readMinutes": 2
     },
     {
       "id": "parker-solar-probe-29th-record-flyby",
@@ -342,7 +642,24 @@
       "impact": 4,
       "images": [
         "images/parker-solar-probe-29th-record-flyby-0.webp"
-      ]
+      ],
+      "whyMatters": "A spacecraft keeps sampling the Sun’s corona at record distance and speed.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Closest approach",
+          "value": "3.8M mi"
+        },
+        {
+          "label": "Flyby #",
+          "value": "29"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -357,7 +674,14 @@
         "images/partners-launch-research-to-bring-sea-otters-bac-1.webp"
       ],
       "youtube": null,
-      "id": "partners-launch-research-to-bring-sea-otters-bac"
+      "id": "partners-launch-research-to-bring-sea-otters-bac",
+      "whyMatters": "New coastal science is the foundation for eventually restoring Oregon sea otters.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Science"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Chinook salmon reclaim most of their historic Klamath range",
@@ -372,7 +696,20 @@
         "images/chinook-salmon-reclaim-most-of-their-historic-kl-1.jpg"
       ],
       "youtube": null,
-      "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
+      "id": "chinook-salmon-reclaim-most-of-their-historic-kl",
+      "whyMatters": "After the largest dam removal yet, Chinook are already using nearly their full historic range.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Passed Iron Gate (2025)",
+          "value": "13,310"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
@@ -386,7 +723,19 @@
         "images/iron-canyon-fish-passage-reopens-8-5-miles-of-co-0.webp"
       ],
       "youtube": null,
-      "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
+      "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co",
+      "whyMatters": "Removing a failed fish ladder reconnects miles of cold-water spawning habitat.",
+      "topics": [
+        "Climate",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "Habitat reopened",
+          "value": "8.5 mi"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
@@ -400,7 +749,14 @@
         "images/olive-ridley-turtles-nest-on-the-u-s-west-coast--0.jpg"
       ],
       "youtube": null,
-      "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
+      "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-",
+      "whyMatters": "The first documented natural sea-turtle nests on the U.S. West Coast.",
+      "topics": [
+        "Science",
+        "Climate",
+        "Achievement"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Getty brings Reynolds’ Portrait of Mai to Los Angeles for the first time",
@@ -414,7 +770,15 @@
         "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
       ],
       "youtube": null,
-      "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
+      "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang",
+      "whyMatters": "A landmark portrait reaches U.S. audiences with free talks and workshops.",
+      "topics": [
+        "Art",
+        "Community"
+      ],
+      "actionUrl": "https://www.getty.edu/visit/",
+      "actionLabel": "Plan a Getty visit",
+      "readMinutes": 2
     },
     {
       "title": "Open-source ORCA turns everyday radios into science radars",
@@ -428,7 +792,13 @@
         "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
       ],
       "youtube": null,
-      "id": "open-source-orca-turns-everyday-radios-into-scie"
+      "id": "open-source-orca-turns-everyday-radios-into-scie",
+      "whyMatters": "Free radar software helps labs study ice, forests, and soils without proprietary lock-in.",
+      "topics": [
+        "Tech",
+        "Science"
+      ],
+      "readMinutes": 2
     },
     {
       "title": "Xerces maps a statewide Oregon pollinator conservation strategy",
@@ -442,7 +812,22 @@
         "images/xerces-maps-a-statewide-oregon-pollinator-conser-0.jpg"
       ],
       "youtube": null,
-      "id": "xerces-maps-a-statewide-oregon-pollinator-conser"
+      "id": "xerces-maps-a-statewide-oregon-pollinator-conser",
+      "whyMatters": "A statewide map gives land managers clear pollinator priorities across Oregon.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Science"
+      ],
+      "metrics": [
+        {
+          "label": "Priority species",
+          "value": "22"
+        }
+      ],
+      "actionUrl": "https://beecityusa.org/oregons-new-pollinator-conservation-strategy-prioritizes-actions-across-the-state/",
+      "actionLabel": "Read the Oregon strategy",
+      "readMinutes": 2
     },
     {
       "title": "Smithsonian’s African American History Museum marks 10 years with a free community weekend",
@@ -456,7 +841,16 @@
         "images/smithsonian-s-african-american-history-museum-ma-0.webp"
       ],
       "youtube": null,
-      "id": "smithsonian-s-african-american-history-museum-ma"
+      "id": "smithsonian-s-african-american-history-museum-ma",
+      "whyMatters": "A free anniversary weekend invites everyone into music, art, and family programs.",
+      "topics": [
+        "Art",
+        "Community",
+        "Achievement"
+      ],
+      "actionUrl": "https://nmaahc.si.edu/",
+      "actionLabel": "Visit the free museum site",
+      "readMinutes": 2
     },
     {
       "title": "Free digital twin lets anyone explore Assisi’s Giotto frescoes up close",
@@ -470,7 +864,21 @@
         "images/free-digital-twin-lets-anyone-explore-assisi-s-g-0.webp",
         "images/free-digital-twin-lets-anyone-explore-assisi-s-g-1.webp"
       ],
-      "id": "free-digital-twin-lets-anyone-explore-assisi-s-g"
+      "id": "free-digital-twin-lets-anyone-explore-assisi-s-g",
+      "whyMatters": "Gigapixel frescoes let anyone study Giotto-level detail without a plane ticket.",
+      "topics": [
+        "Art",
+        "Tech"
+      ],
+      "metrics": [
+        {
+          "label": "Pixels (one fresco)",
+          "value": "~8B"
+        }
+      ],
+      "actionUrl": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
+      "actionLabel": "Explore Preserving Assisi",
+      "readMinutes": 2
     },
     {
       "title": "Thailand eliminates rubella as a public health problem, WHO says",
@@ -484,7 +892,19 @@
         "images/thailand-eliminates-rubella-as-a-public-health-p-0.webp"
       ],
       "youtube": null,
-      "id": "thailand-eliminates-rubella-as-a-public-health-p"
+      "id": "thailand-eliminates-rubella-as-a-public-health-p",
+      "whyMatters": "Verified rubella elimination protects families from congenital rubella syndrome.",
+      "topics": [
+        "Health",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "SE Asia countries verified",
+          "value": "7th"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "nasa-prithvi-ai-in-orbit",
@@ -496,7 +916,16 @@
       "impact": 5,
       "images": [
         "images/nasa-prithvi-ai-in-orbit-0.webp"
-      ]
+      ],
+      "whyMatters": "An open Earth AI model is now running flood and cloud detection from orbit.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Climate"
+      ],
+      "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
+      "actionLabel": "Try open geospatial models",
+      "readMinutes": 2
     },
     {
       "id": "nasa-galapagos-tortoises-satellite",
@@ -508,7 +937,20 @@
       "impact": 5,
       "images": [
         "images/nasa-galapagos-tortoises-satellite-0.webp"
-      ]
+      ],
+      "whyMatters": "Satellite data helped place the first wild tortoises back on Floreana in 150+ years.",
+      "topics": [
+        "Climate",
+        "Science",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Tortoises released",
+          "value": "158"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "noaa-indian-river-lagoon-restore",
@@ -520,7 +962,23 @@
       "impact": 4,
       "images": [
         "images/noaa-indian-river-lagoon-restore-0.webp"
-      ]
+      ],
+      "whyMatters": "A coordinated lagoon restoration plants seagrass, mangroves, and reefs at ecosystem scale.",
+      "topics": [
+        "Climate",
+        "Community"
+      ],
+      "metrics": [
+        {
+          "label": "NOAA funding",
+          "value": "$9.4M"
+        },
+        {
+          "label": "Projects",
+          "value": "15"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "noaa-wemo-open-source-r",
@@ -532,7 +990,16 @@
       "impact": 4,
       "images": [
         "images/noaa-wemo-open-source-r-0.webp"
-      ]
+      ],
+      "whyMatters": "Coastal managers can estimate wave energy with free R software instead of locked GIS tools.",
+      "topics": [
+        "Tech",
+        "Science",
+        "Climate"
+      ],
+      "actionUrl": "https://coastalscience.noaa.gov/news/new-version-of-wave-exposure-tool-now-publicly-available/",
+      "actionLabel": "Get the free WEMo package",
+      "readMinutes": 2
     },
     {
       "id": "oregon-zoo-sihek-palmyra",
@@ -544,7 +1011,20 @@
       "impact": 4,
       "images": [
         "images/oregon-zoo-sihek-palmyra-0.webp"
-      ]
+      ],
+      "whyMatters": "Zoo-bred Sihek may help restore a bird extinct in the wild to a predator-free atoll.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Achievement"
+      ],
+      "metrics": [
+        {
+          "label": "Birds in human care",
+          "value": "~143"
+        }
+      ],
+      "readMinutes": 2
     },
     {
       "id": "met-3d-models-open-access",
@@ -556,7 +1036,21 @@
       "impact": 4,
       "images": [
         "images/met-3d-models-open-access-0.webp"
-      ]
+      ],
+      "whyMatters": "Research-grade 3D museum scans are free to explore—and many to download—under open access.",
+      "topics": [
+        "Art",
+        "Tech"
+      ],
+      "metrics": [
+        {
+          "label": "3D models",
+          "value": "100+"
+        }
+      ],
+      "actionUrl": "https://www.metmuseum.org/",
+      "actionLabel": "Explore The Met online",
+      "readMinutes": 2
     },
     {
       "id": "met-gilded-predator-moche",
@@ -568,7 +1062,15 @@
       "impact": 3,
       "images": [
         "images/met-gilded-predator-moche-0.webp"
-      ]
+      ],
+      "whyMatters": "A free digital reconstruction shows how Moche metalsmiths conveyed motion in gold.",
+      "topics": [
+        "Art",
+        "Science"
+      ],
+      "actionUrl": "https://www.metmuseum.org/perspectives/gilded-predator",
+      "actionLabel": "View the reconstruction",
+      "readMinutes": 2
     },
     {
       "id": "nps-cuyahoga-habitat-day",
@@ -580,7 +1082,15 @@
       "impact": 2,
       "images": [
         "images/nps-cuyahoga-habitat-day-0.jpg"
-      ]
+      ],
+      "whyMatters": "A free Public Lands Day drop-in turns visitors into habitat stewards for a day.",
+      "topics": [
+        "Community",
+        "Climate"
+      ],
+      "actionUrl": "https://www.nps.gov/cuva/getinvolved/volunteer.htm",
+      "actionLabel": "Find Cuyahoga volunteer days",
+      "readMinutes": 1
     },
     {
       "id": "marsh-billings-forest-fest",
@@ -592,7 +1102,13 @@
       "impact": 2,
       "images": [
         "images/marsh-billings-forest-fest-0.webp"
-      ]
+      ],
+      "whyMatters": "A free forest festival pairs wagon rides and craft with public-land stewardship.",
+      "topics": [
+        "Community",
+        "Art"
+      ],
+      "readMinutes": 1
     },
     {
       "id": "usgs-landsat-next-free-data",
@@ -604,7 +1120,16 @@
       "impact": 3,
       "images": [
         "images/usgs-landsat-next-free-data-0.webp"
-      ]
+      ],
+      "whyMatters": "Decades of free Landsat imagery power flood maps, crops, and conservation worldwide.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Climate"
+      ],
+      "actionUrl": "https://www.usgs.gov/landsat-missions/landsat-data-access",
+      "actionLabel": "Access free Landsat data",
+      "readMinutes": 1
     },
     {
       "id": "fws-refuge-volunteer-habitat",
@@ -616,7 +1141,15 @@
       "impact": 2,
       "images": [
         "images/fws-refuge-volunteer-habitat-0.webp"
-      ]
+      ],
+      "whyMatters": "National wildlife refuges welcome free volunteers for habitat and citizen science.",
+      "topics": [
+        "Community",
+        "Climate"
+      ],
+      "actionUrl": "https://www.fws.gov/volunteer",
+      "actionLabel": "Find a refuge volunteer day",
+      "readMinutes": 1
     },
     {
       "id": "smithsonian-open-access",
@@ -628,7 +1161,16 @@
       "impact": 3,
       "images": [
         "images/smithsonian-open-access-0.webp"
-      ]
+      ],
+      "whyMatters": "Millions of Smithsonian items are free to download and remix under CC0.",
+      "topics": [
+        "Art",
+        "Tech",
+        "Community"
+      ],
+      "actionUrl": "https://www.si.edu/openaccess",
+      "actionLabel": "Browse Smithsonian Open Access",
+      "readMinutes": 1
     },
     {
       "id": "nasa-eyes-free-solar-system",
@@ -640,7 +1182,15 @@
       "impact": 3,
       "images": [
         "images/nasa-eyes-free-solar-system-0.webp"
-      ]
+      ],
+      "whyMatters": "Real mission data becomes a free fly-through anyone can open on a laptop or phone.",
+      "topics": [
+        "Science",
+        "Tech"
+      ],
+      "actionUrl": "https://eyes.nasa.gov/",
+      "actionLabel": "Open NASA Eyes",
+      "readMinutes": 1
     },
     {
       "id": "opb-oregon-science-desk",
@@ -652,7 +1202,14 @@
       "impact": 2,
       "images": [
         "images/opb-oregon-science-desk-0.jpg"
-      ]
+      ],
+      "whyMatters": "Oregon science and nature reporting stays free to read and share statewide.",
+      "topics": [
+        "Oregon",
+        "Science",
+        "Community"
+      ],
+      "readMinutes": 1
     },
     {
       "id": "oregon-state-newsroom-free",
@@ -664,7 +1221,13 @@
       "impact": 2,
       "images": [
         "images/oregon-state-newsroom-free-0.webp"
-      ]
+      ],
+      "whyMatters": "OSU’s free newsroom translates research into plain-language Oregon updates.",
+      "topics": [
+        "Oregon",
+        "Science"
+      ],
+      "readMinutes": 1
     },
     {
       "id": "noaa-fisheries-habitat-stories",
@@ -676,7 +1239,13 @@
       "impact": 2,
       "images": [
         "images/noaa-fisheries-habitat-stories-0.webp"
-      ]
+      ],
+      "whyMatters": "NOAA’s free habitat features document seagrass, wetlands, and living shorelines with hard numbers.",
+      "topics": [
+        "Climate",
+        "Community"
+      ],
+      "readMinutes": 1
     },
     {
       "id": "code-gov-open-source-usa",
@@ -688,7 +1257,15 @@
       "impact": 2,
       "images": [
         "images/code-gov-open-source-usa-0.webp"
-      ]
+      ],
+      "whyMatters": "Federal open-source catalogs let the public reuse government-built tools.",
+      "topics": [
+        "Tech",
+        "Community"
+      ],
+      "actionUrl": "https://code.gov/",
+      "actionLabel": "Browse Code.gov",
+      "readMinutes": 1
     },
     {
       "id": "nasa-earthdata-open",
@@ -700,7 +1277,16 @@
       "impact": 3,
       "images": [
         "images/nasa-earthdata-open-0.webp"
-      ]
+      ],
+      "whyMatters": "A free Earthdata account unlocks NASA satellite observations for climate and disaster work.",
+      "topics": [
+        "Science",
+        "Tech",
+        "Climate"
+      ],
+      "actionUrl": "https://www.earthdata.nasa.gov/",
+      "actionLabel": "Create a free Earthdata login",
+      "readMinutes": 1
     },
     {
       "id": "uoregon-research-news",
@@ -712,7 +1298,13 @@
       "impact": 2,
       "images": [
         "images/uoregon-research-news-0.jpg"
-      ]
+      ],
+      "whyMatters": "UO’s free research news keeps Eugene-to-Cascades discoveries in plain language.",
+      "topics": [
+        "Oregon",
+        "Science"
+      ],
+      "readMinutes": 1
     },
     {
       "id": "bird-alliance-oregon",
@@ -724,7 +1316,16 @@
       "impact": 2,
       "images": [
         "images/bird-alliance-oregon-0.webp"
-      ]
+      ],
+      "whyMatters": "Portland-area birding and yard-habitat tips stay free for Oregon neighbors.",
+      "topics": [
+        "Oregon",
+        "Climate",
+        "Community"
+      ],
+      "actionUrl": "https://birdallianceoregon.org/",
+      "actionLabel": "Explore Bird Alliance guides",
+      "readMinutes": 1
     },
     {
       "id": "huggingface-nasa-models",
@@ -736,7 +1337,20 @@
       "impact": 3,
       "images": [
         "images/huggingface-nasa-models-0.webp"
-      ]
+      ],
+      "whyMatters": "Open model cards make NASA–IBM science AI inspectable and reusable without a paid API.",
+      "topics": [
+        "Tech",
+        "Science"
+      ],
+      "actionUrl": "https://huggingface.co/ibm-nasa-geospatial",
+      "actionLabel": "Open the model cards",
+      "readMinutes": 1
     }
+  ],
+  "highlights": [
+    "hubble-marks-200000-earth-orbits",
+    "portland-s-springwater-wetlands-wins-national-fl",
+    "colorado-wildlife-overpass-cuts-collisions"
   ]
 }

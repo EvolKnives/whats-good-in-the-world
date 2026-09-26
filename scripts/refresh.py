@@ -12,8 +12,11 @@ over dense journal abstracts, controversy, or auction spectacle. Assigns impact 
 
 Writes both `stories` (featured 15 for first paint / Monday label) and `pool`
 (~30–45) so the site Refresh button can swap in a disjoint set of 15 client-side.
-No API key required (DuckDuckGo HTML). Keeps prior file if too few candidates.
-Monday deploy: run this script, then git commit + push so GitHub Pages updates.
+Soft-fills `topics`, `whyMatters`, and `readMinutes` from title/summary heuristics;
+preserves prior `metrics` / `actionUrl` / `actionLabel` / `highlights` when merging.
+Never invents numeric metrics or action links. No API key required (DuckDuckGo HTML).
+Keeps prior file if too few candidates. Monday deploy: run this script, then git
+commit + push so GitHub Pages updates.
 """
 
 from __future__ import annotations
@@ -468,6 +471,133 @@ def ensure_ids(stories: list[dict]) -> list[dict]:
     return stories
 
 
+
+TOPIC_LABELS = (
+    "Climate",
+    "Health",
+    "Oregon",
+    "Science",
+    "Tech",
+    "Art",
+    "Achievement",
+    "Community",
+)
+
+TOPIC_PATTERNS = {
+    "Oregon": re.compile(
+        r"\b(Oregon|Portland|Salem|Eugene|Corvallis|Willamette|Cascades|"
+        r"OSU|Oregon State|University of Oregon|OPB|Xerces|Elakha)\b",
+        re.I,
+    ),
+    "Climate": re.compile(
+        r"\b(habitat|wetland|salmon|wildlife|climate|restoration|pollinator|"
+        r"seagrass|tortoise|otter|monarch|mussel|reef|forest|conservation)\b",
+        re.I,
+    ),
+    "Health": re.compile(
+        r"\b(health|injury|rubella|vaccine|immuniz|public health|ergonomic)\b",
+        re.I,
+    ),
+    "Science": re.compile(
+        r"\b(NASA|NOAA|research|science|satellite|chemist|study|observ|"
+        r"university|lab)\b",
+        re.I,
+    ),
+    "Tech": re.compile(
+        r"\b(AI|open[- ]source|software|model|app|digital|radar|code|"
+        r"Hugging Face|GitHub)\b",
+        re.I,
+    ),
+    "Art": re.compile(
+        r"\b(museum|portrait|fresco|gallery|exhibition|Met |Getty|"
+        r"Smithsonian|3D model|heritage)\b",
+        re.I,
+    ),
+    "Achievement": re.compile(
+        r"\b(record|first |award|milestone|eliminat|reclaim|all[- ]time)\b",
+        re.I,
+    ),
+    "Community": re.compile(
+        r"\b(volunteer|community|weekend|festival|public|neighbor|"
+        r"citizen|steward)\b",
+        re.I,
+    ),
+}
+
+
+def soft_topics(story: dict) -> list[str]:
+    """Best-effort topic tags from title/summary/url. Cap at 3; never invent."""
+    if isinstance(story.get("topics"), list) and story["topics"]:
+        return [str(t) for t in story["topics"] if str(t) in TOPIC_LABELS][:3]
+    blob = f"{story.get('title', '')} {story.get('summary', '')} {story.get('url', '')}"
+    found = [label for label in TOPIC_LABELS if TOPIC_PATTERNS[label].search(blob)]
+    return found[:3]
+
+
+def soft_why_matters(story: dict) -> str | None:
+    """Use existing whyMatters, else first summary sentence if short enough."""
+    existing = story.get("whyMatters")
+    if isinstance(existing, str) and existing.strip():
+        return existing.strip()
+    summary = (story.get("summary") or "").strip()
+    if not summary:
+        return None
+    first = re.split(r"(?<=[.!?])\s+", summary)[0].strip()
+    if 24 <= len(first) <= 140:
+        return first
+    return None
+
+
+def soft_read_minutes(story: dict) -> int:
+    if story.get("readMinutes"):
+        try:
+            return max(1, int(story["readMinutes"]))
+        except (TypeError, ValueError):
+            pass
+    text = story.get("summaryLong") or story.get("summary") or ""
+    words = len(re.findall(r"\b\w+\b", text))
+    return max(1, round(words / 200) or 1)
+
+
+def enrich_story(story: dict) -> dict:
+    """Soft-fill topics / whyMatters / readMinutes for Monday harvests.
+
+    metrics[] and actionUrl/actionLabel stay manual-or-prior only — never invent
+    numbers or shady CTAs in the refresher.
+    """
+    topics = soft_topics(story)
+    if topics:
+        story["topics"] = topics
+    why = soft_why_matters(story)
+    if why:
+        story["whyMatters"] = why
+    story["readMinutes"] = soft_read_minutes(story)
+    return story
+
+
+def pick_highlights(pool: list[dict], prior_ids: list[str] | None = None) -> list[str]:
+    """Prefer prior editor highlights still in pool; else top-3 by impact."""
+    by_id = {s["id"]: s for s in pool if s.get("id")}
+    picked: list[str] = []
+    for sid in prior_ids or []:
+        if sid in by_id and sid not in picked:
+            picked.append(sid)
+        if len(picked) >= 3:
+            return picked
+    ranked = sorted(
+        pool,
+        key=lambda s: (-float(s.get("impact") or 0), str(s.get("id") or "")),
+    )
+    for s in ranked:
+        sid = s.get("id")
+        if not sid or sid in picked:
+            continue
+        picked.append(sid)
+        if len(picked) >= 3:
+            break
+    return picked
+
+
 def main() -> int:
     week_of = prior_week_monday()
     print(
@@ -510,9 +640,22 @@ def main() -> int:
         if not stories:
             return 1
 
+    prior_highlights: list[str] = []
+    if OUT.exists():
+        try:
+            prior_full = json.loads(OUT.read_text(encoding="utf-8"))
+            prior_highlights = list(prior_full.get("highlights") or [])
+        except Exception:
+            prior_highlights = []
+
+    pool = [enrich_story(s) for s in pool]
+    stories = [enrich_story(s) for s in stories[:NEED]]
+    highlights = pick_highlights(pool, prior_highlights)
+
     payload = {
         "weekOf": week_of.isoformat(),
         "updatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "highlights": highlights,
         "stories": stories[:NEED],
         "pool": pool,
     }
