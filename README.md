@@ -1,6 +1,6 @@
 # What's Good In The World?
 
-A phone-first single page with **15** uplifting stories from the **prior calendar week**. Sparse Apple-inspired layout: large type, soft rounded media, generous whitespace, subtle scroll fades. Story footprint scales with an `impact` score (1–5).
+A phone-first single page with **15** uplifting stories drawn fresh from a larger pool each visit (pool rebuilt from the **prior calendar week** on Mondays). Sparse Apple-inspired layout: large type, soft rounded media, generous whitespace, subtle scroll fades. Story footprint scales with an `impact` score (1–5).
 
 ## Preview locally
 
@@ -60,13 +60,17 @@ Cron example (Mondays 06:00) — refresh then push so Pages updates:
 0 6 * * 1 cd /path/to/whats-good-in-the-world && python3 scripts/refresh.py && git add data/week.json && git commit -m "weekly refresh" && git push >> /tmp/whats-good-refresh.log 2>&1
 ```
 
-**Assumptions:** searches favor **USA stories (majority)**, with **Oregon** when available (Portland, coast, Cascades, Willamette, OSU/UO, local nonprofits), plus accessible tech/space/open-source writeups, conservation, art, and a little global variety only as needed. Builds a **pool of ~30–45**, then sets a featured 15. Skips known paywall hosts. Scores with positivity heuristics plus USA/Oregon boosts. **Failure:** if fewer than ~8 solid candidates, exits non-zero and leaves the previous `week.json` intact.
+**Assumptions:** searches favor **USA stories (majority)**, with **Oregon** when available (Portland, coast, Cascades, Willamette, OSU/UO, local nonprofits), plus accessible tech/space/open-source writeups, conservation, art, **recent human achievements**, and a little global variety only as needed. Builds a **pool of ~30–45**. Soft mix targets include tech, art, and ~3–5 achievement-flavored stories among a featured 15 (and a healthy share of the pool). Skips known paywall hosts. Scores with positivity / tech / art / achievement heuristics plus USA/Oregon boosts. **Failure:** if fewer than ~8 solid candidates, exits non-zero and leaves the previous `week.json` intact.
+
+### Fresh set on every open
+
+Each page load picks a **fresh 15** from `pool` (shuffled; prefers unique primary photos). The header “Week of …” label is pool provenance from the Monday harvest—not a fixed digest that stays until next Monday.
 
 ### In-page Refresh
 
 The footer **Refresh** button does **not** wait on a network re-harvest. It instantly chooses 15 stories from `pool` with ids disjoint from the current set (falling back to maximize-new if the pool is tight), re-renders, scrolls to top, and toasts **“Fifteen new stories”**. `sessionStorage` remembers recent ids so repeated taps keep rotating.
 
-**Positivity criteria:** conservation & recovery, public-health milestones, useful tech/open-source tools, restoration, accessibility, free museum/art wins. Avoid culture-war / contested framing.
+**Positivity criteria:** conservation & recovery, public-health milestones, useful tech/open-source tools, restoration, accessibility, free museum/art wins, and **human achievements** (personal/team records, maker builds, science/tech milestones, community goals met, wildlife release successes). Prefer USA + Oregon when available. Avoid culture-war / contested framing.
 
 ## Images & paywalls
 

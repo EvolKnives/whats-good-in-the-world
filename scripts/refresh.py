@@ -6,8 +6,9 @@ Monday cron/routine friendly. Prefers USA stories (majority), with Oregon when
 available (Portland, Oregon coast, Cascades, Willamette, Oregon nonprofits,
 OSU/UO research, conservation, community, art, tech). Keep a little global
 variety only as needed. Freely readable writeups — tech, space, AI-for-good,
-open source, conservation, community, and art-world wins — over dense journal
-abstracts, controversy, or auction spectacle. Assigns impact 1–5 and stable ids.
+open source, conservation, community, art-world wins, and recent human
+achievements (records, maker builds, science milestones, community goals) —
+over dense journal abstracts, controversy, or auction spectacle. Assigns impact 1–5 and stable ids.
 
 Writes both `stories` (featured 15 for first paint / Monday label) and `pool`
 (~30–45) so the site Refresh button can swap in a disjoint set of 15 client-side.
@@ -51,6 +52,16 @@ POSITIVE_QUERIES = [
     "site:oregonstate.edu OR site:uoregon.edu OR site:ohsu.edu research breakthrough OR discovery",
     "site:opb.org Oregon conservation OR science OR community",
     "Oregon nonprofit museum OR art OR pollinator OR monarch",
+    # Human achievements (personal/team wins, records, maker builds, milestones)
+    "athlete OR runner OR climber breaks record OR first person OR summit USA",
+    "student inventor OR invention OR debuted OR launched open source USA OR Oregon",
+    "community fundraiser reaches goal OR raised OR completed restoration USA",
+    "wildlife rescued released OR habitat restored success OR fish passage complete",
+    "accessibility win OR assistive technology debuted OR open source shipped GitHub",
+    "NASA OR NOAA milestone OR first OR record OR completed mission",
+    "Oregon Portland award OR completed OR milestone OR inventor OR graduated",
+    "maker build completed OR open source release shipped university OR NASA",
+    "site:reignfc.com OR site:nwslsoccer.com record OR milestone OR first",
     # Small global fill only
     "site:who.int verifies OR eliminates OR validates",
     "site:esa.int Earth observation OR open",
@@ -101,6 +112,18 @@ ART_HINTS = re.compile(
     r"\b(museum|gallery|exhibition|fresco|mural|heritage|"
     r"street art|conservator|restoration|gigapixel|"
     r"Tate|Louvre|Smithsonian|Met |MOCAA|ARTIST ROOMS|Getty)\b",
+    re.I,
+)
+
+# Human achievement / personal-team wins (avoid war/politics/scandal via NEG_HINTS)
+ACHIEVE_HINTS = re.compile(
+    r"\b(achieved|achievement|record|broke record|first person|"
+    r"milestone|completed|graduated|raised \$?\d|rescued|release(?:d)?|"
+    r"restored habitat|won award|award[- ]winning|inventor|invented|"
+    r"debuted|launched open[- ]source|climbed|summit|finished|"
+    r"all[- ]time|career (?:high|record)|brace|hat[- ]trick|"
+    r"fundraiser|goal (?:met|reached)|shipped|prototype|"
+    r"world(?:'s)? first|for the first time)\b",
     re.I,
 )
 
@@ -232,6 +255,7 @@ def score_candidate(title: str, summary: str, url: str) -> float:
     # Prefer digestible tech / accessible news over dense paper language
     score += 2.0 * len(TECH_HINTS.findall(blob))
     score += 2.0 * len(ART_HINTS.findall(blob))
+    score += 2.0 * len(ACHIEVE_HINTS.findall(blob))
     if DENSE_HINTS.search(blob):
         score -= 2.5
     host = urllib.parse.urlparse(url).netloc.lower()
@@ -325,6 +349,7 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
     titles_norm: list[str] = []
     tech_count = 0
     art_count = 0
+    achieve_count = 0
 
     def blob_of(story: dict) -> str:
         return f"{story['title']} {story['summary']} {story.get('url', '')}"
@@ -335,6 +360,7 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
             continue
         is_tech = bool(TECH_HINTS.search(blob_of(story)))
         is_art = bool(ART_HINTS.search(blob_of(story)))
+        is_achieve = bool(ACHIEVE_HINTS.search(blob_of(story)))
         titles_norm.append(norm)
         story["impact"] = impact_from_score(sc, len(picked))
         picked.append(story)
@@ -342,6 +368,8 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
             tech_count += 1
         if is_art:
             art_count += 1
+        if is_achieve:
+            achieve_count += 1
         if len(picked) >= need:
             break
 
@@ -358,13 +386,15 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
                 continue
             if len(picked) >= need:
                 for i in range(len(picked) - 1, -1, -1):
-                    # Prefer replacing items that are neither tech nor art
+                    # Prefer replacing items outside protected mix categories
                     pb = f"{picked[i]['title']} {picked[i]['summary']}"
                     if hint_re.search(pb):
                         continue
-                    if label == "tech" and ART_HINTS.search(pb):
+                    if label != "tech" and TECH_HINTS.search(pb):
                         continue
-                    if label == "art" and TECH_HINTS.search(pb):
+                    if label != "art" and ART_HINTS.search(pb):
+                        continue
+                    if label != "achieve" and ACHIEVE_HINTS.search(pb):
                         continue
                     story["impact"] = picked[i]["impact"]
                     picked[i] = story
@@ -378,9 +408,15 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
                 count += 1
         return count
 
-    # Second pass: keep tech and art represented alongside nature/health
-    tech_count = boost_category(TECH_HINTS, tech_count, 5, "tech")
-    art_count = boost_category(ART_HINTS, art_count, 2, "art")
+    # Second pass: keep tech, art, and achievements represented
+    # Soft targets scale with need: ~5 tech / ~2 art / ~3–5 achieve in featured 15;
+    # ~12 tech / ~5 art / ~10 achieve across a ~40 pool.
+    want_tech = max(5, (need * 5) // 15)
+    want_art = max(2, (need * 2) // 15)
+    want_achieve = max(3, (need * 4) // 15)  # ~3–4 of 15; ~10 of 40
+    tech_count = boost_category(TECH_HINTS, tech_count, want_tech, "tech")
+    art_count = boost_category(ART_HINTS, art_count, want_art, "art")
+    achieve_count = boost_category(ACHIEVE_HINTS, achieve_count, want_achieve, "achieve")
 
     # Third pass: prefer USA majority (soft replace non-US when USA candidates remain)
     def is_usa(story: dict) -> bool:

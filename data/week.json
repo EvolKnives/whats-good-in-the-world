@@ -1,7 +1,19 @@
 {
   "weekOf": "2026-09-22",
-  "updatedAt": "2026-09-26T11:12:21Z",
+  "updatedAt": "2026-09-26T18:09:09Z",
   "stories": [
+    {
+      "id": "hubble-marks-200000-earth-orbits",
+      "title": "Hubble marks 200,000 Earth orbits while hunting a lensed supernova",
+      "summary": "NASA’s Hubble Space Telescope completed its 200,000th orbit around Earth on Sept. 19, after more than 36 years and over 5 billion miles traveled. The same day’s observing program continues Hubble’s work on the universe’s expansion rate by monitoring a gravitationally lensed supernova.",
+      "summaryLong": "NASA’s Hubble Space Telescope completed its 200,000th orbit around Earth on Sept. 19, marking another milestone for an observatory that continues to transform our understanding of the universe.\n\nHubble has traveled more than 5 billion miles around Earth over its 36-year lifetime and has made more than 1.7 million observations. An observation completed on the day of the 200,000th orbit ties directly to one of Hubble’s defining scientific legacies: measuring the expansion rate of the universe, often called the Hubble Constant. The program takes advantage of Hubble’s ability to return to the same regions of the sky over time to monitor for the reappearance of a supernova—an exploding star—named Athena.\n\nThe featured image centers on galaxy cluster MACS J0417, which acts as a gravitational lens, bending and magnifying light from objects far behind it. Light from a supernova can reach Earth along multiple paths, so the same stellar explosion can appear more than once at times separated by months or even years depending on the path it took. Supernova Athena, discovered by NASA’s James Webb Space Telescope in 2025, is predicted to reappear between now and early March 2027. Measuring the timing of those reappearances can help researchers map the mass of MACS J0417 as a foreground lens and refine our understanding of how fast the universe is expanding.\n\nAfter more than 36 years in space, Hubble still reaches new heights of scientific productivity. Its unique ability to observe and analyze light in ultraviolet and visible wavelengths complements NASA’s James Webb and Roman Space Telescopes. Demand for Hubble observing time remains high: astronomers request about seven times as much observing time as is available each year. Hubble continues to observe targets across every area of astronomy around the clock, with real-time tracking of those observations available on NASA’s website.\n\nThe Sept. 23, 2026 NASA Science update credits the Hubble Mission Team at Goddard Space Flight Center. Image credits on the page include NASA, ESA, STScI, and M. Pascale (UCLA), with processing by J. DePasquale (STScI). This digest summary sticks to those published facts—no extra quotes or figures invented.",
+      "source": "NASA Science",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-seeks-lensed-supernova-marks-200000-orbits/",
+      "impact": 5,
+      "images": [
+        "images/hubble-marks-200000-earth-orbits-0.webp"
+      ]
+    },
     {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
       "summary": "NASA and IBM released a free Lunar Foundation Model trained on Lunar Reconnaissance Orbiter data and more. Hosted on Hugging Face with open code, it helps scientists map craters, hunt for polar ice, and study old volcanic features without building a model from scratch.",
@@ -13,6 +25,18 @@
         "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
       "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
+    },
+    {
+      "id": "fishlock-breaks-reign-scoring-record",
+      "title": "Jess Fishlock becomes Seattle Reign’s all-time leading scorer",
+      "summary": "Captain Jess Fishlock scored twice as Seattle Reign FC beat Boston Legacy 2-0 at Lumen Field, passing Megan Rapinoe for the club’s regular-season scoring record with 52 goals. The milestone comes in Fishlock’s announced final NWSL season.",
+      "summaryLong": "Seattle Reign FC defeated Boston Legacy FC 2-0 at Lumen Field on Friday night behind a brace from captain Jess Fishlock. With those two goals she passed NWSL and U.S. Women’s National Team legend Megan Rapinoe as the club’s all-time leading scorer in the regular season, reaching 52 goals.\n\nAccording to the club’s free match recap, Seattle played at a blistering tempo and employed a high press from the opening whistle, repeatedly winning the ball back before attacking in transition. Fishlock forced an early save in the 14th minute after Ainsley McCammon and Maddie Dahlien combined to find her. The breakthrough came in the 23rd minute: Dahlien intercepted near midfield, played Fishlock into space, and the Welsh midfielder drove toward the edge of the box before picking out the bottom corner past goalkeeper Casey Murphy.\n\nSeattle nearly added more before halftime. McCammon launched a sweeping attack that ended with Sofia Huerta’s header denied by a kick save. After the break, Dahlien forced another reflex stop, and waves of transition continued through McCammon, Dahlien, and Maddie Mercado. Fishlock sealed the result in the 64th minute—McCammon split defenders into Fishlock, who released Dahlien down the flank and finished the return into the top-right corner for 2-0. Later chances included a Mercado effort blocked and a curled shot from Fishel that crashed off the crossbar.\n\nThe clean sheet made the Reign the first team in NWSL history to record five straight home shutout wins in the regular season, against a Boston side that had scored in 13 consecutive matches. The result temporarily pushed Seattle into sixth in the standings. Fishlock has announced this will be her final season; the club plans to honor her during its annual Queen’s Match against the North Carolina Courage. Source: Seattle Reign FC match recap dated Sept. 25, 2026.",
+      "source": "Seattle Reign FC",
+      "url": "https://www.reignfc.com/news/match-recap-reign-fc-earns-crucial-three-points-against-boston",
+      "impact": 4,
+      "images": [
+        "images/fishlock-breaks-reign-scoring-record-0.webp"
+      ]
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -29,6 +53,18 @@
       "id": "portland-s-springwater-wetlands-wins-national-fl"
     },
     {
+      "id": "colorado-wildlife-overpass-cuts-collisions",
+      "title": "Colorado’s largest wildlife overpass cuts I-25 collisions by 91%",
+      "summary": "Nine months after North America’s largest wildlife overpass opened over I-25 in Douglas County, Colorado officials report a 91% drop in wildlife collisions. Camera feeds show elk herds and— for the first time in decades—pronghorn crossing safely west of the highway.",
+      "summaryLong": "Nine months after North America’s largest wildlife overpass opened in Douglas County, Colorado, the agencies behind it say the project has been a big success. A mitigation system made up of the overpass, five wildlife underpasses, and fencing that guides animals to the crossings has led to a 91% decrease in wildlife collisions along that stretch of Interstate 25.\n\nFor decades, I-25 restricted seasonal wildlife movement in Douglas and El Paso counties. “It was an effective wall that they had to play Frogger and try to get across,” Colorado Parks and Wildlife biologist Brandon Marette told CBS Colorado, noting the corridor once saw about one deer hit a day in peak seasons. “Based on the video feed that we’re collecting, huge success. We’re seeing elk herds cross the bridge. We’re seeing pronghorn for the first time in decades cross over to the west side of I-25 because of the bridge,” said Chuck Attardo, CDOT Environmental Manager.\n\nThe 209-by-200-foot overpass spans I-25 near the Greenland exit between Larkspur and Monument. It was designed especially for pronghorn and elk, which prefer open structures with long sight lines. In the months since opening, cameras have also recorded bears, deer, coyotes, and other animals. Biologists piled wood into a pathway so smaller mammals—including the federally threatened Preble’s meadow jumping mouse—have cover from predators while crossing.\n\nThe overpass opened in December ahead of schedule and under budget. The project received about $22 million in federal infrastructure funds and $8 million from the state, and contractor Kraemer North America completed it for roughly $15 million. Partners include the Federal Highway Administration, CDOT, Colorado Parks and Wildlife, Douglas County, the Douglas Land Conservancy, and the Colorado Cattlemen’s Agricultural Land Trust. Source facts and quotes from CBS Colorado’s Sept. 18, 2026 report by Olivia Young.",
+      "source": "CBS Colorado",
+      "url": "https://www.cbsnews.com/colorado/news/largest-wildlife-overpass-north-america-colorado-reduce-wildlife-collisions/",
+      "impact": 4,
+      "images": [
+        "images/colorado-wildlife-overpass-cuts-collisions-0.webp"
+      ]
+    },
+    {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
       "summary": "OSU researchers patented a water-based process that separates zirconium from hafnium—metals vital for semiconductors and nuclear power—without toxic organic solvents. Their precipitation method scored a separation factor of 33 versus the industry standard of about 6–7.",
       "summaryLong": "CORVALLIS, Ore. — Oregon State University scientists have patented a better and more eco-friendly process for separating two metals that are critical in their pure forms for the semiconductor and atomic energy industries.\n\nResearchers in the OSU College of Science used a water-based solution rather than a toxic organic solvent to separate zirconium, vital in nuclear power generation, from hafnium, which is crucial for both nuclear energy and semiconductor manufacturing. The study, led by graduate research assistant Alex Roseborough and May Nyman, professor of chemistry, tackled one of the most difficult separations on the periodic table. The elements are so closely related that the mineral zirconium silicate (zircon) almost always contains trace amounts of hafnium, and zircon mining is the principal economic source of both.\n\nHigh-purity separation is still necessary for microelectronics and nuclear reactors. Only two U.S. facilities—ATI Specialty Alloys & Components in Albany, Oregon, and Westinghouse Electric in Ogden, Utah—currently perform the separation at industrial scale, each using millions of pounds of flammable organic solvent annually. That liquid-liquid extraction process is energy intensive and loses roughly 4% of the solvent to the air as pollution, the researchers note.\n\nOSU’s approach uses precipitation instead: dissolved ions with opposite charges attract to form an insoluble solid. An aqueous solution combines natural zirconium (with its few percent hafnium impurity), thiocyanate ligands that bind the metal ions, and choline—an inexpensive, nontoxic chemical commonly used as a food additive. The low-energy process, with no organic solvent, precipitates hafnium-rich species.\n\nSeparation factor measures how well a process splits two components; higher is better. The industry standard for zirconium–hafnium separation is between six and seven; the OSU process produced a top score of 33—about five times better.\n\n“We describe in atomic-level detail how the separation works and how precipitation-based separations can compete with solvent extraction,” said Nyman, the Terence Bradshaw Chemistry Professor at Oregon State. “We still have questions to answer and milestones to achieve, but these findings are really exciting and impactful.” The work was published in the Journal of the American Chemical Society with support from the U.S. Department of Energy and the Murdock Charitable Trust.",
@@ -41,6 +77,18 @@
       ],
       "youtube": null,
       "id": "oregon-state-chemists-invent-a-greener-way-to-se"
+    },
+    {
+      "id": "osu-mina-salehi-ai-injury-award",
+      "title": "Oregon State doctoral researcher wins award for AI that flags workplace injury risk",
+      "summary": "Mina Salehi, a College of Health doctoral student at Oregon State University, received the university’s Dissertation Completion Award for AI and musculoskeletal models that make ergonomic risk assessment more affordable outside the lab. Her work targets common work-related injuries such as low-back pain.",
+      "summaryLong": "Mina Salehi, a doctoral researcher in Oregon State University’s College of Health, has received the university’s Dissertation Completion Award for work that combines artificial intelligence and musculoskeletal modeling to assess workplace injury risk more efficiently and affordably outside the lab.\n\nWork-related musculoskeletal disorders affect millions of U.S. workers and result in billions of dollars in annual costs. Low-back pain is especially common, with an estimated 80% of people experiencing at least one episode during their lifetime. Preventing these injuries relies on timely, accurate, and scalable risk-assessment tools that identify hazards before they cause harm. Highly accurate laboratory equipment exists, but those tools are often impractical and expensive to use in real workplaces. Salehi’s research aims to close that gap so sophisticated ergonomic assessments become more accessible in the field.\n\nThe Dissertation Completion Award is a selective, university-wide recognition given to only about four to six doctoral students across OSU each term. Major professor Jay Kim, in environmental and occupational health, said he was extremely proud of the selection given the large and diverse doctoral community, calling it a significant accomplishment that speaks to the quality, impact, and innovation of her research. Kim described Salehi as an exceptionally productive, creative, and dedicated doctoral student and highlighted how she brings together artificial intelligence, computer vision, and biomechanics to tackle a longstanding challenge in occupational health.\n\n“I'm grateful to the college for nominating me and to the Office of Graduate Education for selecting me for this award,” Salehi said in the college’s Sept. 16, 2026 story. “My time at OSU has been the most challenging and rewarding chapter of my life. It pushed me to grow in ways I didn't expect, both as a researcher and as a person. As I approach the end of my PhD, I’m proud to close this chapter with this recognition and am deeply thankful to everyone who supported me along the way.” Source: Oregon State University College of Health free news feature.",
+      "source": "Oregon State University",
+      "url": "https://health.oregonstate.edu/news-and-stories/2026-09/student-researcher-uses-ai-models-reduce-work-related-injury",
+      "impact": 4,
+      "images": [
+        "images/osu-mina-salehi-ai-injury-award-0.webp"
+      ]
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -57,6 +105,18 @@
       "id": "portland-monarchs-get-digital-trackers-you-can-f"
     },
     {
+      "id": "alabama-releases-1500-mussels-paint-rock",
+      "title": "Alabama partners release ~1,500 rare mussels into the Paint Rock River",
+      "summary": "State and federal agencies, The Nature Conservancy, and landowners released about 1,500 rare native mussels into Alabama’s Paint Rock River after years of streambank repair and barrier removal. Reintroduced populations of several species are already showing recruitment.",
+      "summaryLong": "On Aug. 25, 2026, partners gathered in rural Jackson County, Alabama, to release approximately 1,500 rare native mussels into a reach of the Paint Rock River that flows through private land. The release is part of a longer partnership among the Alabama Department of Conservation and Natural Resources (ADCNR), the U.S. Fish and Wildlife Service, The Nature Conservancy in Alabama, the Alabama Rivers Alliance, the Beagle Charitable Foundation, and landowners focused on streambank restoration, barrier removal, and river cleanup.\n\nFreshwater mussels and snails help keep rivers healthy by filtering water, recycling nutrients, and supporting food webs. The shipment included endangered Pale Lilliput and Tennessee Bean mussels, plus Cumberland Moccasinshell—proposed for listing and remaining in only two places in Alabama. This release was described as the first Cumberland Moccasinshell release in the middle Paint Rock. Expanding where these species occur is necessary to meet U.S. Fish and Wildlife Service recovery criteria that could eventually support delisting.\n\nSince 2010, Alabama’s Aquatic Biodiversity Center has released more than 23,000 mussels at this landowner site and about 53,000 mussels representing six species across the Paint Rock. Program manager Dr. Paul Johnson reports verified recruitment—young mussels joining the population—for Pale Lilliput, Birdwing Pearlymussel, Oystermussel, and Alabama Lampmussel in the middle and lower Paint Rock. Working with the Tennessee Wildlife Resources Agency, Pale Lilliput has been reintroduced at five locations with reproducing populations at three; Cumberland Moccasinshell is reproducing after release into Bear Creek in Colbert County.\n\n“Partnerships like this are essential to our mission to conserve the state’s natural resources,” ADCNR Commissioner Chris Blankenship said in Outdoor Alabama’s Sept. 18, 2026 feature. The same work that rebuilds rare mussel populations also pushes cleaner water and healthier property for landowners along the river. Summary limited to that ADCNR-authored Outdoor Alabama report.",
+      "source": "Outdoor Alabama",
+      "url": "https://www.outdooralabama.com/articles/it-takes-village-clean-river-habitat-restoration-and-mussel-recovery-paint-rock",
+      "impact": 4,
+      "images": [
+        "images/alabama-releases-1500-mussels-paint-rock-0.webp"
+      ]
+    },
+    {
       "title": "AI helps find scents that steer bees away from pesticides",
       "summary": "UC Riverside researchers used machine learning to screen millions of compounds for bee-safe repellents. Lab and field tests backed top candidates that could keep honey bees off sprayed crops without harming the insects.",
       "summaryLong": "In a win for pollinator conservation, researchers at the University of California, Riverside, have developed a machine learning-based method to identify chemical compounds that can safely repel honey bees from pesticide-treated crops. The research offers a potential solution to one of agriculture’s most urgent ecological challenges: the ongoing decline in honey bee populations, driven in part by pesticide exposure.\n\nThe interdisciplinary team led by Anandasankar Ray, a professor of molecular, cell and systems biology and an expert on insect olfactory behavior, tackled a central obstacle in altering behavior of pollinators to protect them: the complexity of the honey bee olfactory system. With more than 200 odor receptors capable of detecting a vast array of volatile compounds, finding scents that repel bees was a major challenge — until now.\n\n“Bees rely heavily on their sense of smell to forage, but that sensitivity makes it tough to find odors that push them away instead of drawing them in,” Ray said. “Our goal was to flip that script and find a way to use scent as a deterrent — safely and effectively.”\n\nTo do this, Ray’s team collaborated with honey bee researchers in the lab of Boris Baer, a professor of entomology. The researchers created a machine-learning model trained on both the chemical structures of odorants and previously recorded behavioral responses of bees. The model was refined with new behavioral data the team obtained in the lab from honey bees and Drosophila (fruit flies), allowing for a more accurate prediction of insect olfactory responses. Once optimized, the system screened more than 50 million compounds, ultimately identifying about 130 that were predicted to have strong potential as bee repellents.\n\nThe team reports in the journal eLife how they put the top-performing candidates to the test. In the lab, honey bees exhibited clear avoidance behaviors when exposed to these candidates, aligning closely with the model’s predictions. Subsequent field experiments with freely foraging bees confirmed that all seven compounds tested reliably repelled bees from honey combs without harming them.\n\n“This is a powerful demonstration of how machine learning can help solve real-world ecological problems,” Ray said. “By keeping bees away from harmful pesticides, we can potentially reduce their risk of exposure without compromising the protection of crops.”",
@@ -70,6 +130,18 @@
       ],
       "youtube": null,
       "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
+    },
+    {
+      "id": "parker-solar-probe-29th-record-flyby",
+      "title": "Parker Solar Probe matches its record Sun dive on a 29th close approach",
+      "summary": "NASA’s Parker Solar Probe completed its 29th close approach to the Sun on Sept. 4, again matching its record of 3.8 million miles from the solar surface at about 430,000 mph. Instruments sampled nearly 40% of the solar circumference in a day, including views near the Sun’s north pole.",
+      "summaryLong": "NASA’s Parker Solar Probe completed its 29th close approach to the Sun on Sept. 4, again matching its record speed and distance from the solar surface. On this pass the spacecraft trained its camera on structures and activity near the Sun’s north pole.\n\nThe flyby brought Parker to within 3.8 million miles of the Sun at a top speed of 430,000 miles per hour, letting it race through and sample almost 40% of the solar circumference within one day. The broader solar encounter ran from Aug. 30 through Sept. 9. Parker’s four scientific instrument packages gathered data from inside the Sun’s atmosphere, or corona. Flying on a trajectory that limited communications with Earth, the probe operated autonomously for nine days centered on closest approach, then transmitted a beacon tone on Sept. 7 indicating systems were operating normally.\n\nDetailed spacecraft telemetry was expected to begin returning Sept. 11, with science data transmission scheduled from Sept. 13 through Sept. 27. Parker’s observations of the solar wind and solar events—such as coronal mass ejections and the aftermaths of flares—help scientists understand the physics that drive high-energy space weather. Those storms can pose risks to astronauts, satellites, air travel, and even power grids on Earth. Better fundamental understanding supports more reliable forecasts and safer deep-space missions to the Moon and Mars.\n\nParker launched in August 2018 near the minimum of the Sun’s 11-year activity cycle. The record close-approach distance and speed were first set on Dec. 24, 2024, and have been matched on several flybys since, most recently this September pass. Source facts drawn from NASA’s Parker Solar Probe blog post dated Sept. 10, 2026; no additional telemetry claims invented beyond that update.",
+      "source": "NASA",
+      "url": "https://science.nasa.gov/blogs/parker-solar-probe/2026/09/10/after-latest-swing-past-sun-nasas-parker-solar-probe-checks-in/",
+      "impact": 4,
+      "images": [
+        "images/parker-solar-probe-29th-record-flyby-0.webp"
+      ]
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -102,20 +174,6 @@
       "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
     },
     {
-      "title": "Getty brings Reynolds’ Portrait of Mai to Los Angeles for the first time",
-      "summary": "Joshua Reynolds’ celebrated full-length portrait of Mai, jointly owned with London’s National Portrait Gallery, opens at the Getty Center through March 2027—its U.S. debut—with free workshops and talks tied to the display.",
-      "summaryLong": "The J. Paul Getty Museum is celebrating the arrival of “Portrait of Mai,” painted about 1776 by Sir Joshua Reynolds. The renowned work goes on display in the Getty Center’s West Pavilion from September 15, 2026 through March 14, 2027. Purchased jointly with London’s National Portrait Gallery in 2023, the painting is traveling to the United States for the first time after a U.K. tour.\n\nMai arrived in England in 1774 after voyaging from Tahiti with the Royal Navy and is remembered as the first Polynesian to visit Britain. Reynolds’ imposing full-length portrait—first shown at the Royal Academy in 1776—pairs Mai’s tapa robe, headdress, and tattooed hands with a pose recalling classical sculpture, making the work a powerful symbol of early global encounters.\n\nUpon arrival at Getty, the painting underwent its first comprehensive technical analysis: imaging and pigment study with National Portrait Gallery colleagues, revealing layered reworking and materials such as lead white, vermilion, carbon black, and iron earth pigments. The portrait hangs alongside other 18th-century Getty holdings to show how the full-length format was usually reserved for aristocracy—yet Reynolds painted Mai on his own initiative.\n\nBetween September 18 and 20, visitors could join free programs including a bookmark workshop inspired by Tahitian tattoo designs, a tapa barkcloth demonstration, and a public conversation with author Hampton Sides and Getty’s Richard Rand. During a later Getty Center closure, the painting will move to the Getty Villa, then travel in “Faces of Fame” to the National Gallery of Art in Washington, D.C., before returning to Los Angeles.\n\nGetty Center general admission is free (parking fees apply), keeping this rarely seen masterpiece accessible to West Coast audiences.",
-      "summaryLongNote": "Verified from Getty News (September 2026).",
-      "source": "Getty",
-      "url": "https://www.getty.edu/news/getty-celebrates-long-awaited-west-coast-debut-of-reynolds-portrait-of-mai/",
-      "impact": 3,
-      "images": [
-        "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
-      ],
-      "youtube": null,
-      "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
-    },
-    {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
       "summary": "CalTrout and partners finished removing a failed 1956 fish ladder in Upper Bidwell Park near Chico, California. Steelhead and spring-run Chinook can again reach miles of spring-fed habitat after four years of planning and construction.",
       "summaryLong": "After four years, the instream work for the Iron Canyon Fish Passage Project is complete, restoring access to 8.5 miles of critical cold-water habitat on Ótakim Séwi (Big Chico Creek) and reconnecting a stretch of watershed that has sustained fish, wildlife, and people for thousands of years.\n\nFor nearly 70 years, a concrete fish ladder built in 1956 into a bedrock gorge in Upper Bidwell Park tried to help steelhead and spring-run Chinook salmon through Iron Canyon. Over decades the ladder stopped functioning, leaving salmon and steelhead stuck downstream in water too warm to survive with nowhere to spawn. That barrier is now gone, and fish again have an open migration corridor upstream.\n\nThe project is a partnership between CalTrout, the Mechoopda Indian Tribe, the City of Chico, the Big Chico Creek Ecological Reserve, and specialists in permitting, fish biology, engineering, and construction. Bidwell Park is Chico’s most-used public space; a healthier creek means a healthier park. Restoring the stretch also benefits the broader native fish and wildlife community, strengthens drought and wildfire resilience, and—through outreach woven into the project—gives students a firsthand look at river restoration.\n\nAcross California, dams still block access to over 90% of historical salmonid spawning and summer holding areas. Every mile reconnected matters, and 8.5 miles of unaltered, spring-fed habitat with cold water and deep holding pools is exactly what ESA-listed spring-run Chinook and steelhead need. CalTrout announced completion of the instream work on September 25, 2026.",
@@ -130,20 +188,6 @@
       "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
     },
     {
-      "title": "Open-source ORCA turns everyday radios into science radars",
-      "summary": "CU Boulder’s HI-SNR lab leads ORCA, free software that helps researchers turn commercial software-defined radios into environmental radars for ice, forests, and soils—without proprietary lock-in.",
-      "summaryLong": "Radar technology is one of the most powerful tools to better understand our world around us. Researchers use radar to see beneath the surface of ice, forest canopy or soil in ways the human eye never could. As the planet changes, that kind of capability matters more than ever.\n\nBut for the researchers who actually build these tools, there’s a frustrating dilemma: Before a radar system can answer a scientific question, someone has to spend months, oftentimes much longer, building the radar and writing code just to get it operating. A new student joins a lab, inherits a software-defined radio and starts writing the same kind of control code to make it operate as a radar. A team at the University of Colorado Boulder’s High precision Imaging, Signals ‘N Radar (Hi-SNR) Laboratory is working to change that. The lab, based in the Department of Electrical, Computer & Energy Engineering is leading the Open Radar Code Architecture (ORCA) initiative, an open-source software framework that turns commercially available software-defined radios into functioning radar systems built specifically for environmental monitoring.\n\n“It takes a student a year to get to this base level of radar operation,” said Nicole Bienert, assistant professor of electrical engineering. “Every new student is just recreating the wheel over and over. That’s not an efficient use of our time as researchers if we really want to answer major scientific questions.” ORCA is designed to close that gap. Rather than every research group re-writing radar-control code from scratch, ORCA gives them a starting point they can build on, so more radar research questions can get answered.\n\nThe project traces its roots to Bienert’s doctoral research in the Stanford Radio Glaciology group and collaborators including Thomas Teisberg and Anna Broome. Applications range from snow levels for avalanche warning and snow water equivalent for water resource management to tree water content for wildfire risk and glacier material analysis.",
-      "summaryLongNote": null,
-      "source": "University of Colorado Boulder",
-      "url": "https://www.colorado.edu/ecee/open-source-coding-platform-makes-radar-technology-accessible-scientists-worldwide",
-      "impact": 3,
-      "images": [
-        "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
-      ],
-      "youtube": null,
-      "id": "open-source-orca-turns-everyday-radios-into-scie"
-    },
-    {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
       "summary": "Responders documented olive ridley turtles nesting near Seal Beach and Huntington Beach—the first known natural sea-turtle nesting on the U.S. West Coast. Scientists link the unusual visits to warm Super El Niño ocean conditions.",
       "summaryLong": "This month, Southern California hosted some very special guests—who left behind historic mementos.\n\nOn September 16, an olive ridley turtle dug a nest and laid her eggs near Seal Beach in Orange County. It represents the U.S. West Coast’s first known natural sea turtle nesting, according to a social media post by the National Oceanic and Atmospheric Administration (NOAA) Fisheries West Coast. Then, three days later, a sea turtle of the same species was seen doing the same thing close to the Huntington Beach Pier, just a few miles south of the first observation.\n\n“What happened this week—and we’re very excited about—is there’s never been a recorded instance of any sea turtle nesting on a California beach,” Aquarium of the Pacific President and CEO Jeff Flocken told SFGate. “And we’ve had two confirmed sightings of an olive ridley hauling up onto the beach and nesting—digging a hole.”\n\nTypically the northernmost known olive ridley nesting is in Mexico, so this is quite a bit farther north. NOAA biologist Cali Turner Tomaszewicz used photo I.D.—body shape, barnacles, and shell scale pattern—to confirm the turtles were two distinct individuals. Nesting sites have been fenced off and monitored during the typically 45- to 60-day incubation periods, with officials urging people to keep their distance.\n\n“The biggest hurdles these developing baby turtles face will be cold temperatures as we get deeper into the fall, and the potential for inundation from the extreme high tides that are common this time of the year,” marine ecologist Jeff Seminoff explained. Olive ridleys are among the smallest sea turtles—adults weigh up to about 100 pounds—and among the most abundant and widespread, primarily in tropical Pacific, Indian, and Atlantic waters. Smithsonian Magazine covered the firsts as scientists linked the unusual visits to warm Super El Niño ocean conditions.",
@@ -156,66 +200,22 @@
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
-    },
-    {
-      "title": "Xerces maps a statewide Oregon pollinator conservation strategy",
-      "summary": "The Xerces Society released an Oregon Pollinator Conservation Strategy identifying 22 priority species and hotspots from the Rogue Valley through the Cascades to the Blue Mountains, plus an interactive dashboard land managers can use.",
-      "summaryLong": "Oregon’s landscapes—from high desert to coastal forest—support hundreds of pollinators facing habitat loss and climate change. On September 16, 2026, Bee City USA highlighted a new Xerces Society Oregon Pollinator Conservation Strategy that gives land managers clearer, data-driven priorities.\n\nThe strategy identifies priority species and regions, evaluates threats, and recommends actions to protect and restore pollinator habitat. An interactive online dashboard lets users explore maps, learn about priority species, and spot conservation opportunities across Oregon.\n\nXerces biologists compiled distribution, habitat, and conservation-status information and identified 22 priority pollinator species of highest concern, while noting that recommended actions will help many more species. Because surveys are incomplete, researchers combined observations with habitat suitability models that predict where species are likely to occur. The team also mapped where threats such as habitat loss, fragmentation, pesticides, climate change, and invasive species hit hardest, and assembled practical management recommendations drawn from decades of Xerces field experience.\n\nAnalysis highlighted priority regions from the Rogue River Valley east to the Southern Cascades, north through the Cascades, and east through the Columbia Plateau and Blue Mountains. Matching high-priority habitats with local threats helps tailor investments. The strategy also stresses keeping common species common—including habitat on public lands, farms, parks, schoolyards, and backyard gardens.\n\nTogether, the written strategy and dashboard turn complex science into tools agencies, nonprofits, and communities can use for habitat management, restoration, and long-term planning. The work builds on earlier Washington bumble bee planning and Xerces’ State of the Bees Initiative.",
-      "summaryLongNote": "Verified from Bee City USA / Xerces Society coverage (16 September 2026).",
-      "source": "Bee City USA / Xerces Society",
-      "url": "https://beecityusa.org/oregons-new-pollinator-conservation-strategy-prioritizes-actions-across-the-state/",
-      "impact": 3,
-      "images": [
-        "images/xerces-maps-a-statewide-oregon-pollinator-conser-0.jpg"
-      ],
-      "youtube": null,
-      "id": "xerces-maps-a-statewide-oregon-pollinator-conser"
-    },
-    {
-      "title": "Smithsonian’s African American History Museum marks 10 years with a free community weekend",
-      "summary": "The National Museum of African American History and Culture invites visitors of all ages for Welcome Home weekend programs September 25–27—music, dance, art, family workshops, and a special café menu—with free museum admission and registration for activities.",
-      "summaryLong": "Friday, September 25 through Sunday, September 27, 2026, the National Museum of African American History and Culture in Washington, D.C., celebrates 10 years with Welcome Home: 10th Anniversary Community Weekend.\n\nPart of the larger Reunion anniversary celebration, the free daytime programs invite visitors of all ages to gather, create, move, and make memories together through music, dance, art, family activities, food, and community. Museum admission remains free; activity registration is required for some sessions.\n\nThroughout the weekend, Sweet Home Café offers a special 10th Anniversary menu experience, and the Museum Store carries commemorative merchandise. Friday highlights include The Meaning of Home: A Treasures Zine Project (ages 8 and up)—a drop-in collage and writing workshop exploring belonging—and younger-family birthday programming on the fourth floor.\n\nAdditional weekend events continue the theme of home, creativity, and connection that has defined the museum’s first decade on the National Mall. As with other Smithsonian museums, the community weekend keeps art, history, and culture accessible without a ticket price—an open invitation for locals and visitors marking a national cultural milestone.",
-      "summaryLongNote": "Verified from NMAAHC event listing for Welcome Home weekend (25–27 September 2026).",
-      "source": "National Museum of African American History and Culture",
-      "url": "https://nmaahc.si.edu/events/welcome-home-10th-anniversary-community-weekend-museum",
-      "impact": 3,
-      "images": [
-        "images/smithsonian-s-african-american-history-museum-ma-0.webp"
-      ],
-      "youtube": null,
-      "id": "smithsonian-s-african-american-history-museum-ma"
-    },
-    {
-      "title": "Free digital twin lets anyone explore Assisi’s Giotto frescoes up close",
-      "summary": "Preserving Assisi launched a free platform with gigapixel frescoes, 360° tours, and 3D surveys of the Basilica of Saint Francis. Nearly 8 billion pixels on a single Lorenzetti Crucifixion help the public and conservators study details once out of reach.",
-      "summaryLong": "Presented on 16 September 2026, Preserving Assisi gathers ultra-high-resolution gigapixel images, virtual tours, 360° panoramas, three-dimensional surveys, and a digital archive of the Basilica of Saint Francis—a UNESCO World Heritage site famous for cycles by Giotto, Cimabue, and Pietro Lorenzetti.\n\nPromoted by Haltadefinizione and the General Custody of the Sacred Convent of Saint Francis, with support from Italy’s National Committee for the Celebrations of Saint Francis, the free platform lets anyone move from overall architecture to brushstroke-level detail. Campaigns in 2025–2026 captured more than 27,000 photographs and over 12 TB of data. One new gigapixel of Lorenzetti’s Crucifixion measures about 101,627 × 78,170 pixels—nearly 8 billion pixels.\n\nBeyond public access, the surveys freeze the basilica’s condition at a known moment for future monitoring, study, and restoration. After the 1997 earthquakes, earlier high-definition photography already proved vital to reassembling damaged frescoes; Preserving Assisi continues that documentary tradition in an interactive form anyone can use.",
-      "summaryLongNote": "Verified from Haltadefinizione’s 17 September 2026 project announcement and Art Newspaper coverage of the free platform; rewritten for general readers.",
-      "source": "Haltadefinizione",
-      "url": "https://www.haltadefinizione.com/en/news-and-media/news/preserving-assisi-the-digital-platform-for-the-basilica-of-saint-francis/",
-      "impact": 3,
-      "images": [
-        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-0.webp",
-        "images/free-digital-twin-lets-anyone-explore-assisi-s-g-1.webp"
-      ],
-      "id": "free-digital-twin-lets-anyone-explore-assisi-s-g"
-    },
-    {
-      "title": "Thailand eliminates rubella as a public health problem, WHO says",
-      "summary": "The World Health Organization verified that Thailand has eliminated endemic rubella—the seventh country in WHO’s South-East Asia Region to do so. Years of childhood immunization and careful disease tracking helped protect families from congenital rubella syndrome.",
-      "summaryLong": "The World Health Organization today announced that Thailand has been verified for eliminating rubella as a public health problem, marking a major milestone in the country’s efforts to protect children, women and families from vaccine-preventable diseases.\n\nRubella, also known as German measles, is a contagious viral infection. Rubella infection during pregnancy can cause miscarriage, stillbirth or congenital rubella syndrome, a condition associated with lifelong birth defects. Rubella can be prevented through safe, effective and affordable vaccines.\n\n“Thailand has shown that rubella elimination is achievable when strong political commitment, resilient immunization services, high-quality surveillance and community trust come together. This achievement protects future generations from congenital rubella syndrome and brings the Region closer to eliminating both measles and rubella,” said Dr Nilesh Buddha, Officer-in-Charge, WHO South-East Asia Region, endorsing the recommendation of the Regional Verification Commission for Measles and Rubella Elimination in the South-East Asia Region (SEA-RVC).\n\nThe SEA-RVC, which held its annual meeting from 22–23 June 2026, reviewed evidence submitted by Thailand’s National Verification Committee, including data on disease surveillance, molecular epidemiology, immunization coverage, outbreak response and programme performance. This was followed by a verification field visit in July 2026 and the Commission recommended that Thailand be verified for endemic rubella elimination.\n\nThailand is now the seventh country in the WHO South-East Asia Region to achieve rubella elimination, joining Bhutan, DPR Korea, Maldives, Nepal, Sri Lanka and Timor-Leste. Four countries in the Region - Bhutan, DPR Korea, Maldives and Timor-Leste - have eliminated both measles and rubella.\n\nVerification confirms that Thailand has met the requisite criteria for interruption of endemic rubella virus transmission and has systems in place to sustain this achievement.",
-      "summaryLongNote": null,
-      "source": "World Health Organization",
-      "url": "https://www.who.int/southeastasia/news/detail/05-09-2026-thailand-verified-for-eliminating-rubella-as-a-public-health-problem",
-      "impact": 3,
-      "images": [
-        "images/thailand-eliminates-rubella-as-a-public-health-p-0.webp"
-      ],
-      "youtube": null,
-      "id": "thailand-eliminates-rubella-as-a-public-health-p"
     }
   ],
   "pool": [
     {
+      "id": "hubble-marks-200000-earth-orbits",
+      "title": "Hubble marks 200,000 Earth orbits while hunting a lensed supernova",
+      "summary": "NASA’s Hubble Space Telescope completed its 200,000th orbit around Earth on Sept. 19, after more than 36 years and over 5 billion miles traveled. The same day’s observing program continues Hubble’s work on the universe’s expansion rate by monitoring a gravitationally lensed supernova.",
+      "summaryLong": "NASA’s Hubble Space Telescope completed its 200,000th orbit around Earth on Sept. 19, marking another milestone for an observatory that continues to transform our understanding of the universe.\n\nHubble has traveled more than 5 billion miles around Earth over its 36-year lifetime and has made more than 1.7 million observations. An observation completed on the day of the 200,000th orbit ties directly to one of Hubble’s defining scientific legacies: measuring the expansion rate of the universe, often called the Hubble Constant. The program takes advantage of Hubble’s ability to return to the same regions of the sky over time to monitor for the reappearance of a supernova—an exploding star—named Athena.\n\nThe featured image centers on galaxy cluster MACS J0417, which acts as a gravitational lens, bending and magnifying light from objects far behind it. Light from a supernova can reach Earth along multiple paths, so the same stellar explosion can appear more than once at times separated by months or even years depending on the path it took. Supernova Athena, discovered by NASA’s James Webb Space Telescope in 2025, is predicted to reappear between now and early March 2027. Measuring the timing of those reappearances can help researchers map the mass of MACS J0417 as a foreground lens and refine our understanding of how fast the universe is expanding.\n\nAfter more than 36 years in space, Hubble still reaches new heights of scientific productivity. Its unique ability to observe and analyze light in ultraviolet and visible wavelengths complements NASA’s James Webb and Roman Space Telescopes. Demand for Hubble observing time remains high: astronomers request about seven times as much observing time as is available each year. Hubble continues to observe targets across every area of astronomy around the clock, with real-time tracking of those observations available on NASA’s website.\n\nThe Sept. 23, 2026 NASA Science update credits the Hubble Mission Team at Goddard Space Flight Center. Image credits on the page include NASA, ESA, STScI, and M. Pascale (UCLA), with processing by J. DePasquale (STScI). This digest summary sticks to those published facts—no extra quotes or figures invented.",
+      "source": "NASA Science",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-seeks-lensed-supernova-marks-200000-orbits/",
+      "impact": 5,
+      "images": [
+        "images/hubble-marks-200000-earth-orbits-0.webp"
+      ]
+    },
+    {
       "title": "NASA and IBM open-source an AI model for mapping the Moon",
       "summary": "NASA and IBM released a free Lunar Foundation Model trained on Lunar Reconnaissance Orbiter data and more. Hosted on Hugging Face with open code, it helps scientists map craters, hunt for polar ice, and study old volcanic features without building a model from scratch.",
       "summaryLong": "NASA is bringing artificial intelligence to the study of the Moon, helping researchers transform how they analyze the Moon’s surface. In an ongoing collaboration with IBM Research and several academic institutions, NASA has launched the NASA-IBM Lunar Foundation Model, among the first open-source AI models built specifically for lunar science. The model, trained primarily on data from NASA’s Lunar Reconnaissance Orbiter (LRO), is hosted publicly on Hugging Face for anyone to use, with the complete codebase available on GitHub for testing and experimentation.\n\nThe NASA-IBM Lunar Foundation Model supports the next generation of lunar science by helping researchers quickly analyze vast quantities of data to better understand the Moon’s surface. Using the model as a mapping tool, researchers can rapidly develop actionable strategies for evaluating the Moon’s rugged surface, understanding its geological past, and planning future lunar research.\n\n“NASA has spent decades building an extraordinary scientific record of the Moon, but collecting data is only part of the job,” said Kevin Murphy, chief science data officer and acting chief data and AI officer at NASA Headquarters in Washington. “We also have to make data easier for scientists to explore and use. The NASA-IBM Lunar Foundation Model shows what’s possible when we bring AI to NASA’s petabytes of scientific data. That’s a real opportunity we see with AI: turning large-scale data into new discoveries.”\n\nUnlike traditional models that require building and training specialized algorithms from scratch for specific tasks, foundation models are pre-trained on vast, unlabeled datasets. The broad knowledge they acquire through pre-training allows them to generalize across multiple scientific domains through quick fine-tuning.\n\nData collected by NASA’s LRO over the past 17 years covers most of the lunar surface in detail. The NASA-IBM model was trained on roughly 2 million image tiles from this dataset, comprising more than 1 million high-resolution camera images at 1-meter resolution and nearly 964,000 multispectral images at 100-meter resolution. It also drew on high-resolution Moon imagery and terrain data from missions such as NASA’s GRAIL, NASA’s Lunar Prospector, and JAXA’s Selenological and Engineering Explorer.\n\nBecause the foundation model is already pre-trained, planetary scientists can adapt it to many lunar research tasks—mapping craters, spotting young volcanic features, and estimating where ice may exist near the lunar poles—using only small amounts of labeled data. Dark permanently shadowed regions remain cold enough to trap and preserve ice for up to billions of years. Mapping those areas offers insight into the Moon’s history and potential resources for future exploration.\n\nOverall, the model matched or exceeded several strong baseline models across evaluated tasks, with a clear advantage on estimating polar ice stability. Datasets, benchmarks, and integration with the open-source TerraTorch toolkit were released alongside the model so researchers worldwide can build on the work.",
@@ -226,6 +226,18 @@
         "images/nasa-and-ibm-open-source-an-ai-model-for-mapping-0.jpg"
       ],
       "id": "nasa-and-ibm-open-source-an-ai-model-for-mapping"
+    },
+    {
+      "id": "fishlock-breaks-reign-scoring-record",
+      "title": "Jess Fishlock becomes Seattle Reign’s all-time leading scorer",
+      "summary": "Captain Jess Fishlock scored twice as Seattle Reign FC beat Boston Legacy 2-0 at Lumen Field, passing Megan Rapinoe for the club’s regular-season scoring record with 52 goals. The milestone comes in Fishlock’s announced final NWSL season.",
+      "summaryLong": "Seattle Reign FC defeated Boston Legacy FC 2-0 at Lumen Field on Friday night behind a brace from captain Jess Fishlock. With those two goals she passed NWSL and U.S. Women’s National Team legend Megan Rapinoe as the club’s all-time leading scorer in the regular season, reaching 52 goals.\n\nAccording to the club’s free match recap, Seattle played at a blistering tempo and employed a high press from the opening whistle, repeatedly winning the ball back before attacking in transition. Fishlock forced an early save in the 14th minute after Ainsley McCammon and Maddie Dahlien combined to find her. The breakthrough came in the 23rd minute: Dahlien intercepted near midfield, played Fishlock into space, and the Welsh midfielder drove toward the edge of the box before picking out the bottom corner past goalkeeper Casey Murphy.\n\nSeattle nearly added more before halftime. McCammon launched a sweeping attack that ended with Sofia Huerta’s header denied by a kick save. After the break, Dahlien forced another reflex stop, and waves of transition continued through McCammon, Dahlien, and Maddie Mercado. Fishlock sealed the result in the 64th minute—McCammon split defenders into Fishlock, who released Dahlien down the flank and finished the return into the top-right corner for 2-0. Later chances included a Mercado effort blocked and a curled shot from Fishel that crashed off the crossbar.\n\nThe clean sheet made the Reign the first team in NWSL history to record five straight home shutout wins in the regular season, against a Boston side that had scored in 13 consecutive matches. The result temporarily pushed Seattle into sixth in the standings. Fishlock has announced this will be her final season; the club plans to honor her during its annual Queen’s Match against the North Carolina Courage. Source: Seattle Reign FC match recap dated Sept. 25, 2026.",
+      "source": "Seattle Reign FC",
+      "url": "https://www.reignfc.com/news/match-recap-reign-fc-earns-crucial-three-points-against-boston",
+      "impact": 4,
+      "images": [
+        "images/fishlock-breaks-reign-scoring-record-0.webp"
+      ]
     },
     {
       "title": "Portland’s Springwater Wetlands wins national flood-and-habitat award",
@@ -242,6 +254,18 @@
       "id": "portland-s-springwater-wetlands-wins-national-fl"
     },
     {
+      "id": "colorado-wildlife-overpass-cuts-collisions",
+      "title": "Colorado’s largest wildlife overpass cuts I-25 collisions by 91%",
+      "summary": "Nine months after North America’s largest wildlife overpass opened over I-25 in Douglas County, Colorado officials report a 91% drop in wildlife collisions. Camera feeds show elk herds and— for the first time in decades—pronghorn crossing safely west of the highway.",
+      "summaryLong": "Nine months after North America’s largest wildlife overpass opened in Douglas County, Colorado, the agencies behind it say the project has been a big success. A mitigation system made up of the overpass, five wildlife underpasses, and fencing that guides animals to the crossings has led to a 91% decrease in wildlife collisions along that stretch of Interstate 25.\n\nFor decades, I-25 restricted seasonal wildlife movement in Douglas and El Paso counties. “It was an effective wall that they had to play Frogger and try to get across,” Colorado Parks and Wildlife biologist Brandon Marette told CBS Colorado, noting the corridor once saw about one deer hit a day in peak seasons. “Based on the video feed that we’re collecting, huge success. We’re seeing elk herds cross the bridge. We’re seeing pronghorn for the first time in decades cross over to the west side of I-25 because of the bridge,” said Chuck Attardo, CDOT Environmental Manager.\n\nThe 209-by-200-foot overpass spans I-25 near the Greenland exit between Larkspur and Monument. It was designed especially for pronghorn and elk, which prefer open structures with long sight lines. In the months since opening, cameras have also recorded bears, deer, coyotes, and other animals. Biologists piled wood into a pathway so smaller mammals—including the federally threatened Preble’s meadow jumping mouse—have cover from predators while crossing.\n\nThe overpass opened in December ahead of schedule and under budget. The project received about $22 million in federal infrastructure funds and $8 million from the state, and contractor Kraemer North America completed it for roughly $15 million. Partners include the Federal Highway Administration, CDOT, Colorado Parks and Wildlife, Douglas County, the Douglas Land Conservancy, and the Colorado Cattlemen’s Agricultural Land Trust. Source facts and quotes from CBS Colorado’s Sept. 18, 2026 report by Olivia Young.",
+      "source": "CBS Colorado",
+      "url": "https://www.cbsnews.com/colorado/news/largest-wildlife-overpass-north-america-colorado-reduce-wildlife-collisions/",
+      "impact": 4,
+      "images": [
+        "images/colorado-wildlife-overpass-cuts-collisions-0.webp"
+      ]
+    },
+    {
       "title": "Oregon State chemists invent a greener way to separate critical metals",
       "summary": "OSU researchers patented a water-based process that separates zirconium from hafnium—metals vital for semiconductors and nuclear power—without toxic organic solvents. Their precipitation method scored a separation factor of 33 versus the industry standard of about 6–7.",
       "summaryLong": "CORVALLIS, Ore. — Oregon State University scientists have patented a better and more eco-friendly process for separating two metals that are critical in their pure forms for the semiconductor and atomic energy industries.\n\nResearchers in the OSU College of Science used a water-based solution rather than a toxic organic solvent to separate zirconium, vital in nuclear power generation, from hafnium, which is crucial for both nuclear energy and semiconductor manufacturing. The study, led by graduate research assistant Alex Roseborough and May Nyman, professor of chemistry, tackled one of the most difficult separations on the periodic table. The elements are so closely related that the mineral zirconium silicate (zircon) almost always contains trace amounts of hafnium, and zircon mining is the principal economic source of both.\n\nHigh-purity separation is still necessary for microelectronics and nuclear reactors. Only two U.S. facilities—ATI Specialty Alloys & Components in Albany, Oregon, and Westinghouse Electric in Ogden, Utah—currently perform the separation at industrial scale, each using millions of pounds of flammable organic solvent annually. That liquid-liquid extraction process is energy intensive and loses roughly 4% of the solvent to the air as pollution, the researchers note.\n\nOSU’s approach uses precipitation instead: dissolved ions with opposite charges attract to form an insoluble solid. An aqueous solution combines natural zirconium (with its few percent hafnium impurity), thiocyanate ligands that bind the metal ions, and choline—an inexpensive, nontoxic chemical commonly used as a food additive. The low-energy process, with no organic solvent, precipitates hafnium-rich species.\n\nSeparation factor measures how well a process splits two components; higher is better. The industry standard for zirconium–hafnium separation is between six and seven; the OSU process produced a top score of 33—about five times better.\n\n“We describe in atomic-level detail how the separation works and how precipitation-based separations can compete with solvent extraction,” said Nyman, the Terence Bradshaw Chemistry Professor at Oregon State. “We still have questions to answer and milestones to achieve, but these findings are really exciting and impactful.” The work was published in the Journal of the American Chemical Society with support from the U.S. Department of Energy and the Murdock Charitable Trust.",
@@ -254,6 +278,18 @@
       ],
       "youtube": null,
       "id": "oregon-state-chemists-invent-a-greener-way-to-se"
+    },
+    {
+      "id": "osu-mina-salehi-ai-injury-award",
+      "title": "Oregon State doctoral researcher wins award for AI that flags workplace injury risk",
+      "summary": "Mina Salehi, a College of Health doctoral student at Oregon State University, received the university’s Dissertation Completion Award for AI and musculoskeletal models that make ergonomic risk assessment more affordable outside the lab. Her work targets common work-related injuries such as low-back pain.",
+      "summaryLong": "Mina Salehi, a doctoral researcher in Oregon State University’s College of Health, has received the university’s Dissertation Completion Award for work that combines artificial intelligence and musculoskeletal modeling to assess workplace injury risk more efficiently and affordably outside the lab.\n\nWork-related musculoskeletal disorders affect millions of U.S. workers and result in billions of dollars in annual costs. Low-back pain is especially common, with an estimated 80% of people experiencing at least one episode during their lifetime. Preventing these injuries relies on timely, accurate, and scalable risk-assessment tools that identify hazards before they cause harm. Highly accurate laboratory equipment exists, but those tools are often impractical and expensive to use in real workplaces. Salehi’s research aims to close that gap so sophisticated ergonomic assessments become more accessible in the field.\n\nThe Dissertation Completion Award is a selective, university-wide recognition given to only about four to six doctoral students across OSU each term. Major professor Jay Kim, in environmental and occupational health, said he was extremely proud of the selection given the large and diverse doctoral community, calling it a significant accomplishment that speaks to the quality, impact, and innovation of her research. Kim described Salehi as an exceptionally productive, creative, and dedicated doctoral student and highlighted how she brings together artificial intelligence, computer vision, and biomechanics to tackle a longstanding challenge in occupational health.\n\n“I'm grateful to the college for nominating me and to the Office of Graduate Education for selecting me for this award,” Salehi said in the college’s Sept. 16, 2026 story. “My time at OSU has been the most challenging and rewarding chapter of my life. It pushed me to grow in ways I didn't expect, both as a researcher and as a person. As I approach the end of my PhD, I’m proud to close this chapter with this recognition and am deeply thankful to everyone who supported me along the way.” Source: Oregon State University College of Health free news feature.",
+      "source": "Oregon State University",
+      "url": "https://health.oregonstate.edu/news-and-stories/2026-09/student-researcher-uses-ai-models-reduce-work-related-injury",
+      "impact": 4,
+      "images": [
+        "images/osu-mina-salehi-ai-injury-award-0.webp"
+      ]
     },
     {
       "title": "Portland monarchs get digital trackers you can follow on a free app",
@@ -270,6 +306,18 @@
       "id": "portland-monarchs-get-digital-trackers-you-can-f"
     },
     {
+      "id": "alabama-releases-1500-mussels-paint-rock",
+      "title": "Alabama partners release ~1,500 rare mussels into the Paint Rock River",
+      "summary": "State and federal agencies, The Nature Conservancy, and landowners released about 1,500 rare native mussels into Alabama’s Paint Rock River after years of streambank repair and barrier removal. Reintroduced populations of several species are already showing recruitment.",
+      "summaryLong": "On Aug. 25, 2026, partners gathered in rural Jackson County, Alabama, to release approximately 1,500 rare native mussels into a reach of the Paint Rock River that flows through private land. The release is part of a longer partnership among the Alabama Department of Conservation and Natural Resources (ADCNR), the U.S. Fish and Wildlife Service, The Nature Conservancy in Alabama, the Alabama Rivers Alliance, the Beagle Charitable Foundation, and landowners focused on streambank restoration, barrier removal, and river cleanup.\n\nFreshwater mussels and snails help keep rivers healthy by filtering water, recycling nutrients, and supporting food webs. The shipment included endangered Pale Lilliput and Tennessee Bean mussels, plus Cumberland Moccasinshell—proposed for listing and remaining in only two places in Alabama. This release was described as the first Cumberland Moccasinshell release in the middle Paint Rock. Expanding where these species occur is necessary to meet U.S. Fish and Wildlife Service recovery criteria that could eventually support delisting.\n\nSince 2010, Alabama’s Aquatic Biodiversity Center has released more than 23,000 mussels at this landowner site and about 53,000 mussels representing six species across the Paint Rock. Program manager Dr. Paul Johnson reports verified recruitment—young mussels joining the population—for Pale Lilliput, Birdwing Pearlymussel, Oystermussel, and Alabama Lampmussel in the middle and lower Paint Rock. Working with the Tennessee Wildlife Resources Agency, Pale Lilliput has been reintroduced at five locations with reproducing populations at three; Cumberland Moccasinshell is reproducing after release into Bear Creek in Colbert County.\n\n“Partnerships like this are essential to our mission to conserve the state’s natural resources,” ADCNR Commissioner Chris Blankenship said in Outdoor Alabama’s Sept. 18, 2026 feature. The same work that rebuilds rare mussel populations also pushes cleaner water and healthier property for landowners along the river. Summary limited to that ADCNR-authored Outdoor Alabama report.",
+      "source": "Outdoor Alabama",
+      "url": "https://www.outdooralabama.com/articles/it-takes-village-clean-river-habitat-restoration-and-mussel-recovery-paint-rock",
+      "impact": 4,
+      "images": [
+        "images/alabama-releases-1500-mussels-paint-rock-0.webp"
+      ]
+    },
+    {
       "title": "AI helps find scents that steer bees away from pesticides",
       "summary": "UC Riverside researchers used machine learning to screen millions of compounds for bee-safe repellents. Lab and field tests backed top candidates that could keep honey bees off sprayed crops without harming the insects.",
       "summaryLong": "In a win for pollinator conservation, researchers at the University of California, Riverside, have developed a machine learning-based method to identify chemical compounds that can safely repel honey bees from pesticide-treated crops. The research offers a potential solution to one of agriculture’s most urgent ecological challenges: the ongoing decline in honey bee populations, driven in part by pesticide exposure.\n\nThe interdisciplinary team led by Anandasankar Ray, a professor of molecular, cell and systems biology and an expert on insect olfactory behavior, tackled a central obstacle in altering behavior of pollinators to protect them: the complexity of the honey bee olfactory system. With more than 200 odor receptors capable of detecting a vast array of volatile compounds, finding scents that repel bees was a major challenge — until now.\n\n“Bees rely heavily on their sense of smell to forage, but that sensitivity makes it tough to find odors that push them away instead of drawing them in,” Ray said. “Our goal was to flip that script and find a way to use scent as a deterrent — safely and effectively.”\n\nTo do this, Ray’s team collaborated with honey bee researchers in the lab of Boris Baer, a professor of entomology. The researchers created a machine-learning model trained on both the chemical structures of odorants and previously recorded behavioral responses of bees. The model was refined with new behavioral data the team obtained in the lab from honey bees and Drosophila (fruit flies), allowing for a more accurate prediction of insect olfactory responses. Once optimized, the system screened more than 50 million compounds, ultimately identifying about 130 that were predicted to have strong potential as bee repellents.\n\nThe team reports in the journal eLife how they put the top-performing candidates to the test. In the lab, honey bees exhibited clear avoidance behaviors when exposed to these candidates, aligning closely with the model’s predictions. Subsequent field experiments with freely foraging bees confirmed that all seven compounds tested reliably repelled bees from honey combs without harming them.\n\n“This is a powerful demonstration of how machine learning can help solve real-world ecological problems,” Ray said. “By keeping bees away from harmful pesticides, we can potentially reduce their risk of exposure without compromising the protection of crops.”",
@@ -283,6 +331,18 @@
       ],
       "youtube": null,
       "id": "ai-helps-find-scents-that-steer-bees-away-from-p"
+    },
+    {
+      "id": "parker-solar-probe-29th-record-flyby",
+      "title": "Parker Solar Probe matches its record Sun dive on a 29th close approach",
+      "summary": "NASA’s Parker Solar Probe completed its 29th close approach to the Sun on Sept. 4, again matching its record of 3.8 million miles from the solar surface at about 430,000 mph. Instruments sampled nearly 40% of the solar circumference in a day, including views near the Sun’s north pole.",
+      "summaryLong": "NASA’s Parker Solar Probe completed its 29th close approach to the Sun on Sept. 4, again matching its record speed and distance from the solar surface. On this pass the spacecraft trained its camera on structures and activity near the Sun’s north pole.\n\nThe flyby brought Parker to within 3.8 million miles of the Sun at a top speed of 430,000 miles per hour, letting it race through and sample almost 40% of the solar circumference within one day. The broader solar encounter ran from Aug. 30 through Sept. 9. Parker’s four scientific instrument packages gathered data from inside the Sun’s atmosphere, or corona. Flying on a trajectory that limited communications with Earth, the probe operated autonomously for nine days centered on closest approach, then transmitted a beacon tone on Sept. 7 indicating systems were operating normally.\n\nDetailed spacecraft telemetry was expected to begin returning Sept. 11, with science data transmission scheduled from Sept. 13 through Sept. 27. Parker’s observations of the solar wind and solar events—such as coronal mass ejections and the aftermaths of flares—help scientists understand the physics that drive high-energy space weather. Those storms can pose risks to astronauts, satellites, air travel, and even power grids on Earth. Better fundamental understanding supports more reliable forecasts and safer deep-space missions to the Moon and Mars.\n\nParker launched in August 2018 near the minimum of the Sun’s 11-year activity cycle. The record close-approach distance and speed were first set on Dec. 24, 2024, and have been matched on several flybys since, most recently this September pass. Source facts drawn from NASA’s Parker Solar Probe blog post dated Sept. 10, 2026; no additional telemetry claims invented beyond that update.",
+      "source": "NASA",
+      "url": "https://science.nasa.gov/blogs/parker-solar-probe/2026/09/10/after-latest-swing-past-sun-nasas-parker-solar-probe-checks-in/",
+      "impact": 4,
+      "images": [
+        "images/parker-solar-probe-29th-record-flyby-0.webp"
+      ]
     },
     {
       "title": "Partners launch research to bring sea otters back to Oregon’s coast",
@@ -315,20 +375,6 @@
       "id": "chinook-salmon-reclaim-most-of-their-historic-kl"
     },
     {
-      "title": "Getty brings Reynolds’ Portrait of Mai to Los Angeles for the first time",
-      "summary": "Joshua Reynolds’ celebrated full-length portrait of Mai, jointly owned with London’s National Portrait Gallery, opens at the Getty Center through March 2027—its U.S. debut—with free workshops and talks tied to the display.",
-      "summaryLong": "The J. Paul Getty Museum is celebrating the arrival of “Portrait of Mai,” painted about 1776 by Sir Joshua Reynolds. The renowned work goes on display in the Getty Center’s West Pavilion from September 15, 2026 through March 14, 2027. Purchased jointly with London’s National Portrait Gallery in 2023, the painting is traveling to the United States for the first time after a U.K. tour.\n\nMai arrived in England in 1774 after voyaging from Tahiti with the Royal Navy and is remembered as the first Polynesian to visit Britain. Reynolds’ imposing full-length portrait—first shown at the Royal Academy in 1776—pairs Mai’s tapa robe, headdress, and tattooed hands with a pose recalling classical sculpture, making the work a powerful symbol of early global encounters.\n\nUpon arrival at Getty, the painting underwent its first comprehensive technical analysis: imaging and pigment study with National Portrait Gallery colleagues, revealing layered reworking and materials such as lead white, vermilion, carbon black, and iron earth pigments. The portrait hangs alongside other 18th-century Getty holdings to show how the full-length format was usually reserved for aristocracy—yet Reynolds painted Mai on his own initiative.\n\nBetween September 18 and 20, visitors could join free programs including a bookmark workshop inspired by Tahitian tattoo designs, a tapa barkcloth demonstration, and a public conversation with author Hampton Sides and Getty’s Richard Rand. During a later Getty Center closure, the painting will move to the Getty Villa, then travel in “Faces of Fame” to the National Gallery of Art in Washington, D.C., before returning to Los Angeles.\n\nGetty Center general admission is free (parking fees apply), keeping this rarely seen masterpiece accessible to West Coast audiences.",
-      "summaryLongNote": "Verified from Getty News (September 2026).",
-      "source": "Getty",
-      "url": "https://www.getty.edu/news/getty-celebrates-long-awaited-west-coast-debut-of-reynolds-portrait-of-mai/",
-      "impact": 3,
-      "images": [
-        "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
-      ],
-      "youtube": null,
-      "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
-    },
-    {
       "title": "Iron Canyon fish passage reopens 8.5 miles of cold-water habitat",
       "summary": "CalTrout and partners finished removing a failed 1956 fish ladder in Upper Bidwell Park near Chico, California. Steelhead and spring-run Chinook can again reach miles of spring-fed habitat after four years of planning and construction.",
       "summaryLong": "After four years, the instream work for the Iron Canyon Fish Passage Project is complete, restoring access to 8.5 miles of critical cold-water habitat on Ótakim Séwi (Big Chico Creek) and reconnecting a stretch of watershed that has sustained fish, wildlife, and people for thousands of years.\n\nFor nearly 70 years, a concrete fish ladder built in 1956 into a bedrock gorge in Upper Bidwell Park tried to help steelhead and spring-run Chinook salmon through Iron Canyon. Over decades the ladder stopped functioning, leaving salmon and steelhead stuck downstream in water too warm to survive with nowhere to spawn. That barrier is now gone, and fish again have an open migration corridor upstream.\n\nThe project is a partnership between CalTrout, the Mechoopda Indian Tribe, the City of Chico, the Big Chico Creek Ecological Reserve, and specialists in permitting, fish biology, engineering, and construction. Bidwell Park is Chico’s most-used public space; a healthier creek means a healthier park. Restoring the stretch also benefits the broader native fish and wildlife community, strengthens drought and wildfire resilience, and—through outreach woven into the project—gives students a firsthand look at river restoration.\n\nAcross California, dams still block access to over 90% of historical salmonid spawning and summer holding areas. Every mile reconnected matters, and 8.5 miles of unaltered, spring-fed habitat with cold water and deep holding pools is exactly what ESA-listed spring-run Chinook and steelhead need. CalTrout announced completion of the instream work on September 25, 2026.",
@@ -343,20 +389,6 @@
       "id": "iron-canyon-fish-passage-reopens-8-5-miles-of-co"
     },
     {
-      "title": "Open-source ORCA turns everyday radios into science radars",
-      "summary": "CU Boulder’s HI-SNR lab leads ORCA, free software that helps researchers turn commercial software-defined radios into environmental radars for ice, forests, and soils—without proprietary lock-in.",
-      "summaryLong": "Radar technology is one of the most powerful tools to better understand our world around us. Researchers use radar to see beneath the surface of ice, forest canopy or soil in ways the human eye never could. As the planet changes, that kind of capability matters more than ever.\n\nBut for the researchers who actually build these tools, there’s a frustrating dilemma: Before a radar system can answer a scientific question, someone has to spend months, oftentimes much longer, building the radar and writing code just to get it operating. A new student joins a lab, inherits a software-defined radio and starts writing the same kind of control code to make it operate as a radar. A team at the University of Colorado Boulder’s High precision Imaging, Signals ‘N Radar (Hi-SNR) Laboratory is working to change that. The lab, based in the Department of Electrical, Computer & Energy Engineering is leading the Open Radar Code Architecture (ORCA) initiative, an open-source software framework that turns commercially available software-defined radios into functioning radar systems built specifically for environmental monitoring.\n\n“It takes a student a year to get to this base level of radar operation,” said Nicole Bienert, assistant professor of electrical engineering. “Every new student is just recreating the wheel over and over. That’s not an efficient use of our time as researchers if we really want to answer major scientific questions.” ORCA is designed to close that gap. Rather than every research group re-writing radar-control code from scratch, ORCA gives them a starting point they can build on, so more radar research questions can get answered.\n\nThe project traces its roots to Bienert’s doctoral research in the Stanford Radio Glaciology group and collaborators including Thomas Teisberg and Anna Broome. Applications range from snow levels for avalanche warning and snow water equivalent for water resource management to tree water content for wildfire risk and glacier material analysis.",
-      "summaryLongNote": null,
-      "source": "University of Colorado Boulder",
-      "url": "https://www.colorado.edu/ecee/open-source-coding-platform-makes-radar-technology-accessible-scientists-worldwide",
-      "impact": 3,
-      "images": [
-        "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
-      ],
-      "youtube": null,
-      "id": "open-source-orca-turns-everyday-radios-into-scie"
-    },
-    {
       "title": "Olive ridley turtles nest on the U.S. West Coast for the first time",
       "summary": "Responders documented olive ridley turtles nesting near Seal Beach and Huntington Beach—the first known natural sea-turtle nesting on the U.S. West Coast. Scientists link the unusual visits to warm Super El Niño ocean conditions.",
       "summaryLong": "This month, Southern California hosted some very special guests—who left behind historic mementos.\n\nOn September 16, an olive ridley turtle dug a nest and laid her eggs near Seal Beach in Orange County. It represents the U.S. West Coast’s first known natural sea turtle nesting, according to a social media post by the National Oceanic and Atmospheric Administration (NOAA) Fisheries West Coast. Then, three days later, a sea turtle of the same species was seen doing the same thing close to the Huntington Beach Pier, just a few miles south of the first observation.\n\n“What happened this week—and we’re very excited about—is there’s never been a recorded instance of any sea turtle nesting on a California beach,” Aquarium of the Pacific President and CEO Jeff Flocken told SFGate. “And we’ve had two confirmed sightings of an olive ridley hauling up onto the beach and nesting—digging a hole.”\n\nTypically the northernmost known olive ridley nesting is in Mexico, so this is quite a bit farther north. NOAA biologist Cali Turner Tomaszewicz used photo I.D.—body shape, barnacles, and shell scale pattern—to confirm the turtles were two distinct individuals. Nesting sites have been fenced off and monitored during the typically 45- to 60-day incubation periods, with officials urging people to keep their distance.\n\n“The biggest hurdles these developing baby turtles face will be cold temperatures as we get deeper into the fall, and the potential for inundation from the extreme high tides that are common this time of the year,” marine ecologist Jeff Seminoff explained. Olive ridleys are among the smallest sea turtles—adults weigh up to about 100 pounds—and among the most abundant and widespread, primarily in tropical Pacific, Indian, and Atlantic waters. Smithsonian Magazine covered the firsts as scientists linked the unusual visits to warm Super El Niño ocean conditions.",
@@ -369,6 +401,34 @@
       ],
       "youtube": null,
       "id": "olive-ridley-turtles-nest-on-the-u-s-west-coast-"
+    },
+    {
+      "title": "Getty brings Reynolds’ Portrait of Mai to Los Angeles for the first time",
+      "summary": "Joshua Reynolds’ celebrated full-length portrait of Mai, jointly owned with London’s National Portrait Gallery, opens at the Getty Center through March 2027—its U.S. debut—with free workshops and talks tied to the display.",
+      "summaryLong": "The J. Paul Getty Museum is celebrating the arrival of “Portrait of Mai,” painted about 1776 by Sir Joshua Reynolds. The renowned work goes on display in the Getty Center’s West Pavilion from September 15, 2026 through March 14, 2027. Purchased jointly with London’s National Portrait Gallery in 2023, the painting is traveling to the United States for the first time after a U.K. tour.\n\nMai arrived in England in 1774 after voyaging from Tahiti with the Royal Navy and is remembered as the first Polynesian to visit Britain. Reynolds’ imposing full-length portrait—first shown at the Royal Academy in 1776—pairs Mai’s tapa robe, headdress, and tattooed hands with a pose recalling classical sculpture, making the work a powerful symbol of early global encounters.\n\nUpon arrival at Getty, the painting underwent its first comprehensive technical analysis: imaging and pigment study with National Portrait Gallery colleagues, revealing layered reworking and materials such as lead white, vermilion, carbon black, and iron earth pigments. The portrait hangs alongside other 18th-century Getty holdings to show how the full-length format was usually reserved for aristocracy—yet Reynolds painted Mai on his own initiative.\n\nBetween September 18 and 20, visitors could join free programs including a bookmark workshop inspired by Tahitian tattoo designs, a tapa barkcloth demonstration, and a public conversation with author Hampton Sides and Getty’s Richard Rand. During a later Getty Center closure, the painting will move to the Getty Villa, then travel in “Faces of Fame” to the National Gallery of Art in Washington, D.C., before returning to Los Angeles.\n\nGetty Center general admission is free (parking fees apply), keeping this rarely seen masterpiece accessible to West Coast audiences.",
+      "summaryLongNote": "Verified from Getty News (September 2026).",
+      "source": "Getty",
+      "url": "https://www.getty.edu/news/getty-celebrates-long-awaited-west-coast-debut-of-reynolds-portrait-of-mai/",
+      "impact": 3,
+      "images": [
+        "images/getty-brings-reynolds-portrait-of-mai-to-los-ang-0.webp"
+      ],
+      "youtube": null,
+      "id": "getty-brings-reynolds-portrait-of-mai-to-los-ang"
+    },
+    {
+      "title": "Open-source ORCA turns everyday radios into science radars",
+      "summary": "CU Boulder’s HI-SNR lab leads ORCA, free software that helps researchers turn commercial software-defined radios into environmental radars for ice, forests, and soils—without proprietary lock-in.",
+      "summaryLong": "Radar technology is one of the most powerful tools to better understand our world around us. Researchers use radar to see beneath the surface of ice, forest canopy or soil in ways the human eye never could. As the planet changes, that kind of capability matters more than ever.\n\nBut for the researchers who actually build these tools, there’s a frustrating dilemma: Before a radar system can answer a scientific question, someone has to spend months, oftentimes much longer, building the radar and writing code just to get it operating. A new student joins a lab, inherits a software-defined radio and starts writing the same kind of control code to make it operate as a radar. A team at the University of Colorado Boulder’s High precision Imaging, Signals ‘N Radar (Hi-SNR) Laboratory is working to change that. The lab, based in the Department of Electrical, Computer & Energy Engineering is leading the Open Radar Code Architecture (ORCA) initiative, an open-source software framework that turns commercially available software-defined radios into functioning radar systems built specifically for environmental monitoring.\n\n“It takes a student a year to get to this base level of radar operation,” said Nicole Bienert, assistant professor of electrical engineering. “Every new student is just recreating the wheel over and over. That’s not an efficient use of our time as researchers if we really want to answer major scientific questions.” ORCA is designed to close that gap. Rather than every research group re-writing radar-control code from scratch, ORCA gives them a starting point they can build on, so more radar research questions can get answered.\n\nThe project traces its roots to Bienert’s doctoral research in the Stanford Radio Glaciology group and collaborators including Thomas Teisberg and Anna Broome. Applications range from snow levels for avalanche warning and snow water equivalent for water resource management to tree water content for wildfire risk and glacier material analysis.",
+      "summaryLongNote": null,
+      "source": "University of Colorado Boulder",
+      "url": "https://www.colorado.edu/ecee/open-source-coding-platform-makes-radar-technology-accessible-scientists-worldwide",
+      "impact": 3,
+      "images": [
+        "images/open-source-orca-turns-everyday-radios-into-scie-0.webp"
+      ],
+      "youtube": null,
+      "id": "open-source-orca-turns-everyday-radios-into-scie"
     },
     {
       "title": "Xerces maps a statewide Oregon pollinator conservation strategy",
@@ -619,30 +679,6 @@
       ]
     },
     {
-      "id": "nga-always-free-admission",
-      "title": "The National Gallery of Art keeps admission free—every day",
-      "summary": "Washington, D.C.’s National Gallery of Art welcomes everyone at no charge and publishes conservation stories and collection images online for remote visitors too.",
-      "summaryLong": "The National Gallery of Art in Washington, D.C., offers free admission every day it is open—a standing public commitment that makes world-class painting, sculpture, and works on paper accessible without a ticket price. The museum also shares behind-the-scenes conservation stories and collection resources online.\n\nFree admission removes a barrier for families, students, and travelers on tight budgets. Digital essays and imaging projects extend that access to people who cannot visit the Mall. Together, the open doors and online resources model how a national art museum can stay a commons rather than a luxury.",
-      "source": "National Gallery of Art",
-      "url": "https://www.nga.gov/",
-      "impact": 3,
-      "images": [
-        "images/nga-always-free-admission-0.webp"
-      ]
-    },
-    {
-      "id": "getty-open-content",
-      "title": "Getty Open Content offers free high-res images for any use",
-      "summary": "The Getty makes hundreds of thousands of public-domain images free to download under its Open Content Program—no registration required for most uses.",
-      "summaryLong": "The J. Paul Getty Trust’s Open Content Program releases high-resolution images of public-domain artworks free of charge. Users can download files for study, publication, and creative projects under clear terms that encourage sharing rather than gatekeeping.\n\nOpen Content sits alongside Getty exhibition news and conservation research that is often freely readable on getty.edu. For art teachers, students, and small museums, the program is a practical USA-based alternative to stock photography when you need accurate images of historic works.\n\nBrowse the Open Content portal, download what you need, and credit the source—keeping cultural heritage in everyday circulation.",
-      "source": "Getty",
-      "url": "https://www.getty.edu/about/open-content-program/",
-      "impact": 3,
-      "images": [
-        "images/getty-open-content-0.webp"
-      ]
-    },
-    {
       "id": "code-gov-open-source-usa",
       "title": "Code.gov catalogs free open-source software from U.S. agencies",
       "summary": "Code.gov helps the public find open-source projects released by federal agencies—reuse government-built tools instead of reinventing them.",
@@ -652,30 +688,6 @@
       "impact": 2,
       "images": [
         "images/code-gov-open-source-usa-0.webp"
-      ]
-    },
-    {
-      "id": "data-gov-open-datasets",
-      "title": "Data.gov opens U.S. government datasets to anyone",
-      "summary": "Data.gov aggregates free federal datasets—from climate to transit—so journalists, students, and startups can build with public information.",
-      "summaryLong": "Data.gov is the United States government’s open-data portal, pointing to hundreds of thousands of datasets published by federal agencies. Topics include environment, public health indicators, agriculture, and local partnerships.\n\nOpen data lets teachers assign real civic analysis, lets nonprofits map needs, and lets companies prototype tools without buying proprietary feeds. Datasets typically carry clear licenses and agency contacts. Pairing Data.gov with agency newsrooms (NASA, NOAA, USGS) gives a free pipeline from raw tables to understandable public stories.",
-      "source": "Data.gov",
-      "url": "https://data.gov/",
-      "impact": 2,
-      "images": [
-        "images/data-gov-open-datasets-0.webp"
-      ]
-    },
-    {
-      "id": "library-congress-free-exhibits",
-      "title": "Library of Congress shares free digital exhibitions and scans",
-      "summary": "The Library of Congress publishes free online exhibitions and digitized collections—maps, photos, manuscripts—anyone can browse without a reader card.",
-      "summaryLong": "The Library of Congress offers extensive digital collections and online exhibitions at no cost. Visitors can explore maps, photographs, sheet music, and manuscripts from a browser, while in-person exhibits in Washington complement the virtual shelves.\n\nDigitization programs make rare materials usable in classrooms far from D.C. Teachers can assign primary sources; artists can study public-domain images; genealogists can chase leads. The Library’s digital presence is one of the country’s largest free cultural archives—quietly expanding what “public library” means online.",
-      "source": "Library of Congress",
-      "url": "https://www.loc.gov/exhibitions/",
-      "impact": 2,
-      "images": [
-        "images/library-congress-free-exhibits-0.webp"
       ]
     },
     {
@@ -715,18 +727,6 @@
       ]
     },
     {
-      "id": "xerces-pollinator-resources",
-      "title": "Xerces Society posts free pollinator conservation resources",
-      "summary": "The Xerces Society publishes free guides on protecting bees, butterflies, and other invertebrates—used by cities, farmers, and gardeners across the USA, including Oregon partners.",
-      "summaryLong": "The Xerces Society for Invertebrate Conservation offers free downloadable resources on pollinator habitat, pesticide reduction, and species monitoring. Cities in Bee City USA networks and farmers planting habitat strips rely on that guidance.\n\nOregon’s statewide pollinator strategy work has drawn on Xerces expertise, linking national science to local action. Because the guides are free, a school garden club and a state agency can use the same playbook. The result is quieter progress: more flowers, safer nesting sites, and better data on insects that keep ecosystems working.",
-      "source": "Xerces Society",
-      "url": "https://www.xerces.org/",
-      "impact": 3,
-      "images": [
-        "images/xerces-pollinator-resources-0.webp"
-      ]
-    },
-    {
       "id": "huggingface-nasa-models",
       "title": "Hugging Face hosts free NASA and IBM science AI model cards",
       "summary": "Open model pages on Hugging Face document NASA–IBM science models anyone can inspect or fine-tune—complete with licenses, demos, and links to code.",
@@ -736,18 +736,6 @@
       "impact": 3,
       "images": [
         "images/huggingface-nasa-models-0.webp"
-      ]
-    },
-    {
-      "id": "esa-earth-observation-open",
-      "title": "ESA shares free Earth-observation explainers and open data paths",
-      "summary": "The European Space Agency publishes freely readable Earth observation stories and points the public toward open Sentinel data that anyone can use alongside NASA and NOAA archives.",
-      "summaryLong": "The European Space Agency (ESA) maintains public news and education pages about Earth observation missions, often highlighting open data from the Sentinel satellites. Those datasets complement NASA and NOAA archives and feed countless free mapping and conservation tools.\n\nESA’s explainers help non-specialists understand what satellites measure—vegetation, floods, air quality—without a journal paywall. For a global-fill story in a USA-first digest, ESA content shows international cooperation that still lands as practical, non-controversial science progress.",
-      "source": "European Space Agency",
-      "url": "https://www.esa.int/Applications/Observing_the_Earth",
-      "impact": 2,
-      "images": [
-        "images/esa-earth-observation-open-0.webp"
       ]
     }
   ]

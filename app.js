@@ -767,7 +767,13 @@
       })
       .then(function (data) {
         var packed = ingestWeekData(data);
-        var ok = renderWeek(packed.data, packed.featured);
+        // Fresh 15 from the full pool on every page open (not a fixed featured list).
+        var initial =
+          packed.pool.length >= SET_SIZE
+            ? pickDisjointSet(packed.pool, [], SET_SIZE)
+            : packed.featured.slice(0, SET_SIZE);
+        if (!initial.length) initial = packed.featured.slice(0, SET_SIZE);
+        var ok = renderWeek(packed.data, initial);
         if (!ok) return;
         requestAnimationFrame(focusHash);
       })
@@ -781,10 +787,7 @@
       e.preventDefault();
       sharePayload({
         title: SITE_TITLE,
-        text:
-          "Fifteen quiet highlights from the week of " +
-          (weekMeta.label || "this week") +
-          ".",
+        text: "Fifteen good things worth a look.",
         url: pageUrl()
       });
     });
