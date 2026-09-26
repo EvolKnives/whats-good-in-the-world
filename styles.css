@@ -19,6 +19,10 @@
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --dur: 0.45s;
   --hero-band: #f5f5f7;
+  --header-bg-rgb: 251, 251, 253;
+  --header-base-alpha: 0.78;
+  --header-progress: 0;
+  --header-blur: 20px;
 }
 
 *,
@@ -73,15 +77,14 @@ a {
   top: 0;
   z-index: 20;
   padding-top: env(safe-area-inset-top);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(251, 251, 253, 0.78);
-  transition: background 0.3s var(--ease), box-shadow 0.3s var(--ease);
-}
-
-.site-header.is-scrolled {
-  box-shadow: 0 1px 0 var(--rule);
-  background: rgba(251, 251, 253, 0.9);
+  backdrop-filter: saturate(180%) blur(var(--header-blur));
+  -webkit-backdrop-filter: saturate(180%) blur(var(--header-blur));
+  background: rgba(
+    var(--header-bg-rgb),
+    calc(var(--header-base-alpha) * (1 - var(--header-progress)))
+  );
+  transition: background 0.12s var(--ease), backdrop-filter 0.12s var(--ease),
+    -webkit-backdrop-filter 0.12s var(--ease);
 }
 
 .site-header__inner {
@@ -843,11 +846,7 @@ a {
   }
 
   .site-header {
-    background: rgba(28, 28, 30, 0.78);
-  }
-
-  .site-header.is-scrolled {
-    background: rgba(28, 28, 30, 0.92);
+    --header-bg-rgb: 28, 28, 30;
   }
 
   .story__card {
