@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
-Refresh data/week.json with 15 uplifting stories from the prior calendar week.
+Refresh data/week.json with a featured 15 plus a larger reusable pool.
 
 Monday cron/routine friendly. Prefers USA stories (majority), with Oregon when
 available (Portland, Oregon coast, Cascades, Willamette, Oregon nonprofits,
 OSU/UO research, conservation, community, art, tech). Keep a little global
-variety only as needed to fill 15. Freely readable writeups — tech, space,
-AI-for-good, open source, conservation, community, and art-world wins — over
-dense journal abstracts, controversy, or auction spectacle. Assigns impact 1–5.
+variety only as needed. Freely readable writeups — tech, space, AI-for-good,
+open source, conservation, community, and art-world wins — over dense journal
+abstracts, controversy, or auction spectacle. Assigns impact 1–5 and stable ids.
+
+Writes both `stories` (featured 15 for first paint / Monday label) and `pool`
+(~30–45) so the site Refresh button can swap in a disjoint set of 15 client-side.
 No API key required (DuckDuckGo HTML). Keeps prior file if too few candidates.
-Monday deploy: run this script, then git commit + push so GitHub Pages picks up data/week.json.
+Monday deploy: run this script, then git commit + push so GitHub Pages updates.
 """
 
 from __future__ import annotations
@@ -25,8 +28,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "week.json"
-UA = "WhatsGoodInTheWorldRefresh/1.3 (+local; positive-news curator)"
+UA = "WhatsGoodInTheWorldRefresh/1.4 (+local; positive-news curator)"
 NEED = 15
+POOL_TARGET = 40
 
 # Prefer accessible newsy sources + tech/space/open-source; still allow WHO/uni
 POSITIVE_QUERIES = [
@@ -408,11 +412,56 @@ def harvest(week_of: date, need: int = NEED) -> list[dict]:
     return picked
 
 
+def slugify(title: str) -> str:
+    s = re.sub(r"['’]", "", (title or "story").lower())
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return (s[:48] or "story")
+
+
+def ensure_ids(stories: list[dict]) -> list[dict]:
+    seen: set[str] = set()
+    for story in stories:
+        base = slugify(str(story.get("id") or story.get("title") or "story"))
+        sid = base
+        n = 2
+        while sid in seen:
+            sid = f"{base}-{n}"
+            n += 1
+        story["id"] = sid
+        seen.add(sid)
+    return stories
+
+
 def main() -> int:
     week_of = prior_week_monday()
-    print(f"Refreshing {NEED} stories for week of {week_of.isoformat()} …")
-    stories = harvest(week_of, need=NEED)
+    print(
+        f"Refreshing featured {NEED} + pool (~{POOL_TARGET}) "
+        f"for week of {week_of.isoformat()} …"
+    )
+    # Harvest a larger candidate set so Refresh can swap disjoint sets client-side
+    harvested = harvest(week_of, need=POOL_TARGET)
+    harvested = ensure_ids(harvested)
 
+    # Merge with any prior pool entries that are still unique (keeps depth between Mondays)
+    prior_pool: list[dict] = []
+    if OUT.exists():
+        try:
+            prior = json.loads(OUT.read_text(encoding="utf-8"))
+            prior_pool = list(prior.get("pool") or prior.get("stories") or [])
+        except Exception:
+            prior_pool = []
+
+    by_id: dict[str, dict] = {}
+    for story in ensure_ids(prior_pool) + harvested:
+        by_id[story["id"]] = story
+    pool = list(by_id.values())
+    # Prefer freshly harvested order first
+    fresh_ids = {s["id"] for s in harvested}
+    pool.sort(key=lambda s: (0 if s["id"] in fresh_ids else 1, -float(s.get("impact") or 0)))
+    pool = pool[: max(POOL_TARGET, NEED * 2)]
+    pool = ensure_ids(pool)
+
+    stories = pool[:NEED]
     min_keep = max(8, NEED // 2)
     if len(stories) < min_keep:
         print(
@@ -429,10 +478,14 @@ def main() -> int:
         "weekOf": week_of.isoformat(),
         "updatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "stories": stories[:NEED],
+        "pool": pool,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT} with {len(payload['stories'])} stories:")
+    print(
+        f"Wrote {OUT} with {len(payload['stories'])} featured "
+        f"+ {len(payload['pool'])} pool stories:"
+    )
     for s in payload["stories"]:
         print(f"  [{s['impact']}] {s['title']}")
     return 0
